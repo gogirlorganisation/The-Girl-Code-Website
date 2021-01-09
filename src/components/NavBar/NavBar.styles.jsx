@@ -17,15 +17,15 @@ export const Ul = styled.ul`
   list-style: none;
   display: flex;
   flex-flow: row nowrap;
+  z-index:10;
   
   li {
     font-weight: 700;
     background-color: ${({ open , bgOut, bgIn, textOut, textIn}) => bgOut};
-    padding: 5px 20px;
+    padding: 4px 20px;
     
     color: ${({ open , bgOut, bgIn, textOut, textIn}) => textOut};
   }
-
 
   li:nth-child(6) {
       background-color: ${({ open , bgOut, bgIn, textOut, textIn}) => bgOut};
@@ -33,6 +33,7 @@ export const Ul = styled.ul`
       border: 2px solid black;
       border-radius: 7px;
   }
+
   @media (max-width: 768px) {
     flex-flow: column nowrap;
     background-color: ${({ open , bgOut, bgIn, textOut, textIn}) => bgIn};
@@ -65,8 +66,8 @@ export const StyledBurger = styled.div`
   width: 2rem;
   height: 2rem;
   position: fixed;
-  top: 15px;
-  right: 20px;
+  top: 25px;
+  right: 25px;
   z-index: 20;
   display: none;
   background-color: transparent;
