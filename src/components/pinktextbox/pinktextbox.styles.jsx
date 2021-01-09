@@ -6,19 +6,24 @@ export const BoxBackground=styled.div`
         margin-top: 6rem;
         margin-bottom: 6rem;
         border-radius:25px;
+        text-align:center;
+        justify-content:center;
         @media screen and (min-width:481px) {
         border-radius: 30px;
         }
 `
-export const BoxHeading=styled.p`
+export const BoxHeading=styled.h2`
+    
     color:#d74b8d;
     font-weight: 800;
     letter-spacing: 0.145rem;
     font-size: 1.225rem;
+    text-align:center;
+    margin:auto;
+    padding-bottom:1rem;
     @media screen and (max-width:481px) {
         font-size: 1.125rem;
-        margin-left: auto;
-        margin-right: auto;}
+        }
 `
 export const BoxText=styled.p`
     font-weight: 400;

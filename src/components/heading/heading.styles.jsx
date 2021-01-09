@@ -16,5 +16,6 @@ export const Title=styled.div`
 
     @media screen and (min-width:515px) {
         padding-bottom: 0.6rem;
+        margin-bottom:0.2rem;
     }
 `

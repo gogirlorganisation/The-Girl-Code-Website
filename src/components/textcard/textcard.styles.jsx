@@ -1,13 +1,5 @@
 import styled from "styled-components";
 
-export const Icon=styled.div`
-          padding-left: 1rem;
-          padding-right: 1rem;
-          height: 150px;
-          @media screen and (max-width:767px) {
-              padding-top:3rem;
-          }
-`
 
 export const Title=styled.p`
           font-weight: 700;
@@ -36,4 +28,7 @@ export const Alignment=styled.div`
 text-align: center;
 padding-top: 1.5rem;
 padding-bottom: 1.5rem;
+`
+export const Spacing=styled.div`
+          padding-top: 10%;
 `
