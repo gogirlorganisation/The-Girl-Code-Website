@@ -25,6 +25,10 @@ export const Input = styled.input`
   font-size: 0.8rem;
   border-radius: 8px;
   border: 2px solid #ffcfe1;
+  :focus {
+    outline: none; /* oranges! yey */
+  }
+
   @media screen and (max-width: 560px) {
     margin-bottom: 0.5rem;
     width: 100%;
