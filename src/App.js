@@ -7,12 +7,14 @@ import {
   Link,
   Redirect,
 } from "react-router-dom";
-import Home from "./pages/homepage";
+
+import HomePage from "./pages/HomePage/homepage";
+
 class App extends Component {
   render() {
     return (
       <Router>
-        <Route path="/" component={Home} />
+        <Route path="/" component={HomePage} />
       </Router>
     );
   }
