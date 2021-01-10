@@ -2,19 +2,20 @@ import React from "react";
 import Stats from "../components/stats.component";
 import PinkTextBox from "../components/pinktextbox.components";
 import TextCard from "../components/textcard.components";
-import './homepage.css'
+import StartChapter from "../components/startchapter/startchapter.components";
+import "./homepage.css";
 
 const Home = () => {
-    return (
-      <body>
-        <Stats
-          stats={[
-            ["70", "FLAGSHIP STAT1"],
-            ["400+", "FLAGSHIP STAT2"],
-            ["35", "FLAGSHIP STAT3"],
-          ]}
-        />
-        
+  return (
+    <body>
+      <Stats
+        stats={[
+          ["70", "FLAGSHIP STAT1"],
+          ["400+", "FLAGSHIP STAT2"],
+          ["35", "FLAGSHIP STAT3"],
+        ]}
+      />
+
       <PinkTextBox
         heading={"MISSION"}
         text={
@@ -25,14 +26,30 @@ const Home = () => {
         heading={"OUR PROGRAM"}
         headingStyle={"dashed"}
         content={[
-          ["WORKSHOPS"," FLAGSHIP STAT 1FLAGSHIP STAT 1FLAGSHIP STAT 1FLAGSHIP STAT " ,"https://imgur.com/bswvrl0.jpg"],
-          ["ONLINE"," FLAGSHIP STAT 1FLAGSHIP STAT 1FLAGSHIP STAT 1FLAGSHIP STAT ", "https://imgur.com/NATlrgl.jpg"],
-          ["COMMUNITY"," FLAGSHIP STAT 1FLAGSHIP STAT 1FLAGSHIP STAT 1FLAGSHIP STAT ", "https://imgur.com/SPY9JRt.jpg"],
-          ["MENTORS"," FLAGSHIP STAT 1FLAGSHIP STAT 1FLAGSHIP STAT 1FLAGSHIP STAT ","https://imgur.com/BH6lGiT.jpg"],
+          [
+            "WORKSHOPS",
+            " FLAGSHIP STAT 1FLAGSHIP STAT 1FLAGSHIP STAT 1FLAGSHIP STAT ",
+            "https://imgur.com/bswvrl0.jpg",
+          ],
+          [
+            "ONLINE",
+            " FLAGSHIP STAT 1FLAGSHIP STAT 1FLAGSHIP STAT 1FLAGSHIP STAT ",
+            "https://imgur.com/NATlrgl.jpg",
+          ],
+          [
+            "COMMUNITY",
+            " FLAGSHIP STAT 1FLAGSHIP STAT 1FLAGSHIP STAT 1FLAGSHIP STAT ",
+            "https://imgur.com/SPY9JRt.jpg",
+          ],
+          [
+            "MENTORS",
+            " FLAGSHIP STAT 1FLAGSHIP STAT 1FLAGSHIP STAT 1FLAGSHIP STAT ",
+            "https://imgur.com/BH6lGiT.jpg",
+          ],
         ]}
       />
-      </body>
-    );
-  };
-  export default Home;
-  
+      <StartChapter heading={"OUR PROGRAM"} headingStyle={"dashed"} />
+    </body>
+  );
+};
+export default Home;
