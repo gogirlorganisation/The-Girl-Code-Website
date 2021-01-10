@@ -8,13 +8,13 @@ import {
   Redirect,
 } from "react-router-dom";
 
-import HomePage from "./pages/HomePage/homepage";
+import HomePage from "./pages/HomePage/home.page";
 
 class App extends Component {
   render() {
     return (
       <Router>
-        <Route path="/" component={HomePage} />
+        <Route exact path="/" component={HomePage} />
       </Router>
     );
   }
