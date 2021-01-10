@@ -1,9 +1,13 @@
 import React from "react";
+import NavBar from "../components/NavBar/NavBar.component";
+import GlobalStyle from "./globalStyles";
+import YoutubeVideo from "../components/YoutubeVideo/YoutubeVideo.component";
 import Stats from "../components/stats.component";
 import PinkTextBox from "../components/pinktextbox.components";
 import TextCard from "../components/textcard.components";
 import StartChapter from "../components/startchapter/startchapter.components";
 import "./homepage.css";
+
 
 const Home = () => {
   return (
@@ -53,3 +57,4 @@ const Home = () => {
   );
 };
 export default Home;
+
