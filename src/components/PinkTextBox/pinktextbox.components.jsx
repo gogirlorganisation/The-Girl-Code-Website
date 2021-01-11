@@ -1,7 +1,7 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Container,Row } from "react-bootstrap";
-import { BoxBackground,BoxHeading,BoxText } from "./pinktextbox.styles";
+import { BoxBackground,BoxHeading,BoxText } from "../PinkTextBox/pinktextbox.styles";
 
 export default function PinkTextBox({ heading, text }) {
   return (
@@ -15,7 +15,6 @@ export default function PinkTextBox({ heading, text }) {
           {text}
         </BoxText>
       </Row>
-      
     </BoxBackground>
     </Container>
   );
