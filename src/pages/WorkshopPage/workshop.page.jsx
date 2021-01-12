@@ -1,3 +1,11 @@
-export default () => {
-    return <div> Workshop page </div>
+import React from 'react';
+
+const Workshop = () => {
+    return (
+        <div>
+            Workshop
+        </div>
+    );
 }
+
+export default Workshop;
