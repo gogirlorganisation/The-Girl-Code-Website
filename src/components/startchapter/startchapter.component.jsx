@@ -7,7 +7,7 @@ import {
   Button,
   BoxImage,
 } from "./startchapter.styles";
-import Heading from "../heading.components";
+import Heading from "../Heading/heading.component";
 import { Image } from "react-bootstrap";
 
 class StartChapter extends Component {
