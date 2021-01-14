@@ -15,4 +15,5 @@ export const ReactStyled = styled(ReactPlayer)`
 export const StyledText = styled.div`
   text-align: center;
   margin-top: 15px;
+  margin-bottom: 15px;
 `
