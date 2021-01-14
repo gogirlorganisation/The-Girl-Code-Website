@@ -84,7 +84,7 @@ export const StyledBurger = styled.div`
   div {
     z-index:1000;
     width: 2rem;
-    height: 0.25rem;
+    height: 0.2rem;
     background-color: ${({ open }) => open ? '#FFF' : '#000'};
     border-radius: 10px;
     transform-origin: 1px;

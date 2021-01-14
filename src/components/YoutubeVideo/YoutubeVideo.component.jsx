@@ -1,5 +1,4 @@
-import React, {Component} from 'react'
-import ReactPlayer from 'react-player'
+import React from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container, Row, Col } from 'reactstrap';
 
@@ -44,23 +43,3 @@ const YoutubeVideo = ({videoOne, videoTwo, textOne, textTwo}) => {
 }
 
 export default YoutubeVideo;
-
-            // <PlayerWrap>
-            //     <ReactStyled
-            //     className='react-player'
-            //     url={videoOne}
-            //     controls={true}
-            //     width="100%"
-            //     height="100%"
-            //     />
-            // </PlayerWrap>
-
-            // <PlayerWrap>
-            //     <ReactStyled
-            //     className='react-player'
-            //     url={videoTwo}
-            //     controls={true}
-            //     width="100%"
-            //     height="100%"
-            //     />
-            // </PlayerWrap>
