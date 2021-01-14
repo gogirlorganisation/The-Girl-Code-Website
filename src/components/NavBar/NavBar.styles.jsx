@@ -18,18 +18,21 @@ export const Ul = styled.ul`
   display: flex;
   flex-flow: row nowrap;
   z-index:10;
-  
   li {
     font-weight: 700;
     background-color: ${({ open , bgOut, bgIn, textOut, textIn}) => bgOut};
-    padding: 4px 20px;
+    margin: 4px 20px;
     
     color: ${({ open , bgOut, bgIn, textOut, textIn}) => textOut};
   }
 
   li:nth-child(6) {
+    min-height: 30px;
+
+      text-align:center;
       background-color: ${({ open , bgOut, bgIn, textOut, textIn}) => bgOut};
-      color: ${({ open , bgOut, bgIn, textOut, textIn}) => textOut};  
+      color: ${({ open , bgOut, bgIn, textOut, textIn}) => textOut}; 
+      min-width: 100px; 
       border: 2px solid black;
       border-radius: 7px;
   }
@@ -53,6 +56,8 @@ export const Ul = styled.ul`
     }
 
     li:nth-child(6) {
+      text-align: left !important;
+
       border: none;
       color: ${({ open , bgOut, bgIn, textOut, textIn}) => textIn};  
 
