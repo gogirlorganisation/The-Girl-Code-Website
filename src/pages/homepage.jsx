@@ -6,6 +6,7 @@ import YoutubeVideo from "../components/YoutubeVideo/YoutubeVideo.component";
 import SocialMediaDiv from "../components/SocialMediaDiv/SocialMediaDiv.component";
 import LeadCard from "../components/LeadCard/LeadCard.component";
 import MemberCard from "../components/MemberCard/MemberCard.component";
+import Team from "../components/Team/Team.component";
 
   const Home = () => {
     return (
@@ -19,6 +20,7 @@ import MemberCard from "../components/MemberCard/MemberCard.component";
       <SocialMediaDiv/>
       <LeadCard imgUrl="https://source.unsplash.com/Dm-qxdynoEc/800x799" name="Mushroom boss" designation="Head Of Fungi Development"/>
       <MemberCard imgUrl="https://source.unsplash.com/Dm-qxdynoEc/800x799" name="Mushroom"/>
+      <Team/>
       </div>
     );
   };

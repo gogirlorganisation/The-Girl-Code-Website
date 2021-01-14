@@ -7,7 +7,7 @@ const LeadCard = ({imgUrl, name, designation}) => {
     return (
         <Container>
         <Row>
-            <Col xs={{ span: 8, offset: 2 }} md={{span: 3, offset: 4}}>
+            <Col xs={{span: 8}} md={{span: 4}} className="mx-auto">
             <Image src={imgUrl} roundedCircle fluid/>
             <NameStyle className="text-center mt-3 text-uppercase">{name}</NameStyle>
             <DesigStyle className="text-center text-uppercase">{designation}</DesigStyle>
