@@ -1,13 +1,17 @@
-import React, {Component} from 'react'
-import ReactPlayer from 'react-player'
+import React from 'react'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Container, Row, Col } from 'reactstrap';
 
-import { PlayerWrap, ReactStyled, boom} from "./YoutubeVideo.styles";
+import { PlayerWrap, ReactStyled, StyledText} from "./YoutubeVideo.styles";
 
 
 const YoutubeVideo = ({videoOne, videoTwo, textOne, textTwo}) => {
-    return (<div>
+    return (
+           <Container>
+            <Row>
+                <Col md={6}>
             <PlayerWrap>
-                <ReactStyled
+                 <ReactStyled
                 className='react-player'
                 url={videoOne}
                 controls={true}
@@ -16,16 +20,24 @@ const YoutubeVideo = ({videoOne, videoTwo, textOne, textTwo}) => {
                 />
             </PlayerWrap>
 
+                <StyledText>{textOne}</StyledText>
+                </Col>
+                <Col md={6}>
             <PlayerWrap>
-                <ReactStyled
+                 <ReactStyled
                 className='react-player'
-                url={videoTwo}
+                url={videoOne}
                 controls={true}
                 width="100%"
                 height="100%"
                 />
             </PlayerWrap>
-            </div>
+                <StyledText>{textTwo}</StyledText>
+
+
+                </Col>
+            </Row>
+            </Container>
     )
 
 }
