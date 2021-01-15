@@ -1,7 +1,7 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Container, Row, Col, Image } from "react-bootstrap";
-import Heading from "../Heading/heading.components";
+import Heading from '../Heading/heading.component';
 import {  Content, Title, Alignment } from "../TextCard/textcard.styles";
 
 export default function TextCard({ heading, content }) {

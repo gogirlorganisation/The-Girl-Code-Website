@@ -7,14 +7,13 @@ import {
   Link,
   Redirect,
 } from "react-router-dom";
-
-import HomePage from "./pages/HomePage/home.page";
+import Home from './pages/homepage'
 
 class App extends Component {
   render() {
     return (
       <Router>
-        <Route exact path="/" component={HomePage} />
+        <Route exact path="/" component={Home} />
       </Router>
     );
   }

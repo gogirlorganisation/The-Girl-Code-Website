@@ -2,7 +2,7 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Container,Row,Image} from "react-bootstrap";
 import {  NameStyles, QuoteStyles,TestimonialBackground,ImgBg} from "./testimonial.styles";
-import Heading from  "../Heading/heading.components";
+import Heading from  '../Heading/heading.component';
 export default function Testimonial({text,name}){
     return(
         <Container>

@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const Background = styled.div`
-  background-color: #fbebf1;
   text-align: center;
   padding: 3rem 4rem 6rem 4rem;
   margin-top: 6rem;
