@@ -28,6 +28,13 @@ import Stats from "../components/Stats/stats.component";
       <Team/>
       {/* <Stats stats={[{'chapter': 10}, '20']}/>
       <TextCard heading="Dummy heading" content={["Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum"]} /> */}
+      <Stats
+          stats={[
+            ["70", "FLAGSHIP STAT1"],
+            ["400+", "FLAGSHIP STAT2"],
+            ["35", "FLAGSHIP STAT3"],
+          ]}
+        />
       <StartChapter heading='Start A Chapter' />
       <Testimonial name='krishna' text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum." />
       </div>
