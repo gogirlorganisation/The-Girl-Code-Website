@@ -1,12 +1,15 @@
 import styled from "styled-components";
 
 export const ButtonStyle=styled.div`
+          display: inline-flex;
+          flex-grow: 0;
+          width: auto;
         font-weight: 600;
         color: #F05680;
-        font-size:1.1rem;
+        font-size:1.4rem;
         border-width: 2px;
         border-color: #ffff;
-        padding: 20px 40px;
+        padding: 15px 30px;
         border-radius: 5px;
         letter-spacing: 2;
         margin-right: 1rem;
