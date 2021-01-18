@@ -2,7 +2,7 @@ import React from "react";
 import { Background } from "../StartChapter/startchapter.styles";
 import { TextBox, ImageBox, FormBox } from "./joincommunity.styles";
 import Form from "./form";
-import Heading from "../Heading/heading.components";
+import Heading from "../Heading/heading.component";
 import "./joincommunity.styles";
 import { Col, Row, Image } from "react-bootstrap";
 
