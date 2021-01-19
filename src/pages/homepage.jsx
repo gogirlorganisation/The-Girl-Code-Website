@@ -11,7 +11,7 @@ import Testimonial from "../components/Testimonial/testimonial.component";
 import TextCard from "../components/TextCard/textcard.components";
 // import StartChapter from "../components/StartChapter/startchapter.component";
 import Stats from "../components/Stats/stats.component";
-import Card from "../components/Card/card.components";
+import Card from "../components/Card/card.component";
 
 const Home = () => {
   return (
