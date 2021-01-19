@@ -1,6 +1,5 @@
 import React from 'react'
-import './imagecorousel.styles'
-import { Background, BoxImage, FooterImages, FooterImage, PinkDiv} from './imagecorousel.styles'
+import { Container, BoxImage, FooterImages, FooterImage, PinkDiv} from './imagecorousel.styles'
 
 class ImageCorousel extends React.Component{
 
@@ -61,7 +60,7 @@ class ImageCorousel extends React.Component{
         console.log(newImgUrls)
 
         return(
-            <Background>
+            <Container>
                 <BoxImage style = {{backgroundImage: `url(${img.default})` }}>
                     <PinkDiv> 
                         <h6 style = {{margin:0}}> <bold> SJI Workshop </bold> </h6>
@@ -89,7 +88,7 @@ class ImageCorousel extends React.Component{
                     }
                 </FooterImages>
 
-            </Background>
+            </Container>
 
         )
     

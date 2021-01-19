@@ -7,13 +7,15 @@ import {
   Link,
   Redirect,
 } from "react-router-dom";
-import Home from './pages/homepage'
+import Home from './pages/HomePage/home.page';
+import AllComponents from './pages/allcomponents';
 
 class App extends Component {
   render() {
     return (
       <Router>
         <Route exact path="/" component={Home} />
+        <Route exact path="/all" component={AllComponents} />
       </Router>
     );
   }
