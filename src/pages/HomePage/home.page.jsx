@@ -11,22 +11,23 @@ import SocialMediaDiv from "../../components/SocialMediaDiv/SocialMediaDiv.compo
 import LeadCard from "../../components/LeadCard/LeadCard.component";
 import MemberCard from "../../components/MemberCard/MemberCard.component";
 import Team from "../../components/Team/Team.component";
-
 const Header = () => {
         return (
+          <div>
             <StyledJumbo>
+             
             <StyledContainer>
             <StyledRow className="justify-content-center">
                 <StyleHead>Welcome To The Girl Code</StyleHead>
             </StyledRow>
             <StyledRow className="justify-content-center">
-                  <StyledButton variant="outline-dark" className="rounded-0 mr-3">Party</StyledButton>{' '}
+                  <StyledButton variant="outline-light" className="rounded-0 mr-3">Party</StyledButton>{' '}
                  
-                 <StyledButton variant="outline-dark" className="rounded-0 ml-3">Tym</StyledButton>{' '}
+                 <StyledButton variant="outline-light" className="rounded-0 ml-3">Tym</StyledButton>{' '}
             </StyledRow>
             </StyledContainer>
-            </StyledJumbo>
-        
+           </StyledJumbo>
+          </div>
         )
     
 }
@@ -35,7 +36,7 @@ const Home = () => {
     return (
       <div>
         <GlobalStyle />
-        <NavBar bgOut="transparent" bgIn="#F05680" textOut="black" textIn="white"/>
+        <NavBar bgOut="transparent" bgIn="#F05680" textOut="white" textIn="white"/>
         <Header/>
 
       <SocialMediaDiv/>

@@ -37,7 +37,7 @@ export const Ul = styled.ul`
       background-color: ${({ open , bgOut, bgIn, textOut, textIn}) => bgOut};
       color: ${({ open , bgOut, bgIn, textOut, textIn}) => textOut}; 
       min-width: 100px; 
-      border: 2px solid black;
+      border: 2px solid ${({ open , bgOut, bgIn, textOut, textIn}) => textOut};
       border-radius: 7px;
   }
 
@@ -71,7 +71,7 @@ export const Ul = styled.ul`
     padding-top: 3.5rem;
     transition: transform 0.3s ease-in-out;
     li {
-        background-color: ${({ open , bgOut, bgIn, textOut, textIn}) => bgIn};
+        background-color: ${({ open , bgOut, bgIn, textOut, textIn}) => bgOut};
         padding: 15px 35px;
         color: ${({ open , bgOut, bgIn, textOut, textIn}) => textIn};
     }
@@ -106,7 +106,7 @@ export const StyledBurger = styled.div`
     z-index:1000;
     width: 2rem;
     height: 0.2rem;
-    background-color: ${({ open }) => open ? '#FFF' : '#000'};
+    background-color: ${({ open }) => open ? '#000' : '#FFF'};
     border-radius: 10px;
     transform-origin: 1px;
     transition: all 0.3s linear;
