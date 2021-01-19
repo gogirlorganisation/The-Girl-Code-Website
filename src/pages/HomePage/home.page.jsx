@@ -39,7 +39,7 @@ import Heading from "../../components/Heading/heading.component";
         />
 
         <PinkBackground>
-          <ImageCorousel imgUrls = {['workshop.png', 'workshop2.jpg', 'workshop3.jpg', 'workshop4.jpg']} />
+          <ImageCorousel imgUrls = {['homepage/imagegallery/workshop.png', 'homepage/imagegallery/workshop2.jpg', 'homepage/imagegallery/workshop3.jpg', 'homepage/imagegallery/workshop4.jpg']} />
         </PinkBackground>
        
         
@@ -54,7 +54,7 @@ import Heading from "../../components/Heading/heading.component";
         </WhiteBackground>
 
        
-      <SocialMediaDiv/>
+        <SocialMediaDiv/>
      
       </div>
     );
