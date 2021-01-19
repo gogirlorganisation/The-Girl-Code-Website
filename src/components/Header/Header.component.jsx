@@ -6,9 +6,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { StyledJumbo, StyleHead, StyledButton, StyledRow, StyledContainer } from "./Header.styles";
 const Header = () => {
         return (
-    
             <StyledJumbo>
-            
             <StyledContainer>
             <StyledRow className="justify-content-center">
                 <StyleHead>Welcome To The Girl Code</StyleHead>

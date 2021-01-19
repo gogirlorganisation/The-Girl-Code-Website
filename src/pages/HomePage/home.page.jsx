@@ -1,4 +1,8 @@
-import React from "react";
+import React from 'react';
+import { Container, Button, Col, Row } from 'react-bootstrap';
+import "bootstrap/dist/css/bootstrap.min.css";
+import { StyledJumbo, StyleHead, StyledButton, StyledRow, StyledContainer } from "./home.page.style";
+
 
 import NavBar from "../../components/NavBar/NavBar.component";
 import GlobalStyle from "../globalStyles";
@@ -7,9 +11,27 @@ import SocialMediaDiv from "../../components/SocialMediaDiv/SocialMediaDiv.compo
 import LeadCard from "../../components/LeadCard/LeadCard.component";
 import MemberCard from "../../components/MemberCard/MemberCard.component";
 import Team from "../../components/Team/Team.component";
-import Header from "../../components/Header/Header.component";
 
-  const Home = () => {
+const Header = () => {
+        return (
+            <StyledJumbo>
+            <StyledContainer>
+            <StyledRow className="justify-content-center">
+                <StyleHead>Welcome To The Girl Code</StyleHead>
+            </StyledRow>
+            <StyledRow className="justify-content-center">
+                  <StyledButton variant="outline-dark" className="rounded-0 mr-3">Party</StyledButton>{' '}
+                 
+                 <StyledButton variant="outline-dark" className="rounded-0 ml-3">Tym</StyledButton>{' '}
+            </StyledRow>
+            </StyledContainer>
+            </StyledJumbo>
+        
+        )
+    
+}
+
+const Home = () => {
     return (
       <div>
         <GlobalStyle />
