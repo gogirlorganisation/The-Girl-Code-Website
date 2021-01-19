@@ -13,7 +13,6 @@ import Header from "../../components/Header/Header.component";
     return (
       <div>
         <GlobalStyle />
-        <Header/>
 
         <NavBar bgOut="transparent" bgIn="#F05680" textOut="black" textIn="white"/>
         <YoutubeVideo videoOne='https://www.youtube.com/watch?v=ysz5S6PUM-U' 

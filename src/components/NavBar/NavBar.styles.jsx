@@ -8,9 +8,9 @@ export const Nav = styled.nav`
   display: flex;
   background-color: ${({bgOut, bgIn, textOut, textIn}) => bgOut};
   justify-content: space-between;
-  .logo {
-    padding: 15px 0;
-  }
+img{
+  width: 4em;
+}
 `
 
 export const Ul = styled.ul`
@@ -18,6 +18,7 @@ export const Ul = styled.ul`
   display: flex;
   flex-flow: row nowrap;
   z-index:10;
+  
   li {
     font-weight: 700;
     background-color: ${({ open , bgOut, bgIn, textOut, textIn}) => bgOut};
@@ -27,7 +28,7 @@ export const Ul = styled.ul`
   }
 
   li:nth-child(6) {
-    min-height: 30px;
+    min-height: 29px;
 
       text-align:center;
       background-color: ${({ open , bgOut, bgIn, textOut, textIn}) => bgOut};
@@ -37,6 +38,19 @@ export const Ul = styled.ul`
       border-radius: 7px;
   }
 
+  @media (max-width: 910px) and (min-width: 768px) {
+
+  li {
+    margin: 4px 10px;
+     font-size: 14px;
+  }
+
+   li:nth-child(6) {
+    min-height: 23px;
+  }
+    
+    
+  }
   @media (max-width: 768px) {
     flex-flow: column nowrap;
     background-color: ${({ open , bgOut, bgIn, textOut, textIn}) => bgIn};
