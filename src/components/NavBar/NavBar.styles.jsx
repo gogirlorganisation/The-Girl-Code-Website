@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 export const Nav = styled.nav`
+  position: absolute;
   z-index:1000;
   width: 100%;
   height: 80px;
@@ -10,6 +11,7 @@ export const Nav = styled.nav`
   justify-content: space-between;
 img{
   width: 4em;
+  position: fixed;
 }
 `
 
@@ -18,6 +20,7 @@ export const Ul = styled.ul`
   display: flex;
   flex-flow: row nowrap;
   z-index:10;
+  background-color: ${({ open , bgOut, bgIn, textOut, textIn}) => bgOut};
   
   li {
     font-weight: 700;
@@ -41,11 +44,15 @@ export const Ul = styled.ul`
   @media (max-width: 910px) and (min-width: 768px) {
 
   li {
+    background-color: ${({ open , bgOut, bgIn, textOut, textIn}) => bgOut};
+
     margin: 4px 10px;
      font-size: 14px;
   }
 
    li:nth-child(6) {
+    background-color: ${({ open , bgOut, bgIn, textOut, textIn}) => bgOut};
+
     min-height: 23px;
   }
     
