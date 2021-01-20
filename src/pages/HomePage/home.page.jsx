@@ -5,7 +5,7 @@ import {WhiteBackground, VideoContainer, PinkBackground} from './home.page.style
 import GlobalStyle from "../globalStyles";
 import NavBar from "../../components/NavBar/NavBar.component";
 import Stats from "../../components/Stats/stats.component";
-import PinkTextBox from "../../components/PinkTextBox/pinktextbox.components";
+import PinkTextBox from "../../components/PinkTextBox/pinktextbox.component";
 import ImageCorousel from  "../../components/ImageCorousel/imagecorousel.component";
 
 
