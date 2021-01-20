@@ -11,7 +11,6 @@ export const Nav = styled.nav`
   justify-content: space-between;
 img{
   width: 4em;
-  position: fixed;
 }
 `
 
@@ -91,7 +90,6 @@ export const StyledBurger = styled.div`
 
   width: 2rem;
   height: 2rem;
-  position: fixed;
   top: 25px;
   right: 25px;
   z-index: 20;
