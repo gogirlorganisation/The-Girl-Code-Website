@@ -1,14 +1,16 @@
 import React, { Component } from "react";
 // import { Container } from "react-bootstrap";
 import {
-  Background,
   BoxText,
   Input,
   Button,
   BoxImage,
+  Logo,
+  SecondaryButton,
 } from "./startchapter.styles";
-import Heading from "../heading.components";
-import { Image } from "react-bootstrap";
+import Heading from "../Heading/heading.component";
+import { Container, Image } from "react-bootstrap";
+import logo from "../../assets/plus.png";
 
 class StartChapter extends Component {
   state = {
@@ -18,7 +20,7 @@ class StartChapter extends Component {
   render() {
     return (
       <div>
-        <Background>
+        <Container style={{ textAlign: "center" }}>
           <Heading heading={this.props.heading} />
           <BoxText>
             At The Girl Code, we aim to bridge the gender gap in the tech
@@ -29,7 +31,16 @@ class StartChapter extends Component {
           </BoxText>
           <Input placeholder="Find Chapters Near You" />
           <br />
-          <Button>Start your Own Chapter</Button>
+
+          <Button type="submit">
+            {" "}
+            <Logo
+              src={logo}
+              alt="Search"
+              style={{ width: "1.7rem", margin: "0 0.8rem" }}
+            />
+            Start your Own Chapter
+          </Button>
           <br />
           <BoxImage>
             <Image
@@ -37,7 +48,10 @@ class StartChapter extends Component {
               style={{ width: "100%" }}
             />
           </BoxImage>
-        </Background>
+          <SecondaryButton type="submit">
+            Start your Own Chapter
+          </SecondaryButton>
+        </Container>
       </div>
     );
   }
