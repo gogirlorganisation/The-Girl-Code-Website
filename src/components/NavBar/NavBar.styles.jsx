@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 export const Nav = styled.nav`
+  position: absolute;
   z-index:1000;
   width: 100%;
   height: 80px;
@@ -8,9 +9,10 @@ export const Nav = styled.nav`
   display: flex;
   background-color: ${({bgOut, bgIn, textOut, textIn}) => bgOut};
   justify-content: space-between;
-  .logo {
-    padding: 15px 0;
-  }
+img{
+  width: 4em;
+  position: fixed;
+}
 `
 
 export const Ul = styled.ul`
@@ -18,6 +20,8 @@ export const Ul = styled.ul`
   display: flex;
   flex-flow: row nowrap;
   z-index:10;
+  background-color: ${({ open , bgOut, bgIn, textOut, textIn}) => bgOut};
+  
   li {
     font-weight: 700;
     background-color: ${({ open , bgOut, bgIn, textOut, textIn}) => bgOut};
@@ -27,16 +31,33 @@ export const Ul = styled.ul`
   }
 
   li:nth-child(6) {
-    min-height: 30px;
+    min-height: 29px;
 
       text-align:center;
       background-color: ${({ open , bgOut, bgIn, textOut, textIn}) => bgOut};
       color: ${({ open , bgOut, bgIn, textOut, textIn}) => textOut}; 
       min-width: 100px; 
-      border: 2px solid black;
+      border: 2px solid ${({ open , bgOut, bgIn, textOut, textIn}) => textOut};
       border-radius: 7px;
   }
 
+  @media (max-width: 910px) and (min-width: 768px) {
+
+  li {
+    background-color: ${({ open , bgOut, bgIn, textOut, textIn}) => bgOut};
+
+    margin: 4px 10px;
+     font-size: 14px;
+  }
+
+   li:nth-child(6) {
+    background-color: ${({ open , bgOut, bgIn, textOut, textIn}) => bgOut};
+
+    min-height: 23px;
+  }
+    
+    
+  }
   @media (max-width: 768px) {
     flex-flow: column nowrap;
     background-color: ${({ open , bgOut, bgIn, textOut, textIn}) => bgIn};
@@ -50,7 +71,7 @@ export const Ul = styled.ul`
     padding-top: 3.5rem;
     transition: transform 0.3s ease-in-out;
     li {
-        background-color: ${({ open , bgOut, bgIn, textOut, textIn}) => bgIn};
+        background-color: ${({ open , bgOut, bgIn, textOut, textIn}) => bgOut};
         padding: 15px 35px;
         color: ${({ open , bgOut, bgIn, textOut, textIn}) => textIn};
     }
@@ -85,7 +106,7 @@ export const StyledBurger = styled.div`
     z-index:1000;
     width: 2rem;
     height: 0.2rem;
-    background-color: ${({ open }) => open ? '#FFF' : '#000'};
+    background-color: ${({ open }) => open ? '#000' : '#FFF'};
     border-radius: 10px;
     transform-origin: 1px;
     transition: all 0.3s linear;
