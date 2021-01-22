@@ -11,13 +11,45 @@ import {
 import Heading from "../Heading/heading.component";
 import { Container, Image } from "react-bootstrap";
 import logo from "../../assets/plus.png";
+import { Link } from "react-router-dom";
 
 class StartChapter extends Component {
   state = {
     searchItems: this.props.searchItems,
     linkedItems: this.props.linkedItems,
+    found: false,
   };
+
+  handleChange = (e) => {
+    const { searchItems } = this.state;
+    this.setState({ search: e.target.value });
+    if (!searchItems.includes(e.target.value)) this.setState({ found: false });
+    else this.setState({ found: true });
+  };
+
   render() {
+    const JoinButton = (text, link) => (
+      <Button type="button">
+        <Link to={link} />{" "}
+        <Logo
+          src={logo}
+          alt="Search"
+          style={{ width: "1.7rem", margin: "0 0.8rem" }}
+        />
+        {text}
+      </Button>
+    );
+    const SecondaryJoinButton = (text, link) => (
+      <SecondaryButton type="button">
+        <Link to={link} />{" "}
+        <Logo
+          src={logo}
+          alt="Search"
+          style={{ width: "1.7rem", margin: "0 0.8rem" }}
+        />
+        {text}
+      </SecondaryButton>
+    );
     return (
       <div>
         <Container style={{ textAlign: "center" }}>
@@ -29,18 +61,15 @@ class StartChapter extends Component {
             platform and intuitive curriculum, we plan to give rise to a new
             generation of female programmers set to take the world by storm.
           </BoxText>
-          <Input placeholder="Find Chapters Near You" />
+          <Input
+            placeholder="Find Chapters Near You"
+            onChange={this.handleChange}
+          />
           <br />
 
-          <Button type="submit">
-            {" "}
-            <Logo
-              src={logo}
-              alt="Search"
-              style={{ width: "1.7rem", margin: "0 0.8rem" }}
-            />
-            Start your Own Chapter
-          </Button>
+          {!this.state.found
+            ? JoinButton("Start a Chapter", "#")
+            : JoinButton("Join Chapter", "#")}
           <br />
           <BoxImage>
             <Image
@@ -48,9 +77,9 @@ class StartChapter extends Component {
               style={{ width: "100%" }}
             />
           </BoxImage>
-          <SecondaryButton type="submit">
-            Start your Own Chapter
-          </SecondaryButton>
+          {!this.state.found
+            ? SecondaryJoinButton("Start a Chapter", "#")
+            : SecondaryJoinButton("Join Chapter", "#")}
         </Container>
       </div>
     );

@@ -12,11 +12,23 @@ class form extends Component {
 
   handleChange = (e) => {
     this.setState({ [e.target.name]: e.target.value });
-    console.log(e.target.value);
+    // console.log(e.target.value);
   };
+
+  handleSubmit = () => {
+    const { name, gender, email } = this.state;
+
+    const formData = {
+      name,
+      gender,
+      email,
+    };
+    console.log(formData);
+  };
+
   render() {
     return (
-      <Form style={{ textAlign: "left" }}>
+      <Form style={{ textAlign: "left" }} onSubmit={this.handleSubmit}>
         <Row>
           <Col>
             <FormLabel>Name :</FormLabel>
@@ -33,10 +45,9 @@ class form extends Component {
 
             <Input name="gender" as="select" onChange={this.handleChange}>
               <option>Select</option>
-              <option>2</option>
-              <option>3</option>
-              <option>4</option>
-              <option>5</option>
+              <option>Female</option>
+              <option>Male</option>
+              <option>Others</option>
             </Input>
           </Col>
         </Row>
