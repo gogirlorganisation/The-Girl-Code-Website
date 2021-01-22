@@ -11,6 +11,7 @@ import {
 import Heading from "../Heading/heading.component";
 import { Container, Image } from "react-bootstrap";
 import logo from "../../assets/plus.png";
+import { Link } from "react-router-dom";
 
 class StartChapter extends Component {
   state = {
@@ -19,17 +20,36 @@ class StartChapter extends Component {
     found: false,
   };
 
-  componentDidMount() {
-    console.log(this.state);
-  }
-
   handleChange = (e) => {
     const { searchItems } = this.state;
     this.setState({ search: e.target.value });
     if (!searchItems.includes(e.target.value)) this.setState({ found: false });
     else this.setState({ found: true });
   };
+
   render() {
+    const JoinButton = (text, link) => (
+      <Button type="button">
+        <Link to={link} />{" "}
+        <Logo
+          src={logo}
+          alt="Search"
+          style={{ width: "1.7rem", margin: "0 0.8rem" }}
+        />
+        {text}
+      </Button>
+    );
+    const SecondaryJoinButton = (text, link) => (
+      <SecondaryButton type="button">
+        <Link to={link} />{" "}
+        <Logo
+          src={logo}
+          alt="Search"
+          style={{ width: "1.7rem", margin: "0 0.8rem" }}
+        />
+        {text}
+      </SecondaryButton>
+    );
     return (
       <div>
         <Container style={{ textAlign: "center" }}>
@@ -47,19 +67,9 @@ class StartChapter extends Component {
           />
           <br />
 
-          {!this.state.found ? (
-            <Button type="button" onClick={this.search}>
-              {" "}
-              <Logo
-                src={logo}
-                alt="Search"
-                style={{ width: "1.7rem", margin: "0 0.8rem" }}
-              />
-              Start your Own Chapter
-            </Button>
-          ) : (
-            ""
-          )}
+          {!this.state.found
+            ? JoinButton("Start a Chapter", "#")
+            : JoinButton("Join Chapter", "#")}
           <br />
           <BoxImage>
             <Image
@@ -67,13 +77,9 @@ class StartChapter extends Component {
               style={{ width: "100%" }}
             />
           </BoxImage>
-          {!this.state.found ? (
-            <SecondaryButton type="submit">
-              Start your Own Chapter
-            </SecondaryButton>
-          ) : (
-            ""
-          )}
+          {!this.state.found
+            ? SecondaryJoinButton("Start a Chapter", "#")
+            : SecondaryJoinButton("Join Chapter", "#")}
         </Container>
       </div>
     );
