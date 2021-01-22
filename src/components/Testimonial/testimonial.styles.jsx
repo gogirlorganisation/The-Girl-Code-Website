@@ -12,10 +12,11 @@ export const ImgBg=styled.div`
 
 export const QuoteStyles=styled.p`
 position:absolute;
-font-size:1.7rem;
+font-size:1.4rem;
 text-align:left;
 margin:2rem 8rem 3rem 2rem;
 @media screen and (max-width:600px) {
+        font-size:1.3rem;
         margin-left:80px;
         }
 `

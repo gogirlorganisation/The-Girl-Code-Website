@@ -22,8 +22,10 @@ import superhero from '../../assets/homepage/Superhero.jpg'
 import GlobalStyle from "../globalStyles";
 import NavBar from "../../components/NavBar/NavBar.component";
 import Stats from "../../components/Stats/stats.component";
-import PinkTextBox from "../../components/PinkTextBox/pinktextbox.components";
-import ImageCorousel from "../../components/ImageCorousel/imagecorousel.component";
+import PinkTextBox from "../../components/PinkTextBox/pinktextbox.component";
+import ImageCorousel from  "../../components/ImageCorousel/imagecorousel.component";
+
+
 
 import YoutubeVideo from "../../components/YoutubeVideo/YoutubeVideo.component";
 import SocialMediaDiv from "../../components/SocialMediaDiv/SocialMediaDiv.component";
