@@ -21,7 +21,7 @@ export default function TextCard({ heading, content }) {
         <Heading heading={heading} />
         <Row
           style={{
-            marginTop: "4rem",
+            marginTop: "2rem",
           }}
         >
           {listItems}

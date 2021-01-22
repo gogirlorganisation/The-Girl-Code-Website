@@ -3,8 +3,6 @@ import styled from "styled-components";
 export const BoxBackground=styled.div`
         background-color: #fbebf1;
         padding: 3rem 4rem 3rem 4rem;
-        margin-top: 6rem;
-        margin-bottom: 6rem;
         border-radius:25px;
         text-align:center;
         justify-content:center;
