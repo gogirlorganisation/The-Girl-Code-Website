@@ -68,6 +68,7 @@ export const StatsDiv = styled.div`
 
 export const HeadingDiv = styled.div`
     margin-bottom: 3rem;
+    text-align: center;
 `
 
 export const SuperheroDiv = styled.div`
@@ -75,7 +76,7 @@ export const SuperheroDiv = styled.div`
     flex-direction: row;
     justify-content: space-evenly;
     height: 90vh;
-    margin: 8rem 8rem
+    margin: 8rem;
 `
 
 export const SuperHeroTextDiv = styled.div`
@@ -104,5 +105,14 @@ export const YouTubeSection = styled.div`
 `;
 
 export const StartAChapterDiv = styled.div`
+margin: 6rem 0;
+background-color: #FBEDF3;
+padding: 3rem 0;
+text-align: center;
+`;
 
+export const Corousel = styled.div`
+margin: 6rem 0;
+background-color: #FBEDF3;
+padding: 3rem 0;
 `;

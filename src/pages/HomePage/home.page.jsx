@@ -22,7 +22,8 @@ import {
   SocialMediaSection,
   YouTubeSection,
   HeadingDiv,
-  StartAChapterDiv
+  StartAChapterDiv,
+  Corousel
 } from "./home.page.style";
 import superhero from '../../assets/homepage/Superhero.jpg'
 
@@ -44,6 +45,8 @@ import TextCard from '../../components/TextCard/textcard.component'
 import CommunitySection from "../../components/Community/community.component";
 import Heading from "../../components/Heading/heading.component";
 import StartChapter from "../../components/StartChapter/startchapter.component";
+import Donate from "../../components/Donate/donate.component";
+import Footer from "../../components/Footer/footer.component";
 const Header = () => {
         return (
           <div>
@@ -116,11 +119,15 @@ const Home = () => {
         </SuperHeroImgDiv>
       </SuperheroDiv>
 
+      <Corousel>
+      <ImageCorousel imgUrls = {['homepage/imagegallery/workshop.png', 'homepage/imagegallery/workshop2.jpg', 'homepage/imagegallery/workshop3.jpg', 'homepage/imagegallery/workshop4.jpg']} />
+      </Corousel>
       <TextCard 
         heading='OUR PROGRAM'
-        content = {[['WORKSHOPS', 'At The Girl Code, we aim to bridge the gender gap in the tech community.'],
-        ['WORKSHOPS', 'At The Girl Code, we aim to bridge the gender gap in the tech community.'],
-        ['WORKSHOPS', 'At The Girl Code, we aim to bridge the gender gap in the tech community.']]}
+        content = {[['WORKSHOPS', 'At The Girl Code, we aim to bridge the gender gap in the tech community.', superhero],
+        ['ONLINE', 'At The Girl Code, we aim to bridge the gender gap in the tech community.', superhero],
+        ['COMMUNITY', 'At The Girl Code, we aim to bridge the gender gap in the tech community.', superhero],
+        ['MENTORS', 'At The Girl Code, we aim to bridge the gender gap in the tech community.', superhero]]}
       />
       <SocialMediaSection>
         <Heading heading='SOCIAL MEDIA' />
@@ -140,8 +147,15 @@ const Home = () => {
       />
       </YouTubeSection>
       <StartAChapterDiv>
+        <Heading heading='Start A Chapter' />
       <StartChapter />
       </StartAChapterDiv>
+      <Donate 
+        buttonText='DONATE NOW'
+        title='Help support The Girl Code'
+        content='At The Girl Code, we aim to bridge the gender gap in the tech community by inspiring young girls to learn programming by hosting workshops.'
+      />
+      <Footer />
     </div>
   );
 };
