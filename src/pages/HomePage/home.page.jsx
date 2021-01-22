@@ -18,6 +18,7 @@ import {
   StatsDiv,
 } from "./home.page.style";
 import superhero from '../../assets/homepage/Superhero.jpg'
+import { StylePee, StyledJumbo, StyleHead, StyledButtonOne, StyledButtonTwo,  StyledRow, StyledContainer } from "./home.page.style";
 
 import GlobalStyle from "../globalStyles";
 import NavBar from "../../components/NavBar/NavBar.component";
@@ -34,26 +35,27 @@ import MemberCard from "../../components/MemberCard/MemberCard.component";
 import Team from "../../components/Team/Team.component";
 import TextCard from "../../components/TextCard/textcard.components";
 const Header = () => {
-  return (
-    <div>
-      <StyledJumbo>
-        <StyledContainer>
-          <StyledRow className="justify-content-center">
-            <StyleHead>Welcome To The Girl Code</StyleHead>
-          </StyledRow>
-          <StyledRow className="justify-content-center">
-            <StyledButton variant="outline-light" className="rounded-0 mr-3">
-              Party
-            </StyledButton>{" "}
-            <StyledButton variant="outline-light" className="rounded-0 ml-3">
-              Tym
-            </StyledButton>{" "}
-          </StyledRow>
-        </StyledContainer>
-      </StyledJumbo>
-    </div>
-  );
-};
+        return (
+          <div>
+            <StyledJumbo>
+             
+            <StyledContainer>
+            <StyledRow className="justify-content-center">
+                <StyleHead>Welcome To The Girl Code</StyleHead>
+            </StyledRow>
+            <StyledRow className="justify-content-center mt-2">
+                <StylePee>We seek to inspire girls to discover and pursue programming</StylePee>
+            </StyledRow>
+            <StyledRow className="justify-content-center mt-5">
+                <StyledButtonOne variant="outline-light" className="rounded-0">JOIN US</StyledButtonOne>{' '}
+                <StyledButtonTwo variant="outline-light" className="rounded-0">LEARN MORE</StyledButtonTwo>{' '}
+            </StyledRow>
+            </StyledContainer>
+           </StyledJumbo>
+          </div>
+        )
+    
+}
 
 const Home = () => {
   return (
