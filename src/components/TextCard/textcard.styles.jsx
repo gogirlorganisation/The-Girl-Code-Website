@@ -23,6 +23,4 @@ export const Content=styled.p`
 
 export const Alignment=styled.div`
 text-align: center;
-padding-top: 1.5rem;
-padding-bottom: 1.5rem;
 `

@@ -8,14 +8,10 @@ import LeadCard from "../components/LeadCard/LeadCard.component";
 import MemberCard from "../components/MemberCard/MemberCard.component";
 import Team from "../components/Team/Team.component";
 import Testimonial from "../components/Testimonial/testimonial.component";
-import TextCard from "../components/TextCard/textcard.components";
+
 import StartChapter from "../components/StartChapter/startchapter.component";
-import Stats from "../components/Stats/stats.component";
 import Card from "../components/Card/card.component";
-import TextCard from "../components/TextCard/textcard.component";
-// import StartChapter from "../components/StartChapter/startchapter.component";
 import Stats from "../components/Stats/stats.component";
-import Card from "../components/Card/card.components";
 //import CommunitySection from "../components/Community/community.component"
 
 const Home = () => {
