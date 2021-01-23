@@ -11,7 +11,7 @@ export const BoxText = styled.p`
   @media screen and (min-width: 767px) {
     text-align: center;
     font-size: 1.4rem;
-    padding: 0 2rem 3rem 2rem;
+    padding: 0 2rem 2rem 2rem;
   }
 `;
 
