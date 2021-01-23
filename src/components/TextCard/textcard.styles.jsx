@@ -6,7 +6,7 @@ export const Title=styled.p`
           font-size:1.7rem;
           line-height: 144%;
           letter-spacing: 2px;
-          margin-top: 2rem;
+          
           text-align:center;
     @media screen and (max-width:992px) {
         font-size: 1.45rem;
@@ -23,6 +23,4 @@ export const Content=styled.p`
 
 export const Alignment=styled.div`
 text-align: center;
-padding-top: 1.5rem;
-padding-bottom: 1.5rem;
 `

@@ -6,6 +6,9 @@ import styled from "styled-components";
         @media screen and (min-width:768px) {
           padding-top: 3rem;
         }
+        @media screen and (max-width:768px) {
+          padding-top: 2rem;
+        }
     
  `
  export const TextAlign=styled.p`
@@ -14,7 +17,10 @@ import styled from "styled-components";
    padding-top:0.4rem;
    padding-left:4rem;
    text-align:left;
-   @media screen and (max-width:767px) {
+   @media screen and (max-width:1200px) {
+            font-size:1.3rem;
+          }
+   @media screen and (max-width:992px) {
      text-align: center;
      font-size: 1.2rem;
      padding-right:4rem;
@@ -23,10 +29,10 @@ import styled from "styled-components";
  `
  export const Icons=styled.div`
           font-size: 1.6rem;
-          @media screen and (max-width:1500px) {
+          @media screen and (max-width:1200px) {
             font-size:1.3rem;
           }
-        @media screen and (max-width:767px) {
+        @media screen and (max-width:992px) {
      text-align: center;
      font-size: 1.2rem;
      padding-right:6rem;
@@ -36,7 +42,12 @@ export const PartnerStyle=styled.div`
                 text-align: center;
                 font-size:1.5rem;
                 font-weight:650;
-                @media screen and (max-width:767px) {
+                @media screen and (max-width:1200px) {
+            font-size:1.3rem;
+            margin-left:2.5rem;
+            margin-top:1.5rem;
+          }
+                @media screen and (max-width:992px) {
                   font-size: 1.25rem;
                 }
 ` 

@@ -7,7 +7,7 @@ const MemberCard = ({imgUrl, name, designation}) => {
     return (
         <Container className="mt-3">
         <Row>
-            <Col xs={{ span: 6 }} md={{span: 3}} className="mx-auto">
+            <Col xs={{ span: 6 }} md={{span: 3}} lg={{span: 2}} className="mx-auto">
             <Image src={imgUrl} roundedCircle fluid/>
             <NameStyle className="text-center mt-3 text-uppercase">{name}</NameStyle>
             </Col>

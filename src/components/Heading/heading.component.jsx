@@ -7,7 +7,7 @@ export default function Heading({ heading}) {
   return (
       <Container>
           <Col>
-            <Title style={{paddingTop:"4rem",marginBottom:"2rem"}}>
+            <Title style={{marginBottom:"1rem", textAlign: 'center'}}>
                 {heading}
             </Title>
         </Col>
