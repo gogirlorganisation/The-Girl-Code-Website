@@ -3,10 +3,18 @@ import { Container, Row, Col, Image } from "react-bootstrap";
 import NavBar from "../../components/NavBar/NavBar.component";
 import GlobalStyle from "../globalStyles";
 import JoinImg from "../../assets/joinuspage.jpg";
-import { MainHeading, HeaderText } from "./joinus.page.style";
+import {
+  MainHeading,
+  HeaderText,
+  StartChapterSection,
+} from "./joinus.page.style";
 import Heading from "../../components/Heading/heading.component";
-import TextBox from "../../components/PinkTextBox/pinktextbox.component";
+import TextCard from "../../components/TextCard/textcard.component";
 import PinkTextBox from "../../components/PinkTextBox/pinktextbox.component";
+import Button from "../../components/Button/button.component";
+import superhero from "../../assets/homepage/Superhero.jpg";
+import JoinCommunity from "../../components/JoinCommunity/joincommunity.components";
+import StartChapter from "../../components/StartChapter/startchapter.component";
 
 const JoinUs = () => {
   return (
@@ -37,8 +45,38 @@ const JoinUs = () => {
         }
       />
       <Container style={{ textAlign: "center", marginTop: "4rem" }}>
-        <Heading heading={"Interships"} />
+        <TextCard
+          heading="INTERNSHIPS"
+          content={[
+            [
+              "WORKSHOPS",
+              "At The Girl Code, we aim to bridge the gender gap in the tech community.",
+              superhero,
+            ],
+            [
+              "ONLINE",
+              "At The Girl Code, we aim to bridge the gender gap in the tech community.",
+              superhero,
+            ],
+            [
+              "COMMUNITY",
+              "At The Girl Code, we aim to bridge the gender gap in the tech community.",
+              superhero,
+            ],
+            [
+              "COMMUNITY",
+              "At The Girl Code, we aim to bridge the gender gap in the tech community.",
+              superhero,
+            ],
+          ]}
+        />
+        <Button Text={"Apply Now"} />
       </Container>
+      <JoinCommunity />
+      <StartChapterSection>
+        <Heading heading={"Start a chapter"} />
+        <StartChapter />
+      </StartChapterSection>
     </>
   );
 };

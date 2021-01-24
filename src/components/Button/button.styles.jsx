@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const ButtonStyle = styled.div`
+  cursor: pointer;
   display: inline-flex;
   flex-grow: 0;
   width: auto;
@@ -9,7 +10,7 @@ export const ButtonStyle = styled.div`
   font-size: 1.4rem;
   border-width: 2px;
   border-color: #ffff;
-  padding: 15px 30px;
+  padding: 0.8rem 4rem;
   border-radius: 5px;
   letter-spacing: 2;
   margin-right: 1rem;

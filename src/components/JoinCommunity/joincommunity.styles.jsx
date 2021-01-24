@@ -1,8 +1,15 @@
 import styled from "styled-components";
 
+export const Background = styled.div`
+  margin-top: 3rem;
+  padding: 4rem 0;
+  background-color: rgba(215, 75, 131, 0.1);
+  text-align: center;
+`;
+
 export const TextBox = styled.p`
   font-family: "Inter", sans-serif;
-  font-size: 1.125rem;
+  font-size: 1.3rem;
   text-align: left;
   margin-top: 2rem;
   padding-top: 6rem;

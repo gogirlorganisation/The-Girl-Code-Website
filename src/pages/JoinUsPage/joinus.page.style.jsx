@@ -1,5 +1,10 @@
 import styled from "styled-components";
 
+export const StartChapterSection = styled.div`
+  margin-top: 3rem;
+  text-align: center;
+`;
+
 export const MainHeading = styled.p`
   font-weight: 900;
   font-size: 60px;
