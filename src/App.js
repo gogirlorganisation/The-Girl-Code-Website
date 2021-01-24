@@ -9,14 +9,15 @@ import {
 } from "react-router-dom";
 import Home from "./pages/HomePage/home.page";
 import AllComponents from "./pages/allcomponents";
-import Form from "./components/form";
+// import Form from "./components/form";
+import JoinUs from "./pages/JoinUsPage/joinus.page";
 class App extends Component {
   render() {
     return (
       <Router>
         <Route exact path="/" component={Home} />
         <Route exact path="/all" component={AllComponents} />
-        <Route exact path="/form" component={Form} />
+        <Route exact path="/joinus" component={JoinUs} />
       </Router>
     );
   }
