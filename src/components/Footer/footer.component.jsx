@@ -1,5 +1,5 @@
 import React from "react";
-import "../../../../new-website-main/src/components/community/node_modules/bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 import { Container, Row, Col, Image } from "react-bootstrap";
 import { Background ,Icons,TextAlign, PartnerStyle, FooterEnd} from "./footer.styles";
 

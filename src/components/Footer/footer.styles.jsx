@@ -4,7 +4,7 @@ import styled from "styled-components";
         background-color: #63379A;
         color: white;
         @media screen and (min-width:768px) {
-          padding-top: 3rem;
+          padding-top: 1.5rem;
         }
         @media screen and (max-width:768px) {
           padding-top: 2rem;

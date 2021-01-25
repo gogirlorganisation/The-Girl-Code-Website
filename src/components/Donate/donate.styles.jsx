@@ -17,7 +17,7 @@ padding-top:1.7rem;
 export const Title=styled.h2`
 color:#F05680;
 font-weight:800;
-font-size:38px;
+font-size:35px;
 padding-bottom:1.4rem;
 @media screen and (max-width:992px) {
      font-size: 30px;
@@ -30,11 +30,11 @@ padding-bottom:1.4rem;
 `
 export const Content=styled.p`
 text-align:left;
-font-size:22px;
+font-size:20px;
 padding-right:5rem;
 padding-bottom:1rem;
 @media screen and (max-width:992px) {
-     font-size: 20px;
+     font-size: 18px;
 }
 @media screen and (max-width:786px) {
    padding-left:2rem;
