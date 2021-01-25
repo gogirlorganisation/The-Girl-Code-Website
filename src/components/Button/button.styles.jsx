@@ -6,13 +6,12 @@ export const ButtonStyle=styled.div`
           width: auto;
         font-weight: 600;
         color: #F05680;
-        font-size:1.4rem;
+        font-size:18px;
         border-width: 2px;
         border-color: #ffff;
-        padding: 15px 30px;
+        padding: 20px 100px;
         border-radius: 5px;
-        letter-spacing: 2;
-        margin-right: 1rem;
+        letter-spacing: 2px;
         box-shadow: 0 3px 4px #F05680;
         &:hover {
           background-color: #F05680;
@@ -20,9 +19,8 @@ export const ButtonStyle=styled.div`
           border-color: #F05680;
           font-weight: 700;
         }
-        @media screen and (max-width:400px) {
-          padding: 8px 16px !important;
-          margin-left: 0.5rem;
+        @media screen and (max-width:768px) {
+          margin-left: 2rem;
           margin-right: 0.5rem;
           margin-top: 0.5rem;
           font-size: 1rem;

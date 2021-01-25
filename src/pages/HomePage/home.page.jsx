@@ -118,9 +118,9 @@ const Home = () => {
 
       <TextCard 
         heading='OUR PROGRAM'
-        content = {[['WORKSHOPS', 'At The Girl Code, we aim to bridge the gender gap in the tech community.'],
-        ['WORKSHOPS', 'At The Girl Code, we aim to bridge the gender gap in the tech community.'],
-        ['WORKSHOPS', 'At The Girl Code, we aim to bridge the gender gap in the tech community.']]}
+        content = {[['WORKSHOPS', 'At The Girl Code, we aim to bridge the gender gap in the tech community.'/*,'ImgUrl'*/],
+        ['WORKSHOPS', 'At The Girl Code, we aim to bridge the gender gap in the tech community.'/*,'ImgUrl'*/],
+        ['WORKSHOPS', 'At The Girl Code, we aim to bridge the gender gap in the tech community.'/*,'ImgUrl'*/]]}
       />
       <SocialMediaSection>
         <Heading heading='SOCIAL MEDIA' />
