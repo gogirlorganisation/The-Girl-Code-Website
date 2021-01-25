@@ -1,7 +1,7 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Container, Row, Col, Image } from "react-bootstrap";
-import Btn from "../Button/button.component";
+import ShadowButton from "../Button/button.component";
 import {Background,Alignment,Title,Content} from "./donate.styles";
 
 export default function Donate({button,title,content})
@@ -30,7 +30,7 @@ export default function Donate({button,title,content})
                 </Row>
                 </Container>
                 <Row xs={12}>
-                    <Btn buttonText={button}/>
+                    <ShadowButton buttonText={button}/>
                 </Row>
                 </Col>
             </Row>

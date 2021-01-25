@@ -103,24 +103,18 @@ const Home = () => {
       </SuperheroDiv> */}
       
 
-      <SuperheroDiv>
-        <SuperHeroTextDiv>
+      
         <CommunitySection
         content = {[['Confidence', 'At The Girl Code, we aim to bridge the gender gap in the tech community.'],
         ['Community', 'At The Girl Code, we aim to bridge the gender gap in the tech community.'],
         ['Curiosity', 'At The Girl Code, we aim to bridge the gender gap in the tech community.']]}
       />
-        </SuperHeroTextDiv>
-        <SuperHeroImgDiv>
-          <SuperHeroImg src={superhero} />
-        </SuperHeroImgDiv>
-      </SuperheroDiv>
 
       <TextCard 
         heading='OUR PROGRAM'
-        content = {[['WORKSHOPS', 'At The Girl Code, we aim to bridge the gender gap in the tech community.'/*,'ImgUrl'*/],
-        ['WORKSHOPS', 'At The Girl Code, we aim to bridge the gender gap in the tech community.'/*,'ImgUrl'*/],
-        ['WORKSHOPS', 'At The Girl Code, we aim to bridge the gender gap in the tech community.'/*,'ImgUrl'*/]]}
+        content = {[['WORKSHOPS', 'At The Girl Code, we aim to bridge the gender gap in the tech community.',/*imgurl*/],
+        ['WORKSHOPS', 'At The Girl Code, we aim to bridge the gender gap in the tech community.',/*imgurl*/],
+        ['WORKSHOPS', 'At The Girl Code, we aim to bridge the gender gap in the tech community.',/*imgurl*/]]}
       />
       <SocialMediaSection>
         <Heading heading='SOCIAL MEDIA' />
