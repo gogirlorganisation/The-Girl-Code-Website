@@ -76,7 +76,7 @@ export const SuperheroDiv = styled.div`
     flex-direction: row;
     justify-content: space-evenly;
     height: 90vh;
-    margin: 8rem;
+    margin: 8rem 8rem;
 `
 
 export const SuperHeroTextDiv = styled.div`

@@ -5,7 +5,7 @@ export const Title = styled.div`
   width: auto;
   color: #d74b8d;
   font-weight: 800;
-  font-size: 2.1rem;
+  font-size: 30px;
   text-transform: uppercase;
   letter-spacing: 2px;
   line-height: 2.5rem;

@@ -106,28 +106,21 @@ const Home = () => {
       </SuperheroDiv> */}
       
 
-      <SuperheroDiv>
-        <SuperHeroTextDiv>
+      
         <CommunitySection
         content = {[['Confidence', 'At The Girl Code, we aim to bridge the gender gap in the tech community.'],
         ['Community', 'At The Girl Code, we aim to bridge the gender gap in the tech community.'],
         ['Curiosity', 'At The Girl Code, we aim to bridge the gender gap in the tech community.']]}
       />
-        </SuperHeroTextDiv>
-        <SuperHeroImgDiv>
-          <SuperHeroImg src={superhero} />
-        </SuperHeroImgDiv>
-      </SuperheroDiv>
 
       <Corousel>
       <ImageCorousel imgUrls = {['homepage/imagegallery/workshop.png', 'homepage/imagegallery/workshop2.jpg', 'homepage/imagegallery/workshop3.jpg', 'homepage/imagegallery/workshop4.jpg']} />
       </Corousel>
       <TextCard 
         heading='OUR PROGRAM'
-        content = {[['WORKSHOPS', 'At The Girl Code, we aim to bridge the gender gap in the tech community.', superhero],
-        ['ONLINE', 'At The Girl Code, we aim to bridge the gender gap in the tech community.', superhero],
-        ['COMMUNITY', 'At The Girl Code, we aim to bridge the gender gap in the tech community.', superhero],
-        ['MENTORS', 'At The Girl Code, we aim to bridge the gender gap in the tech community.', superhero]]}
+        content = {[['WORKSHOPS', 'At The Girl Code, we aim to bridge the gender gap in the tech community.',/*imgurl*/],
+        ['WORKSHOPS', 'At The Girl Code, we aim to bridge the gender gap in the tech community.',/*imgurl*/],
+        ['WORKSHOPS', 'At The Girl Code, we aim to bridge the gender gap in the tech community.',/*imgurl*/]]}
       />
       <SocialMediaSection>
         <Heading heading='SOCIAL MEDIA' />

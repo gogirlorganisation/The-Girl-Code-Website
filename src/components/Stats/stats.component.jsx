@@ -12,7 +12,7 @@ export default function Stats({ stats }) {
     </Col>
   ));
   return (
-    <Container style={{ marginTop: "2rem", maxWidth: "1200px" }} fluid>
+    <Container fluid>
       <Row >{listItems}</Row>
     </Container>
   );
