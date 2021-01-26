@@ -1,7 +1,7 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Container, Row, Col, Image } from "react-bootstrap";
-import { descriptionStyle, headingStyle } from "./community.styles";
+import { descriptionStyle, headingStyle } from "../Community/community.styles";
 import superhero from '../../assets/homepage/Superhero.jpg';
 
 
@@ -15,7 +15,7 @@ export default function CommunitySection({content }) {
           fontWeight: 700,
           marginLeft: "auto",
           marginRight: "auto",
-        }}
+        }} fluid
       >
          <headingStyle>{c[0]}</headingStyle>
       </div>
@@ -24,7 +24,7 @@ export default function CommunitySection({content }) {
           color: "#666666",
           fontSize: "17px",
           textAlign: "center",
-          marginBottom:"3rem",
+          marginBottom:"2rem",
           padding:"0.1rem 3rem",
         }}
       >
@@ -43,7 +43,7 @@ export default function CommunitySection({content }) {
           md={6}
           style={{ marginTop: "auto", marginBottom: "auto", textAlign: "center" }}
         >
-          <Image src={superhero} fluid style={{maxHeight: "70vh",margin:"3rem"}}/>
+          <Image src={superhero} fluid style={{maxHeight: "60vh",margin:"3rem"}}/>
         </Col>
       </Row>
     </Container>
