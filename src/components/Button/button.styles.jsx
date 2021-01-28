@@ -6,10 +6,10 @@ export const ButtonStyle=styled.div`
           width: auto;
         font-weight: 600;
         color: #F05680;
-        font-size:18px;
+        font-size:16px;
         border-width: 2px;
         border-color: #ffff;
-        padding: 20px 100px;
+        padding: 15px 50px;
         border-radius: 5px;
         letter-spacing: 2px;
         box-shadow: 0 3px 4px #F05680;

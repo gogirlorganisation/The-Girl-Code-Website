@@ -13,7 +13,7 @@ export default function Donate({button,title,content})
             <Row>
                 <Col xs={12} md={4}>
                     <Alignment>
-                <Image src="https://imgur.com/9UFLhE6.jpg" fluid />
+                <Image src="https://imgur.com/9UFLhE6.jpg" style={{maxHeight:"150px"}} fluid />
                 </Alignment>
                 </Col>
                 <Col>
