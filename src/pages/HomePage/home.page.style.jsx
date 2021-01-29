@@ -13,14 +13,14 @@ export const StyledJumbo = styled.div`
     
 export const StyleHead = styled.div`
     font-weight: bold;
-    font-size: 25px;
+    font-size: 35px;
     background-color: transparent;
     color: white;
     text-align: center;
 `
 export const StylePee = styled.div`
     font-weight: bold;
-    font-size: 17px;
+    font-size: 19px;
     background-color: transparent;
     color: white;
     text-align: center;
@@ -34,7 +34,7 @@ export const StyledContainer = styled(Container)`
 `
 export const StyledButtonOne = styled(Button)`
     font-weight: bold;
-    font-size: 13px;
+    font-size: 15px;
     padding: 10px 60px 10px 60px;
     margin: 0px 25px 0px 0px;
 
@@ -46,7 +46,7 @@ export const StyledButtonOne = styled(Button)`
 `
 export const StyledButtonTwo = styled(Button)`
     font-weight: bold;
-    font-size: 13px;
+    font-size: 15px;
     padding: 10px 50px 10px 50px;
     margin: 0px 0px 0px 25px;
 
