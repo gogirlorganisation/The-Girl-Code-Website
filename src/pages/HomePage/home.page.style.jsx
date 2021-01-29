@@ -8,7 +8,7 @@ export const StyledJumbo = styled.div`
     padding-bottom: 250px;
     background-image: url(${Workshop});
     background-size: cover;
-    width: 100%;
+    height: 100vh;
 `
     
 export const StyleHead = styled.div`
