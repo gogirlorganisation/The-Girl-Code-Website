@@ -2,7 +2,7 @@ import React from "react";
 import { Container, Button, Col, Row, Image } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-import ChapterHeaderImg from '../../assets/homepage/Superhero.jpg'
+import HeaderImage from '../../assets/homepage/Superhero.jpg'
 
 
 import GlobalStyle from "../globalStyles";
@@ -11,8 +11,6 @@ import Stats from "../../components/Stats/stats.component";
 import PinkTextBox from "../../components/PinkTextBox/pinktextbox.component";
 import ImageCorousel from  "../../components/ImageCorousel/imagecorousel.component";
 import ShadowButton from "../../components/Button/button.component";
-
-
 import LeadCard from "../../components/LeadCard/LeadCard.component";
 import MemberCard from "../../components/MemberCard/MemberCard.component";
 import Team from "../../components/Team/Team.component";
@@ -22,12 +20,13 @@ import Donate from "../../components/Donate/donate.component";
 import Footer from "../../components/Footer/footer.component";
 
 
-import { ButtonBg, CardBg, ChapterHeading, DonateBg, HeaderBg, HeadingStyle, ImgCarouselStyle, ImgStyle } from "./team.page.styles";
+import { 
+
+} from "./team.page.styles";
 
 const Header = () => {
     return(
-        <Row>
-        </Row>
+        
     );
 };
 
@@ -42,7 +41,7 @@ const IndividualChapter = () => {
         textOut="#F05680"
         textIn="white"
       />
-      <HeaderBg>
+    <HeaderBg>
         <Header />
     </HeaderBg>
     </div>
