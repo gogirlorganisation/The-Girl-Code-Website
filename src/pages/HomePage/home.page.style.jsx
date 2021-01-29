@@ -8,19 +8,19 @@ export const StyledJumbo = styled.div`
     padding-bottom: 250px;
     background-image: url(${Workshop});
     background-size: cover;
-    width: 100%;
+    height: 100vh;
 `
     
 export const StyleHead = styled.div`
     font-weight: bold;
-    font-size: 25px;
+    font-size: 35px;
     background-color: transparent;
     color: white;
     text-align: center;
 `
 export const StylePee = styled.div`
     font-weight: bold;
-    font-size: 17px;
+    font-size: 19px;
     background-color: transparent;
     color: white;
     text-align: center;
@@ -34,7 +34,7 @@ export const StyledContainer = styled(Container)`
 `
 export const StyledButtonOne = styled(Button)`
     font-weight: bold;
-    font-size: 13px;
+    font-size: 15px;
     padding: 10px 60px 10px 60px;
     margin: 0px 25px 0px 0px;
 
@@ -46,7 +46,7 @@ export const StyledButtonOne = styled(Button)`
 `
 export const StyledButtonTwo = styled(Button)`
     font-weight: bold;
-    font-size: 13px;
+    font-size: 15px;
     padding: 10px 50px 10px 50px;
     margin: 0px 0px 0px 25px;
 
@@ -76,7 +76,7 @@ export const SuperheroDiv = styled.div`
     flex-direction: row;
     justify-content: space-evenly;
     height: 90vh;
-    margin: 8rem;
+    margin: 8rem 8rem;
 `
 
 export const SuperHeroTextDiv = styled.div`

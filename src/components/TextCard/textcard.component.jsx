@@ -7,7 +7,7 @@ import {  Content, Title, Alignment } from "./textcard.styles";
 export default function TextCard({ heading, content }) {
   const listItems = content.map((item) => (
     <Col mx-auto>
-      <Container>
+      <Container fluid>
           <Image src={item[2]} style={{justifyContent:"center"}} fluid />
       
       <Title>{item[0]}</Title>
@@ -17,7 +17,7 @@ export default function TextCard({ heading, content }) {
   ));
   return (
     <Alignment>
-      <Container>
+      <Container >
         <Heading heading={heading} />
         <Row
           style={{

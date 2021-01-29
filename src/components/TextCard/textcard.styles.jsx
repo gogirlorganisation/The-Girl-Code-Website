@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Title=styled.p`
           font-weight: 700;
           color: #46215F;
-          font-size:1.7rem;
+          font-size:26px;
           line-height: 144%;
           letter-spacing: 2px;
           
@@ -15,7 +15,7 @@ export const Title=styled.p`
 `
 export const Content=styled.p`
     color:#666666;
-    font-size:1.2rem;
+    font-size:18px;
     @media screen and (max-width:992px) {
         font-size: 0.99rem;
         padding-bottom:3rem;}

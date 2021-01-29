@@ -5,7 +5,7 @@ import {  NameStyles, QuoteStyles,TestimonialBackground,ImgBg} from "./testimoni
 import Heading from  '../Heading/heading.component';
 export default function Testimonial({text,name}){
     return(
-        <Container>
+        <Container >
             <TestimonialBackground style={{left:"auto",right:"auto"}}>
             <Heading heading={"TESTIMONIALS"}/>
                 <Row>

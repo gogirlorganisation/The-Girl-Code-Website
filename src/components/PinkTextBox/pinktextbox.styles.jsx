@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const BoxBackground=styled.div`
         background-color: #fbebf1;
-        padding: 3rem 4rem 3rem 4rem;
+        padding: 2rem 4rem 2rem 4rem;
         border-radius:25px;
         text-align:center;
         justify-content:center;
@@ -13,19 +13,17 @@ export const BoxBackground=styled.div`
 export const BoxHeading=styled.h2`
     color:#d74b8d;
     font-weight: 800;
-    letter-spacing: 0.145rem;
-    font-size: 1.225rem;
+    letter-spacing: 0.1rem;
+    font-size: 18px;
     text-align:center;
     margin:auto;
     padding-bottom:1rem;
-    @media screen and (max-width:481px) {
-        font-size: 1.125rem;
-        }
 `
 export const BoxText=styled.p`
     font-weight: 400;
     line-height: 165.24%;
+    font-size:22px;
     @media screen and (min-width:481px) {
-    font-size: 1.125rem;
+    font-size: 18px;
     }
 `

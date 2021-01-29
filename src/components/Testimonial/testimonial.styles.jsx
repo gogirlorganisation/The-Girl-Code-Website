@@ -11,12 +11,12 @@ export const ImgBg=styled.div`
 `
 
 export const QuoteStyles=styled.p`
-position:absolute;
-font-size:1.4rem;
-text-align:left;
+
+font-size:18px;
+text-align:center;
 margin:2rem 8rem 3rem 2rem;
 @media screen and (max-width:600px) {
-        font-size:1.3rem;
+        font-size:18px;
         margin-left:80px;
         }
 `
@@ -24,7 +24,7 @@ export const NameStyles=styled.p`
 float: right;
 text-align:right;
 font-weight:700;
-font-size:1.5rem;
+font-size:20px;
 margin-right:6rem;
 margin-top:2rem;
 `
