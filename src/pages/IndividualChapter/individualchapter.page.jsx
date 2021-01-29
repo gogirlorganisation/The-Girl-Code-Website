@@ -32,7 +32,7 @@ const Header = () => {
 };
 
 
-const TeamPage = () => {
+const IndividualChapter = () => {
   return (
     <div>
       <GlobalStyle />
@@ -48,5 +48,5 @@ const TeamPage = () => {
     </div>
   );
 };
-export default TeamPage;
+export default IndividualChapter;
 
