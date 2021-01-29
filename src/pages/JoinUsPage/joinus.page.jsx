@@ -7,6 +7,7 @@ import {
   MainHeading,
   HeaderText,
   StartChapterSection,
+  DonateSection,
 } from "./joinus.page.style";
 import Heading from "../../components/Heading/heading.component";
 import TextCard from "../../components/TextCard/textcard.component";
@@ -15,6 +16,8 @@ import Button from "../../components/Button/button.component";
 import superhero from "../../assets/homepage/Superhero.jpg";
 import JoinCommunity from "../../components/JoinCommunity/joincommunity.components";
 import StartChapter from "../../components/StartChapter/startchapter.component";
+import Donate from "../../components/Donate/donate.component";
+import Footer from "../../components/Footer/footer.component";
 
 const JoinUs = () => {
   return (
@@ -77,6 +80,16 @@ const JoinUs = () => {
         <Heading heading={"Start a chapter"} />
         <StartChapter />
       </StartChapterSection>
+      <DonateSection>
+        <Donate
+          title={"Help support The Girl Code"}
+          content={
+            "At The Girl Code, we aim to bridge the gender gap in the tech community by inspiring young girls to learn programming by hosting workshops."
+          }
+          button={"Donate Now"}
+        />
+      </DonateSection>
+      <Footer />
     </>
   );
 };
