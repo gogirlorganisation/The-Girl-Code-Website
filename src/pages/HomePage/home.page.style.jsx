@@ -97,7 +97,7 @@ export const SocialMediaSection = styled.div`
     text-align: center;
     margin: 6rem 0;
     background-color: #FBEDF3;
-    padding: 3rem 0;
+    padding: 3rem 13rem 3rem 13rem;
 `
 
 export const YouTubeSection = styled.div`

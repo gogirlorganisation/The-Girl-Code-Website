@@ -23,21 +23,17 @@ import {
   YouTubeSection,
   HeadingDiv,
   StartAChapterDiv,
-  Corousel
+  Corousel,
+  Bord
 } from "./team.page.styles";
 import superhero from '../../assets/homepage/Superhero.jpg'
 
 
 import GlobalStyle from "../globalStyles";
 import NavBar from "../../components/NavBar/NavBar.component";
-import Stats from "../../components/Stats/stats.component";
 import PinkTextBox from "../../components/PinkTextBox/pinktextbox.component";
-import ImageCorousel from  "../../components/ImageCorousel/imagecorousel.component";
-
 import ShadowButton from "../../components/Button/button.component";
-
-import YoutubeVideo from "../../components/YoutubeVideo/YoutubeVideo.component";
-import SocialMediaDiv from "../../components/SocialMediaDiv/SocialMediaDiv.component";
+import Directors from "../../components/Directors/Directors.component";
 import LeadCard from "../../components/LeadCard/LeadCard.component";
 import MemberCard from "../../components/MemberCard/MemberCard.component";
 import Team from "../../components/Team/Team.component";
@@ -51,28 +47,26 @@ const Header = () => {
         return (
           <div>
             <StyledJumbo>
-            <Container>
             <Row>
-                <Col md={6}><Image class="img-responsive float-left" width="100%" src={superhero}/></Col>
-                <Col md={6}>
-                  <Row class="justify content-left">
+                <Col md={5}><Image class="img-responsive float-left" width="100%" src={superhero}/></Col>
+                <Col md={{span: 5, offset:1}} class="d-flex flex-column mb-3">
+                  <Row>
                     <StyleHead>
                     Our Team
                     </StyleHead>
                   </Row>
-                 <Row class="justify content-left">
+                 <Row>
                     <StylePee>Together everyone achieves more!</StylePee>
                   </Row>
                   <Row>
-                    <Row><ShadowButton  buttonText={"INTERN WITH US"}/></Row>
-                    <Row><ShadowButton  buttonText={"START A CHAPTER"}/></Row>
-                    <Row><ShadowButton  buttonText={"JOIN OUR COMMUNITY"}/></Row>
+                    <Bord><ShadowButton  buttonText={"INTERN WITH US"}/></Bord>
+                    <Bord><ShadowButton  buttonText={"INTERN WITH US"}/></Bord>
+                    <Bord><ShadowButton  buttonText={"INTERN WITH US"}/></Bord>
                   </Row>
                 </Col>
             </Row>
 
-            </Container>
-           </StyledJumbo>
+            </StyledJumbo>
           </div>
         )
     
@@ -88,10 +82,35 @@ const Home = () => {
         textOut="#F05680"
         textIn="white"
       />
+
       <Header />
+      <Directors
+        imgUrlOne="https://source.unsplash.com/Dm-qxdynoEc/800x799"
+        nameOne="Japnit Ahuja"
+        imgUrlTwo="https://source.unsplash.com/Dm-qxdynoEc/800x799"
+        nameTwo="Samriddhi Agnihotri"
+      />
       <PinkTextBox 
-        heading='MISSION' 
+        heading='ABOUT THE DIRECTORS' 
         text='At The Girl Code, we aim to bridge the gender gap in the tech community by inspiring young girls to learn programming by hosting workshops at schools and universities local to them. Through our platform and intuitive curriculum, we plan to give rise to a new generation of female programmers set to take the world by storm.'
+      />
+      <Team backgroundColour="#FBEDF3" 
+            heading="TECHNOLOGY DEPARTMENT"
+            leads={[["https://source.unsplash.com/Dm-qxdynoEc/800x799", "Mushroom boss", "Head Of Fungi Development"]]}
+            mems={[["https://source.unsplash.com/Dm-qxdynoEc/800x799", "Mushroom"],
+                   ["https://source.unsplash.com/Dm-qxdynoEc/800x799", "Mushroom"],
+                   ["https://source.unsplash.com/Dm-qxdynoEc/800x799", "Mushroom"],
+                   ["https://source.unsplash.com/Dm-qxdynoEc/800x799", "Mushroom"]]}
+      />
+
+      <Team backgroundColour="#FFFFFF" 
+            heading="SAUCE DEPARTMENT"
+            leads={[["https://source.unsplash.com/Dm-qxdynoEc/800x799", "Mushroom boss", "Head Of Fungi Development"]]}
+            mems={[["https://source.unsplash.com/Dm-qxdynoEc/800x799", "Mushroom"],
+                   ["https://source.unsplash.com/Dm-qxdynoEc/800x799", "Mushroom"],
+                   ["https://source.unsplash.com/Dm-qxdynoEc/800x799", "Mushroom"],
+                   ["https://source.unsplash.com/Dm-qxdynoEc/800x799", "Mushroom"],
+                   ["https://source.unsplash.com/Dm-qxdynoEc/800x799", "Mushroom"]]}
       />
      
       <Donate 

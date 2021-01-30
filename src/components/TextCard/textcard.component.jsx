@@ -15,6 +15,7 @@ export default function TextCard({ heading, content }) {
       </Container>
     </Col>
   ));
+  
   return (
     <Alignment>
       <Container >

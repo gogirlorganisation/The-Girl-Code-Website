@@ -2,26 +2,30 @@ import styled from "styled-components";
 import { Button, Container, Row, Image} from 'react-bootstrap';
 import Logo from "./../../assets/Logo.png";
 import Workshop from "./../../assets/header.png";
+import ShadowButton from "../../components/Button/button.component";
 
-export const StyledJumbo = styled.div` 
-    padding-top: 150px;
-    padding-bottom: 150px;
-    height: 100vh;
+export const StyledJumbo = styled(Container)` 
+    padding-top: 100px;
+    padding-bottom: 100px;
+`
+export const Bord = styled(Row)` 
+    margin-bottom: 20px;
 `
     
 export const StyleHead = styled.div`
     font-weight: bold;
-    font-size: 45px;
-    background-color: transparent;
-    color: pink;
-    text-align: center;
+    font-size: 35px;
+    color: #F05680;
+    margin-left: 10px;
 `
 export const StylePee = styled.div`
     font-weight: bold;
-    font-size: 25px;
+    font-size: 20px;
     background-color: transparent;
-    color: pink;
-    text-align: center;
+    color: #F05680;
+    margin-left:10px;
+    margin-bottom:15px;
+
 `
 export const HeaderImage = styled(Image)` 
     padding-top: 250px;
