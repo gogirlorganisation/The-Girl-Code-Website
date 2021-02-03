@@ -1,60 +1,53 @@
 import styled from "styled-components";
-import { Button, Container, Row } from 'react-bootstrap';
+import { Button, Container, Row, Image} from 'react-bootstrap';
 import Logo from "./../../assets/Logo.png";
 import Workshop from "./../../assets/header.png";
+import ShadowButton from "../../components/Button/button.component";
 
-export const StyledJumbo = styled.div` 
-    padding-top: 250px;
-    padding-bottom: 250px;
-    background-image: url(${Workshop});
-    background-size: cover;
-    height: 100vh;
+export const StyledJumbo = styled(Container)` 
+    padding-top: 100px;
+    padding-bottom: 100px;
+`
+export const Bord = styled(Row)` 
+    margin-bottom: 20px;
 `
     
 export const StyleHead = styled.div`
     font-weight: bold;
     font-size: 35px;
-    background-color: transparent;
-    color: white;
-    text-align: center;
+    color: #F05680;
+    margin-left: 10px;
 `
 export const StylePee = styled.div`
     font-weight: bold;
-    font-size: 19px;
+    font-size: 20px;
     background-color: transparent;
-    color: white;
-    text-align: center;
+    color: #F05680;
+    margin-left:10px;
+    margin-bottom:15px;
+
+`
+export const HeaderImage = styled(Image)` 
+    padding-top: 250px;
+    padding-bottom: 250px;
+    height: 100vh;
 `
 
-export const StyledRow = styled(Row)`
-    background-color: transparent;
+export const ImgStyle=styled.div`
+    padding-left:5rem;
+    margin-left:10rem;
 `
-export const StyledContainer = styled(Container)`
-    background-color: transparent;
+export const ChapterHeading=styled.h1`
+    color:#F05680;
+    font-size:70px;
+    font-weight:700;
+    padding-top:5rem;
+    padding-bottom:3rem;
+    margin-right:20rem;
 `
-export const StyledButtonOne = styled(Button)`
-    font-weight: bold;
-    font-size: 15px;
-    padding: 10px 60px 10px 60px;
-    margin: 0px 25px 0px 0px;
-
-    @media (max-width: 768px) {
-        padding: 10px 20px 10px 20px;
-        margin: 0px 10px 10px 0px;
-
-    }
-`
-export const StyledButtonTwo = styled(Button)`
-    font-weight: bold;
-    font-size: 15px;
-    padding: 10px 50px 10px 50px;
-    margin: 0px 0px 0px 25px;
-
-    @media (max-width: 768px) {
-        padding: 10px 10px 10px 10px;
-        margin: 0px 0px 10px 10px;
-
-    }
+export const ButtonBg=styled.div`
+    margin-right:20rem;
+    margin-bottom:2rem;
 `
 
 export const PinkTextBoxDiv = styled.div`
@@ -97,7 +90,7 @@ export const SocialMediaSection = styled.div`
     text-align: center;
     margin: 6rem 0;
     background-color: #FBEDF3;
-    padding: 3rem 13rem 3rem 13rem;
+    padding: 3rem 0;
 `
 
 export const YouTubeSection = styled.div`
