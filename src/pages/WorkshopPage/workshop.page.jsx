@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Container, Row, Col, Image } from "react-bootstrap";
 import NavBar from "../../components/NavBar/NavBar.component";
 import GlobalStyle from "../globalStyles";
@@ -22,10 +22,8 @@ import {
 import Heading from "../../components/Heading/heading.component";
 import Card from "../../components/Card/card.component";
 import PinkTextBox from "../../components/PinkTextBox/pinktextbox.component";
-import Button from "../../components/Button/button.component";
 import WorkshopsImage from "../../assets/WorkshopsImage.jpg";
 import WorkshopsHeader from "../../assets/WorkshopsHeader.jpg";
-import JoinCommunity from "../../components/JoinCommunity/joincommunity.components";
 import StartChapter from "../../components/StartChapter/startchapter.component";
 import Donate from "../../components/Donate/donate.component";
 import Stats from "../../components/Stats/stats.component";
