@@ -28,25 +28,27 @@ export const ImageBox = styled.div`
 `;
 
 export const UpcomingWorkshopsDiv = styled.div`
-  margin: 4rem 0;
+  margin: 4rem 0rem;
+  padding: 4rem 24rem;
   text-align: center;
+  @media screen and (max-width: 1200px) {
+    padding: 4rem 0;
+  }
 `;
 
 export const PastWorkshopsDiv = styled.div`
-  margin-top: 3rem;
-  padding: 4rem 0;
+  margin: 4rem 0;
+  padding: 4rem 24rem;
   background-color: rgba(215, 75, 131, 0.1);
   text-align: center;
+  @media screen and (max-width: 1200px) {
+    padding: 4rem 0;
+  }
 `;
 
 export const CardsDiv = styled.div`
-  display: flex;
+  /* display: flex; */
   margin: 4rem 0;
-  text-align: left;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
 `;
 
 export const StartChapterSection = styled.div`

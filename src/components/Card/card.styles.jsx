@@ -8,8 +8,8 @@ export const Title = styled.p`
 `;
 
 export const CardHolder = styled.div`
-  width: 34%;
   margin-bottom: 2rem;
+  text-align: left;
   @media screen and (max-width: 1152px) {
     width: 100%;
   }

@@ -1,20 +1,14 @@
 import React from "react";
-import { Container, Row, Col, Image } from "react-bootstrap";
+import { Container, Row, Col, Image, Spinner } from "react-bootstrap";
 import NavBar from "../../components/NavBar/NavBar.component";
 import GlobalStyle from "../globalStyles";
-// import {
-//   MainHeading,
-//   HeaderText,
-//   StartChapterSection,
-//   DonateSection,
-// } from "./joinus.page.style";
+import { GoogleSpreadsheet } from "google-spreadsheet";
 import {
   MainHeading,
   HeaderText,
   PinkBoxDiv,
   ImageBox,
   UpcomingWorkshopsDiv,
-  CardsDiv,
   PastWorkshopsDiv,
   StartChapterSection,
   DonateSection,
@@ -32,26 +26,45 @@ import Footer from "../../components/Footer/footer.component";
 class Workshop extends React.Component {
   state = {
     data: [],
+    loading: true,
   };
 
   fetchData = async () => {
-    try {
-      const response = await fetch(
-        "https://v1.nocodeapi.com/faraz16iqbal/google_sheets/MMNWUTxhWRPIlcdp?tabId=Workshops",
-        {
-          method: "get",
-          headers: {
-            "Content-Type": "application/json",
-          },
-        }
-      );
-      const data = await response.json();
-      this.setState({ data: data.data });
-      // console.log(this.state);
-      console.log("Success:", data);
-    } catch (error) {
-      console.error("Error:", error);
-    }
+    // Initialize the sheet - doc ID is the long id in the sheets URL
+    const doc = new GoogleSpreadsheet(
+      "1L_Etdeh13tOV5BJvodoV7J8rM3HH3lDWt_CYYvLqKrs"
+    );
+
+    // Initialize Auth - see more available options at https://theoephraim.github.io/node-google-spreadsheet/#/getting-started/authentication
+    await doc.useServiceAccountAuth({
+      client_email: process.env.REACT_APP_GOOGLE_SERVICE_ACCOUNT_EMAIL,
+      private_key: process.env.REACT_APP_GOOGLE_PRIVATE_KEY,
+    });
+
+    // console.log(doc);
+
+    await doc.loadInfo(); // loads document properties and worksheets
+    // console.log(doc.title);
+    // await doc.updateProperties({ title: "renamed doc" });
+    const firstSheet = doc.sheetsByIndex[0];
+    const data = await firstSheet.getRows();
+
+    const dataArray = [];
+
+    data.forEach((da) => {
+      const { description, title, icons, image, isButton, subtitle } = da;
+      dataArray.push({ description, title, icons, image, isButton, subtitle });
+    });
+    this.setState({ data, loading: false });
+    // console.log(dataArray);
+
+    // const sheet = doc.sheetsByIndex[0]; // or use doc.sheetsById[id] or doc.sheetsByTitle[title]
+    // console.log(sheet.title);
+    // console.log(sheet.rowCount);
+
+    // // adding / removing sheets
+    // const newSheet = await doc.addSheet({ title: "hot new sheet!" });
+    // await newSheet.delete();
   };
 
   componentDidMount() {
@@ -59,19 +72,20 @@ class Workshop extends React.Component {
   }
 
   render() {
-    const { data } = this.state;
-
+    const { data, loading } = this.state;
+    console.log(data);
     const cards = data.map((card) => (
-      <Card
-        image={card.image}
-        icons={card.icons}
-        title={card.title}
-        subtitle={card.subtitle}
-        description={card.description}
-        isButton={card.isButton}
-      />
+      <Col sm={12} md={6} lg={6} key={card.title}>
+        <Card
+          image={card.image}
+          icons={card.icons}
+          title={card.title}
+          subtitle={card.subtitle}
+          description={card.description}
+          isButton={card.isButton}
+        />
+      </Col>
     ));
-
     return (
       <>
         <GlobalStyle />
@@ -117,21 +131,22 @@ class Workshop extends React.Component {
             }
           />
         </PinkBoxDiv>
-
         <UpcomingWorkshopsDiv>
-          <Heading heading={"UPCOMING WORKSHOPS"} />
-          <CardsDiv>
-            <br />
-            {cards}
-          </CardsDiv>
+          <Heading heading={"PAST WORKSHOPS"} />
+          {loading ? (
+            <Spinner animation="border" variant="danger" className="mt-5" />
+          ) : (
+            <Row className="mt-5">{cards}</Row>
+          )}
         </UpcomingWorkshopsDiv>
 
         <PastWorkshopsDiv>
           <Heading heading={"UPCOMING WORKSHOPS"} />
-          <CardsDiv>
-            <br />
-            {cards}
-          </CardsDiv>
+          {loading ? (
+            <Spinner animation="border" variant="danger" className="mt-5" />
+          ) : (
+            <Row className="mt-5">{cards}</Row>
+          )}
         </PastWorkshopsDiv>
 
         <StartChapterSection>
@@ -147,54 +162,6 @@ class Workshop extends React.Component {
             button={"Donate Now"}
           />
         </DonateSection>
-        {/* <PinkTextBox
-        heading={"WHY WORK WITH US"}
-        text={
-          "At The Girl Code, we aim to bridge the gender gap in the tech community by inspiring young girls to learn programming by hosting workshops at schools and universities local to them. Through our platform and intuitive curriculum, we plan to give rise to a new generation of female programmers set to take the world by storm."
-        }
-      />
-      <Container style={{ textAlign: "center", marginTop: "4rem" }}>
-        <TextCard
-          heading="INTERNSHIPS"
-          content={[
-            [
-              "WORKSHOPS",
-              "At The Girl Code, we aim to bridge the gender gap in the tech community.",
-              superhero,
-            ],
-            [
-              "ONLINE",
-              "At The Girl Code, we aim to bridge the gender gap in the tech community.",
-              superhero,
-            ],
-            [
-              "COMMUNITY",
-              "At The Girl Code, we aim to bridge the gender gap in the tech community.",
-              superhero,
-            ],
-            [
-              "COMMUNITY",
-              "At The Girl Code, we aim to bridge the gender gap in the tech community.",
-              superhero,
-            ],
-          ]}
-        />
-        <Button Text={"Apply Now"} />
-      </Container>
-      <JoinCommunity />
-      <StartChapterSection>
-        <Heading heading={"Start a chapter"} />
-        <StartChapter />
-      </StartChapterSection>
-      <DonateSection>
-        <Donate
-          title={"Help support The Girl Code"}
-          content={
-            "At The Girl Code, we aim to bridge the gender gap in the tech community by inspiring young girls to learn programming by hosting workshops."
-          }
-          button={"Donate Now"}
-        /> */}
-        {/* </DonateSection> */}
         <Footer />
       </>
     );

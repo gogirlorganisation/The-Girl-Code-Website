@@ -31,6 +31,7 @@ const Card = ({ icons, image, title, subtitle, description, isButton }) => {
           paddingBottom: "4rem",
           margin: "0 auto",
           boxShadow: "0px 0px 5px 2px rgba(71, 71, 71, 0.22)",
+          cursor: "pointer",
         }}
       >
         <Img src={image} fluid />
