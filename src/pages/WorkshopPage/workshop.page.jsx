@@ -35,7 +35,6 @@ class Workshop extends React.Component {
       "1L_Etdeh13tOV5BJvodoV7J8rM3HH3lDWt_CYYvLqKrs"
     );
 
-    // Initialize Auth - see more available options at https://theoephraim.github.io/node-google-spreadsheet/#/getting-started/authentication
     await doc.useServiceAccountAuth({
       client_email: process.env.REACT_APP_GOOGLE_SERVICE_ACCOUNT_EMAIL,
       private_key: process.env.REACT_APP_GOOGLE_PRIVATE_KEY,

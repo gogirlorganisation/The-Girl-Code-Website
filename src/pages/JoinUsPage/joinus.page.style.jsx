@@ -8,6 +8,10 @@ export const DonateSection = styled.div`
   margin-top: 5rem;
   text-align: center;
 `;
+export const InternshipsSection = styled.div`
+  margin-top: 5rem;
+  text-align: center;
+`;
 
 export const MainHeading = styled.p`
   font-weight: 900;
