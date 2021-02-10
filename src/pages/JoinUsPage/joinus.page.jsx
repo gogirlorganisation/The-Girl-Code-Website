@@ -57,7 +57,8 @@ const JoinUs = () => {
         }
       />
       <InternshipsSection>
-        <Container>
+        <Heading heading="INTERNSHIPS" />
+        <Container className="mt-5">
           <Internships
             content={[
               [
@@ -88,6 +89,7 @@ const JoinUs = () => {
             ]}
           />
         </Container>
+        <Button Text={"Apply Now"} />
       </InternshipsSection>
       {/* <Container style={{ textAlign: "center", marginTop: "4rem" }}>
         <Button Text={"Apply Now"} />

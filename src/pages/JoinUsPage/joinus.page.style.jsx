@@ -9,7 +9,7 @@ export const DonateSection = styled.div`
   text-align: center;
 `;
 export const InternshipsSection = styled.div`
-  margin-top: 5rem;
+  margin-top: 4rem;
   text-align: center;
 `;
 
