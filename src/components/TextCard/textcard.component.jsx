@@ -15,9 +15,10 @@ export default function TextCard({ heading, content }) {
       </Container>
     </Col>
   ));
+  
   return (
     <Alignment>
-      <Container>
+      <Container >
         <Heading heading={heading} />
         <Row
           style={{
