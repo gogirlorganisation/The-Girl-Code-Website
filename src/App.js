@@ -13,15 +13,20 @@ import AllComponents from "./pages/allcomponents";
 import IndividualChapter from "./pages/IndividualChapter/individualchapter.page";
 
 import Form from "./components/form";
+// import Form from "./components/form";
+import JoinUs from "./pages/JoinUsPage/joinus.page";
+import Workshop from "./pages/WorkshopPage/workshop.page";
 class App extends Component {
   render() {
     return (
       <Router>
-        <Route exact path="/" component={Home} />
+        <Route exact path="/workshops" component={Workshop} />
         <Route exact path="/all" component={AllComponents} />
         <Route exact path="/form" component={Form} />
         <Route exact path="/team" component={TeamPage} />
         <Route exact path="/individualchapter" component={IndividualChapter} />
+        <Route exact path="/joinus" component={JoinUs} />
+        <Route exact path="/" component={Home} />
       </Router>
     );
   }

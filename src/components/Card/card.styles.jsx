@@ -7,6 +7,14 @@ export const Title = styled.p`
   margin-bottom: 0.5rem;
 `;
 
+export const CardHolder = styled.div`
+  margin-bottom: 2rem;
+  text-align: left;
+  @media screen and (max-width: 1152px) {
+    width: 100%;
+  }
+`;
+
 export const Subtitle = styled.p`
   color: #777;
   font-weight: bold;
@@ -32,7 +40,7 @@ export const Description = styled.p`
 `;
 
 export const Img = styled.img`
-  max-width: 16rem;
+  width: 80%;
   padding: 2rem 0 0 0;
   margin: 0 auto;
   border-radius: 10px 10px;
@@ -42,9 +50,9 @@ export const Button = styled.button`
   position: absolute;
   bottom: 0;
   right: 0;
-  width: 8rem;
-  height: 2.5rem;
-  font-size: 0.8rem;
+  width: 10rem;
+  height: 3.5rem;
+  font-size: 1rem;
   background-color: #f05680;
   color: white;
   border: none;

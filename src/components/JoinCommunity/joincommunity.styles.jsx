@@ -1,21 +1,28 @@
 import styled from "styled-components";
 
+export const Background = styled.div`
+  margin-top: 3rem;
+  padding: 4rem 0;
+  background-color: rgba(215, 75, 131, 0.1);
+  text-align: center;
+`;
+
 export const TextBox = styled.p`
   font-family: "Inter", sans-serif;
-  font-size: 1.125rem;
+  font-size: 1.3rem;
   text-align: left;
   margin-top: 2rem;
   padding-top: 6rem;
   padding-left: 12rem;
   @media screen and (max-width: 600px) {
-    font-size: 1.125rem;
-    padding-left: 0;
+    font-size: 1.5rem;
+    padding: 0 0.8rem;
   }
 `;
 
 export const Input = styled.input`
   width: 70%;
-  height: 2.5rem;
+  height: 3.25rem;
   margin-bottom: 1rem;
   padding-left: 0.5rem;
   font-size: 0.8rem;
@@ -40,8 +47,8 @@ export const FormBox = styled.div`
   text-align: center;
   margin-left: 10rem;
   @media screen and (max-width: 600px) {
-    margin-left: 0;
-    width: 100%;
+    margin: 0 auto;
+    width: 90%;
   }
 `;
 
