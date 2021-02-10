@@ -53,7 +53,7 @@ const Header = () => {
             <StyledJumbo>
              
             <StyledContainer>
-            <StyledRow className="justify-content-center">
+            <StyledRow className="justify-content-center mt-5">
                 <StyleHead>Welcome To The Girl Code</StyleHead>
             </StyledRow>
             <StyledRow className="justify-content-center mt-2">
