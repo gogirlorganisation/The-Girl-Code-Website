@@ -16,28 +16,28 @@ export default function Donate({ button, title, content }) {
           </Col>
           <Col>
             <Row>
-                <Col xs={12} md={4}>
-                    <Alignment>
-                <Image src="https://imgur.com/9UFLhE6.jpg" style={{maxHeight:"150px"}} fluid />
+              <Col xs={12} md={4}>
+                <Alignment>
+                  <Image
+                    src="https://imgur.com/9UFLhE6.jpg"
+                    style={{ maxHeight: "150px" }}
+                    fluid
+                  />
                 </Alignment>
-                </Col>
-                <Col>
+              </Col>
+              <Col>
                 <Container>
-                <Row>
-                <Title>
-                {title}
-                </Title>
-                </Row>
-                <Row>
-                    <Content>
-                    {content}
-                    </Content>
-                </Row>
+                  <Row>
+                    <Title>{title}</Title>
+                  </Row>
+                  <Row>
+                    <Content>{content}</Content>
+                  </Row>
                 </Container>
                 <Row xs={12}>
-                    <ShadowButton buttonText={button}/>
+                  <ShadowButton buttonText={button} />
                 </Row>
-                </Col>
+              </Col>
             </Row>
             <Row>
               <Content>{content}</Content>
