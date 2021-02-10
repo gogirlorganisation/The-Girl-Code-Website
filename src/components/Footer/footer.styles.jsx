@@ -12,23 +12,23 @@ import styled from "styled-components";
     
  `
  export const TextAlign=styled.p`
-   font-size: 1.4rem;
+   font-size: 1.3rem;
    line-height: 210%;
    padding-top:0.4rem;
    padding-left:4rem;
    text-align:left;
    @media screen and (max-width:1200px) {
-            font-size:1.3rem;
+            font-size:1.2rem;
           }
    @media screen and (max-width:992px) {
      text-align: center;
-     font-size: 1.2rem;
+     font-size: 1.1rem;
      padding-right:4rem;
    }
                 
  `
  export const Icons=styled.div`
-          font-size: 1.6rem;
+          font-size: 1.3rem;
           @media screen and (max-width:1200px) {
             font-size:1.3rem;
           }
@@ -40,21 +40,21 @@ import styled from "styled-components";
  `
 export const PartnerStyle=styled.div`
                 text-align: center;
-                font-size:1.5rem;
+                font-size:1.3rem;
                 font-weight:650;
                 @media screen and (max-width:1200px) {
-            font-size:1.3rem;
+            font-size:1.2rem;
             margin-left:2.5rem;
             margin-top:1.5rem;
           }
                 @media screen and (max-width:992px) {
-                  font-size: 1.25rem;
+                  font-size: 1.15rem;
                 }
 ` 
 export const FooterEnd=styled.div`
 background:#421F6D;
 text-align:center;
-margin-top:3rem;
-padding-top:1rem;
-padding-bottom:1rem;
+margin-top:0.5rem;
+padding-top:0.5rem;
+padding-bottom:0.5rem;
 `

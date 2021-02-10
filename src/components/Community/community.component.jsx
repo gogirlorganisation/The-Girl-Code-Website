@@ -1,8 +1,8 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Container, Row, Col, Image } from "react-bootstrap";
-import { descriptionStyle, headingStyle } from "../Community/community.styles";
 import superhero from '../../assets/homepage/Superhero.jpg';
+import { HeadingStyle,DescriptionStyle } from "./community.styles";
 
 
 export default function CommunitySection({content }) {
@@ -10,14 +10,15 @@ export default function CommunitySection({content }) {
     <Row>
        <div
         style={{
-          fontSize: "40px",
+          fontSize: "35px",
           color: "#D74B83",
           fontWeight: 700,
           marginLeft: "auto",
           marginRight: "auto",
         }} fluid
       >
-         <headingStyle>{c[0]}</headingStyle>
+        <HeadingStyle>{c[0]}</HeadingStyle>
+         
       </div>
       <div
         style={{
@@ -28,7 +29,7 @@ export default function CommunitySection({content }) {
           padding:"0.1rem 3rem",
         }}
       >
-       <descriptionStyle> {c[1]}</descriptionStyle>
+       <DescriptionStyle> {c[1]}</DescriptionStyle>
        </div>
     </Row>
   ));

@@ -16,6 +16,8 @@ import Form from "./components/form";
 // import Form from "./components/form";
 import JoinUs from "./pages/JoinUsPage/joinus.page";
 import Workshop from "./pages/WorkshopPage/workshop.page";
+import Chapter from "./pages/ChapterPage/chapter.page";
+import IndWorkshop from "./pages/IndWorkshopPage/IndWorksop.page";
 class App extends Component {
   render() {
     return (
@@ -27,6 +29,8 @@ class App extends Component {
         <Route exact path="/individualchapter" component={IndividualChapter} />
         <Route exact path="/joinus" component={JoinUs} />
         <Route exact path="/" component={Home} />
+        <Route exact path="/chapter" component={Chapter}/>
+        <Route exact path="/indworkshop" component={IndWorkshop}/>
       </Router>
     );
   }
