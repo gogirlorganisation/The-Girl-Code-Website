@@ -107,13 +107,15 @@ class Workshop extends React.Component {
             </Col>
           </Row>
         </Container>
-        <Stats
-          stats={[
-            ["70", "FLAGSHIP STAT1"],
-            ["400+", "FLAGSHIP STAT2"],
-            ["35", "FLAGSHIP STAT3"],
-          ]}
-        />
+        <Container className="my-4">
+          <Stats
+            stats={[
+              ["70", "FLAGSHIP STAT1"],
+              ["400+", "FLAGSHIP STAT2"],
+              ["35", "FLAGSHIP STAT3"],
+            ]}
+          />
+        </Container>
         <ImageBox>
           <Heading heading={"COVID RESPONSE"} />
           <Image

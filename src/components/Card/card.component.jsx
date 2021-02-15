@@ -20,6 +20,7 @@ const Card = ({ icons, image, title, subtitle, description, isButton }) => {
   let icon;
   if (icons) {
     icon = icons.split(" ");
+    console.log(icon);
   }
   return (
     <CardHolder>
