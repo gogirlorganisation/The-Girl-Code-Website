@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-// import { Container } from "react-bootstrap";
 import {
   BoxText,
   Input,
@@ -51,37 +50,32 @@ class StartChapter extends Component {
       </SecondaryButton>
     );
     return (
-      <div>
-        <Container style={{ textAlign: "center" }}>
-          <Heading heading={this.props.heading} />
-          <BoxText>
-            At The Girl Code, we aim to bridge the gender gap in the tech
-            community by inspiring young girls to learn programming by hosting
-            workshops at schools and universities local to them. Through our
-            platform and intuitive curriculum, we plan to give rise to a new
-            generation of female programmers set to take the world by storm.
-          </BoxText>
-          <Input
-            placeholder="Find Chapters Near You"
-            onChange={this.handleChange}
-          />
-          <br />
+      <Container style={{ textAlign: "center" }}>
+        <Heading heading={this.props.heading} />
+        <BoxText>
+          At The Girl Code, we aim to bridge the gender gap in the tech
+          community by inspiring young girls to learn programming by hosting
+          workshops at schools and universities local to them. Through our
+          platform and intuitive curriculum, we plan to give rise to a new
+          generation of female programmers set to take the world by storm.
+        </BoxText>
+        <Input
+          placeholder="Find Chapters Near You"
+          onChange={this.handleChange}
+        />
+        <br />
 
-          {!this.state.found
-            ? JoinButton("Start a Chapter", "#")
-            : JoinButton("Join Chapter", "#")}
-          <br />
-          <BoxImage>
-            <Image
-              src="https://i.imgur.com/fi5BtZq.png"
-              style={{ width: "100%" }}
-            />
-          </BoxImage>
-          {!this.state.found
-            ? SecondaryJoinButton("Start a Chapter", "#")
-            : SecondaryJoinButton("Join Chapter", "#")}
-        </Container>
-      </div>
+        {!this.state.found
+          ? JoinButton("Start a Chapter", "#")
+          : JoinButton("Join Chapter", "#")}
+        <br />
+        <BoxImage>
+          <Image src="https://i.imgur.com/fi5BtZq.png" fluid />
+        </BoxImage>
+        {!this.state.found
+          ? SecondaryJoinButton("Start a Chapter", "#")
+          : SecondaryJoinButton("Join Chapter", "#")}
+      </Container>
     );
   }
 }

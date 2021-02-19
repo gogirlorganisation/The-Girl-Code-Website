@@ -7,15 +7,30 @@ import {
   Link,
   Redirect,
 } from "react-router-dom";
-import Home from './pages/HomePage/home.page';
-import AllComponents from './pages/allcomponents';
+import Home from "./pages/HomePage/home.page";
+import TeamPage from "./pages/TeamPage/team.page";
+import AllComponents from "./pages/allcomponents";
+import IndividualChapter from "./pages/IndividualChapter/individualchapter.page";
 
+// import Form from "./components/form";
+// import Form from "./components/form";
+import JoinUs from "./pages/JoinUsPage/joinus.page";
+import Workshop from "./pages/WorkshopPage/workshop.page";
+import Chapter from "./pages/ChapterPage/chapter.page";
+import IndWorkshop from "./pages/IndWorkshopPage/IndWorksop.page";
 class App extends Component {
   render() {
     return (
       <Router>
-        <Route exact path="/" component={Home} />
+        <Route exact path="/workshops" component={Workshop} />
         <Route exact path="/all" component={AllComponents} />
+        {/* <Route exact path="/form" component={Form} /> */}
+        <Route exact path="/team" component={TeamPage} />
+        <Route exact path="/individualchapter" component={IndividualChapter} />
+        <Route exact path="/joinus" component={JoinUs} />
+        <Route exact path="/" component={Home} />
+        <Route exact path="/chapter" component={Chapter} />
+        <Route exact path="/indworkshop" component={IndWorkshop} />
       </Router>
     );
   }

@@ -2,7 +2,7 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Container,Image} from "react-bootstrap";
 import { BoxBackground } from "../Acknowledgement/acknowledgement.styles";
-import Heading from "../Heading/heading.components";
+import Heading from "../Heading/heading.component";
 
 export default function Acknowledgement({ heading }) {
   return (<BoxBackground>

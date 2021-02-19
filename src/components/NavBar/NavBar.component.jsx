@@ -1,19 +1,19 @@
-import React from 'react';
+import React from "react";
 
-import Burger from './Burger';
-import {Nav} from './NavBar.styles';
-import {Image} from 'react-bootstrap';
+import Burger from "./Burger";
+import { Nav } from "./NavBar.styles";
+// import { Image } from "react-bootstrap";
 import Logo from "./../../assets/Logo.png";
 
-const NavBar = ({bgOut, bgIn, textOut, textIn}) => {
+const NavBar = ({ bgOut, bgIn, textOut, textIn }) => {
   return (
     <Nav bgOut={bgOut} bgIn={bgIn} textOut={textOut} textIn={textIn}>
       <div className="logo">
-      <img src={Logo}/>
+        <img src={Logo} alt="Logo" />
       </div>
-      <Burger bgOut={bgOut} bgIn={bgIn} textOut={textOut} textIn={textIn}/>
+      <Burger bgOut={bgOut} bgIn={bgIn} textOut={textOut} textIn={textIn} />
     </Nav>
-  )
-}
+  );
+};
 
 export default NavBar;
