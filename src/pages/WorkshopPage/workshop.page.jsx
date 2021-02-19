@@ -12,6 +12,7 @@ import {
   PastWorkshopsDiv,
   StartChapterSection,
   DonateSection,
+  CardsDiv,
 } from "./workshop.page.style";
 import Heading from "../../components/Heading/heading.component";
 import Card from "../../components/Card/card.component";
@@ -73,18 +74,7 @@ class Workshop extends React.Component {
   render() {
     const { data, loading } = this.state;
     console.log(data);
-    const cards = data.map((card) => (
-      <Col sm={12} md={6} lg={6} key={card.title}>
-        <Card
-          image={card.image}
-          icons={card.icons}
-          title={card.title}
-          subtitle={card.subtitle}
-          description={card.description}
-          isButton={card.isButton}
-        />
-      </Col>
-    ));
+
     return (
       <>
         <GlobalStyle />
@@ -133,20 +123,42 @@ class Workshop extends React.Component {
           />
         </PinkBoxDiv>
         <UpcomingWorkshopsDiv>
-          <Heading heading={"PAST WORKSHOPS"} />
-          {loading ? (
-            <Spinner animation="border" variant="danger" className="mt-5" />
-          ) : (
-            <Row className="mt-5">{cards}</Row>
-          )}
-        </UpcomingWorkshopsDiv>
-
-        <PastWorkshopsDiv>
           <Heading heading={"UPCOMING WORKSHOPS"} />
           {loading ? (
             <Spinner animation="border" variant="danger" className="mt-5" />
           ) : (
-            <Row className="mt-5">{cards}</Row>
+            <CardsDiv className="mt-5 flex-wrap">
+              {data.map((card) => (
+                <Card
+                  image={card.image}
+                  icons={card.icons}
+                  title={card.title}
+                  subtitle={card.subtitle}
+                  description={card.description}
+                  isButton={card.isButton}
+                />
+              ))}
+            </CardsDiv>
+          )}
+        </UpcomingWorkshopsDiv>
+
+        <PastWorkshopsDiv>
+          <Heading heading={"PAST WORKSHOPS"} />
+          {loading ? (
+            <Spinner animation="border" variant="danger" className="mt-5" />
+          ) : (
+            <CardsDiv className="mt-5 flex-wrap">
+              {data.map((card) => (
+                <Card
+                  image={card.image}
+                  icons={card.icons}
+                  title={card.title}
+                  subtitle={card.subtitle}
+                  description={card.description}
+                  isButton={card.isButton}
+                />
+              ))}
+            </CardsDiv>
           )}
         </PastWorkshopsDiv>
 

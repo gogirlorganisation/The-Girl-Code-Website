@@ -9,10 +9,8 @@ export const Title = styled.p`
 
 export const CardHolder = styled.div`
   margin-bottom: 2rem;
+  margin: 1rem 2rem;
   text-align: left;
-  @media screen and (max-width: 1152px) {
-    width: 100%;
-  }
 `;
 
 export const Subtitle = styled.p`

@@ -28,27 +28,29 @@ export const ImageBox = styled.div`
 `;
 
 export const UpcomingWorkshopsDiv = styled.div`
-  margin: 4rem 0rem;
-  padding: 4rem 24rem;
+  margin: 4rem 2rem;
+  padding-top: 4rem;
   text-align: center;
-  @media screen and (max-width: 1200px) {
-    padding: 4rem 0;
+  @media screen and (min-width: 1200px) {
+    padding: 4rem 4rem;
+  }
+  @media screen and (min-width: 1500px) {
+    padding: 4rem 15rem;
   }
 `;
 
 export const PastWorkshopsDiv = styled.div`
-  margin: 4rem 0;
-  padding: 4rem 24rem;
   background-color: rgba(215, 75, 131, 0.1);
   text-align: center;
-  @media screen and (max-width: 1200px) {
-    padding: 4rem 0;
+  margin: 4rem 2rem;
+  padding-top: 4rem;
+  text-align: center;
+  @media screen and (min-width: 1200px) {
+    padding: 4rem 4rem;
   }
-`;
-
-export const CardsDiv = styled.div`
-  /* display: flex; */
-  margin: 4rem 0;
+  @media screen and (min-width: 1500px) {
+    padding: 4rem 15rem;
+  }
 `;
 
 export const StartChapterSection = styled.div`
@@ -59,4 +61,10 @@ export const StartChapterSection = styled.div`
 export const DonateSection = styled.div`
   margin-top: 5rem;
   text-align: center;
+`;
+
+export const CardsDiv = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 `;
