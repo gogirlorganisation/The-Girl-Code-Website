@@ -16,15 +16,6 @@ export default function Donate({ button, title, content }) {
           </Col>
           <Col>
             <Row>
-              <Col xs={12} md={4}>
-                <Alignment>
-                  <Image
-                    src="https://imgur.com/9UFLhE6.jpg"
-                    style={{ maxHeight: "150px" }}
-                    fluid
-                  />
-                </Alignment>
-              </Col>
               <Col>
                 <Container>
                   <Row>
@@ -38,12 +29,6 @@ export default function Donate({ button, title, content }) {
                   <ShadowButton buttonText={button} />
                 </Row>
               </Col>
-            </Row>
-            <Row>
-              <Content>{content}</Content>
-            </Row>
-            <Row xs={12}>
-              <ShadowButton Text={button} />
             </Row>
           </Col>
         </Row>
