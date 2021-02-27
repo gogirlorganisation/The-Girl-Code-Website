@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Row, Col, Image, Spinner } from "react-bootstrap";
+import { Container, Row, Col, Image, Spinner, Button } from "react-bootstrap";
 import NavBar from "../../components/NavBar/NavBar.component";
 import GlobalStyle from "../globalStyles";
 import { GoogleSpreadsheet } from "google-spreadsheet";
@@ -26,8 +26,13 @@ import Footer from "../../components/Footer/footer.component";
 
 class Workshop extends React.Component {
   state = {
-    data: [],
+    upcomingWorkshopsData: [],
+    pastWorkshopsData: [],
+    showItems: 4,
     loading: true,
+    buttonText: "Show More",
+    expanded: false,
+    myRef: React.createRef(),
   };
 
   fetchData = async () => {
@@ -41,21 +46,41 @@ class Workshop extends React.Component {
       private_key: process.env.REACT_APP_GOOGLE_PRIVATE_KEY,
     });
 
-    // console.log(doc);
-
     await doc.loadInfo(); // loads document properties and worksheets
     // console.log(doc.title);
     // await doc.updateProperties({ title: "renamed doc" });
     const firstSheet = doc.sheetsByIndex[0];
-    const data = await firstSheet.getRows();
+    const upcomingWorkshops = await firstSheet.getRows();
 
-    const dataArray = [];
+    const secondSheet = doc.sheetsByIndex[1];
+    const pastWorkshops = await secondSheet.getRows();
 
-    data.forEach((da) => {
+    const upcomingWorkshopsData = [];
+    const pastWorkshopsData = [];
+
+    upcomingWorkshops.forEach((da) => {
       const { description, title, icons, image, isButton, subtitle } = da;
-      dataArray.push({ description, title, icons, image, isButton, subtitle });
+      upcomingWorkshopsData.push({
+        description,
+        title,
+        icons,
+        image,
+        isButton,
+        subtitle,
+      });
     });
-    this.setState({ data, loading: false });
+    pastWorkshops.forEach((da) => {
+      const { description, title, icons, image, isButton, subtitle } = da;
+      pastWorkshopsData.push({
+        description,
+        title,
+        icons,
+        image,
+        isButton,
+        subtitle,
+      });
+    });
+    this.setState({ upcomingWorkshopsData, pastWorkshopsData, loading: false });
     // console.log(dataArray);
 
     // const sheet = doc.sheetsByIndex[0]; // or use doc.sheetsById[id] or doc.sheetsByTitle[title]
@@ -69,11 +94,34 @@ class Workshop extends React.Component {
 
   componentDidMount() {
     this.fetchData();
+    // console.log(this.state.data);
   }
 
+  toggleShow = () => {
+    if (this.state.expanded === false) {
+      this.setState({
+        showItems: this.state.pastWorkshopsData.length,
+        buttonText: "Show Less",
+        expanded: true,
+      });
+    } else {
+      this.setState({
+        showItems: 4,
+        buttonText: "Show More",
+        expanded: false,
+      });
+      this.state.myRef.current.scrollIntoView();
+    }
+  };
+
   render() {
-    const { data, loading } = this.state;
-    console.log(data);
+    const {
+      pastWorkshopsData,
+      upcomingWorkshopsData,
+      loading,
+      showItems,
+      buttonText,
+    } = this.state;
 
     return (
       <>
@@ -122,13 +170,13 @@ class Workshop extends React.Component {
             }
           />
         </PinkBoxDiv>
-        <UpcomingWorkshopsDiv>
-          <Heading heading={"UPCOMING WORKSHOPS"} />
+        <UpcomingWorkshopsDiv ref={this.state.myRef}>
+          <Heading heading={"PAST WORKSHOPS"} />
           {loading ? (
             <Spinner animation="border" variant="danger" className="mt-5" />
           ) : (
             <CardsDiv className="mt-5 flex-wrap">
-              {data.map((card) => (
+              {upcomingWorkshopsData.slice(0, showItems).map((card) => (
                 <Card
                   image={card.image}
                   icons={card.icons}
@@ -140,15 +188,22 @@ class Workshop extends React.Component {
               ))}
             </CardsDiv>
           )}
+          <Button
+            variant="info"
+            className="text-center mx-auto"
+            onClick={this.toggleShow}
+          >
+            {" "}
+            {buttonText}
+          </Button>
         </UpcomingWorkshopsDiv>
-
         <PastWorkshopsDiv>
-          <Heading heading={"PAST WORKSHOPS"} />
+          <Heading heading={"UPCOMING WORKSHOPS"} />
           {loading ? (
             <Spinner animation="border" variant="danger" className="mt-5" />
           ) : (
             <CardsDiv className="mt-5 flex-wrap">
-              {data.map((card) => (
+              {pastWorkshopsData.slice(0, showItems).map((card) => (
                 <Card
                   image={card.image}
                   icons={card.icons}
