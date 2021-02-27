@@ -10,13 +10,13 @@ export const BoxText = styled.p`
   text-align: left;
   @media screen and (min-width: 767px) {
     text-align: center;
-    font-size: 1.4rem;
+    font-size: 1.25rem;
     padding: 0 2rem 2rem 2rem;
   }
 `;
 
 export const Input = styled.input`
-  width: 65%;
+  width: 60%;
   padding-left: 0.5rem;
   height: 3rem;
   font-weight: 500;
@@ -36,7 +36,7 @@ export const Input = styled.input`
 export const Button = styled.button`
   background: white;
   color: #525151;
-  width: 65%;
+  width: 60%;
   height: 3rem;
   text-align: left;
   font-size: 0.95rem;
@@ -55,7 +55,7 @@ export const Button = styled.button`
 
 export const BoxImage = styled.div`
   display: inline-block;
-  width: 70%;
+  width: 60%;
   @media screen and (max-width: 560px) {
     width: 100%;
   }

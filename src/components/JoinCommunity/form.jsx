@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { FormLabel, Input, Button } from "./joincommunity.styles";
+import { FormLabel, Input, Button, FormBox } from "./joincommunity.styles";
 
 import { Row, Col, Form } from "react-bootstrap";
 
@@ -61,7 +61,9 @@ class form extends Component {
             />
           </Col>
         </Row>
-        <Button type="submit">JOIN</Button>
+        <Button type="submit" className="mt-2">
+          JOIN
+        </Button>
       </Form>
     );
   }

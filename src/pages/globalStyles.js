@@ -1,5 +1,5 @@
-import { createGlobalStyle } from 'styled-components';
- 
+import { createGlobalStyle } from "styled-components";
+
 const GlobalStyle = createGlobalStyle`
   * {
     padding: 0;
@@ -7,7 +7,8 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
     //background-color: #fff;
     font-family: 'Inter', sans-serif;
+    scroll-behavior: smooth;
   }
 `;
- 
+
 export default GlobalStyle;
