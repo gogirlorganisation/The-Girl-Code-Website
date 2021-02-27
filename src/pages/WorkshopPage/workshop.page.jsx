@@ -186,7 +186,11 @@ class Workshop extends React.Component {
               ))}
             </CardsDiv>
           )}
-          <ShadowButton Text={buttonText} onClick={this.toggleShow} />
+          {!loading ? (
+            <ShadowButton Text={buttonText} onClick={this.toggleShow} />
+          ) : (
+            " "
+          )}
         </UpcomingWorkshopsDiv>
         <PastWorkshopsDiv>
           <Heading heading={"UPCOMING WORKSHOPS"} />
