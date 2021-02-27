@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Row, Col, Image, Spinner, Button } from "react-bootstrap";
+import { Container, Row, Col, Image, Spinner } from "react-bootstrap";
 import NavBar from "../../components/NavBar/NavBar.component";
 import GlobalStyle from "../globalStyles";
 import { GoogleSpreadsheet } from "google-spreadsheet";

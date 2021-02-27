@@ -45,7 +45,6 @@ class StartChapter extends Component {
     });
 
     this.setState({ searchItems: chaptersData });
-    console.log(this.state.searchItems);
   };
 
   componentDidMount() {
@@ -59,6 +58,7 @@ class StartChapter extends Component {
     if (!searchItems.includes(e.target.value.toLowerCase())) {
       this.setState({ found: false });
     } else {
+      console.log(searchItems.includes(e.target.value.toLowerCase()));
       this.setState({ found: true });
     }
   };
@@ -81,12 +81,31 @@ class StartChapter extends Component {
 
   render() {
     const JoinButton = (text, link) => (
-      <Button type="button" onClick={this.navigate}>
-        <Link to={link} />{" "}
+      <Button
+        type="button"
+        onClick={this.navigate}
+        style={
+          this.state.found
+            ? {
+                backgroundColor: "#f05680",
+                color: "white",
+                fontSize: "1.2rem",
+                textAlign: "center",
+              }
+            : {}
+        }
+      >
         <Logo
           src={logo}
           alt="Search"
-          style={{ width: "1.7rem", margin: "0 0.8rem" }}
+          style={
+            ({ width: "1.7rem", margin: "0 0.8rem" },
+            this.state.found
+              ? {
+                  display: "none",
+                }
+              : {})
+          }
         />
         {text}
       </Button>
