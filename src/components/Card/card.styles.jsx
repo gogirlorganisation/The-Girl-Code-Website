@@ -11,6 +11,17 @@ export const CardHolder = styled.div`
   margin-bottom: 2rem;
   margin: 1rem 2rem;
   text-align: left;
+  width: 24rem;
+  max-height: 32rem;
+  border-radius: 15px;
+  padding-bottom: 4rem;
+  box-shadow: 0px 0px 5px 2px rgba(71, 71, 71, 0.22);
+  cursor: pointer;
+  @media screen and (max-width: 520px) {
+    margin: 1rem 0rem;
+    width: inherit - 4rem;
+    /* font-size: 30px; */
+  }
 `;
 
 export const Subtitle = styled.p`
