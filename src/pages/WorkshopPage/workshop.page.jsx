@@ -23,6 +23,7 @@ import StartChapter from "../../components/StartChapter/startchapter.component";
 import Donate from "../../components/Donate/donate.component";
 import Stats from "../../components/Stats/stats.component";
 import Footer from "../../components/Footer/footer.component";
+import ShadowButton from "../../components/Button/button.component";
 
 class Workshop extends React.Component {
   state = {
@@ -47,8 +48,6 @@ class Workshop extends React.Component {
     });
 
     await doc.loadInfo(); // loads document properties and worksheets
-    // console.log(doc.title);
-    // await doc.updateProperties({ title: "renamed doc" });
     const firstSheet = doc.sheetsByIndex[0];
     const upcomingWorkshops = await firstSheet.getRows();
 
@@ -94,7 +93,6 @@ class Workshop extends React.Component {
 
   componentDidMount() {
     this.fetchData();
-    // console.log(this.state.data);
   }
 
   toggleShow = () => {
@@ -175,7 +173,7 @@ class Workshop extends React.Component {
           {loading ? (
             <Spinner animation="border" variant="danger" className="mt-5" />
           ) : (
-            <CardsDiv className="mt-5 flex-wrap">
+            <CardsDiv className="my-5 flex-wrap">
               {upcomingWorkshopsData.slice(0, showItems).map((card) => (
                 <Card
                   image={card.image}
@@ -188,14 +186,7 @@ class Workshop extends React.Component {
               ))}
             </CardsDiv>
           )}
-          <Button
-            variant="info"
-            className="text-center mx-auto"
-            onClick={this.toggleShow}
-          >
-            {" "}
-            {buttonText}
-          </Button>
+          <ShadowButton Text={buttonText} onClick={this.toggleShow} />
         </UpcomingWorkshopsDiv>
         <PastWorkshopsDiv>
           <Heading heading={"UPCOMING WORKSHOPS"} />

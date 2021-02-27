@@ -78,6 +78,7 @@ const IndWorkshop = () => {
           image={ProjectCardImg}
           title=" Project Name"
           subtitle="PERSON NAME"
+          // icons={[[]]}
           description="Python Course"
           isButton={true}
         />
