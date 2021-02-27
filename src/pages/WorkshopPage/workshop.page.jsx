@@ -135,7 +135,7 @@ class Workshop extends React.Component {
             <Col md={7}>
               <Image src={WorkshopsHeader} alt="Join Us" fluid />
             </Col>
-            <Col md={5}>
+            <Col md={5} className="text-center">
               <MainHeading>Our Workshops </MainHeading>
               <HeaderText>
                 We seek to inspire girls to discover and pursue programming.

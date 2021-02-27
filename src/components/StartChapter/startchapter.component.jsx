@@ -1,4 +1,7 @@
 import React, { Component } from "react";
+import { GoogleSpreadsheet } from "google-spreadsheet";
+import { withRouter } from "react-router-dom";
+
 import {
   BoxText,
   Input,
@@ -14,21 +17,71 @@ import { Link } from "react-router-dom";
 
 class StartChapter extends Component {
   state = {
-    searchItems: this.props.searchItems,
+    searchItems: [],
+    search: "",
     linkedItems: this.props.linkedItems,
     found: false,
   };
 
+  fetchData = async () => {
+    // Initialize the sheet - doc ID is the long id in the sheets URL
+    const doc = new GoogleSpreadsheet(
+      "1L_Etdeh13tOV5BJvodoV7J8rM3HH3lDWt_CYYvLqKrs"
+    );
+
+    await doc.useServiceAccountAuth({
+      client_email: process.env.REACT_APP_GOOGLE_SERVICE_ACCOUNT_EMAIL,
+      private_key: process.env.REACT_APP_GOOGLE_PRIVATE_KEY,
+    });
+
+    await doc.loadInfo(); // loads document properties and worksheets
+    const chapterSheet = doc.sheetsByIndex[2];
+    const chapters = await chapterSheet.getRows();
+
+    const chaptersData = [];
+
+    chapters.forEach((da) => {
+      chaptersData.push(da.name);
+    });
+
+    this.setState({ searchItems: chaptersData });
+    console.log(this.state.searchItems);
+  };
+
+  componentDidMount() {
+    this.fetchData();
+  }
+
   handleChange = (e) => {
     const { searchItems } = this.state;
     this.setState({ search: e.target.value });
-    if (!searchItems.includes(e.target.value)) this.setState({ found: false });
-    else this.setState({ found: true });
+
+    if (!searchItems.includes(e.target.value.toLowerCase())) {
+      this.setState({ found: false });
+    } else {
+      this.setState({ found: true });
+    }
+  };
+
+  navigate = () => {
+    if (this.state.found) {
+      this.props.history.push(`/indworkshop/${this.state.search}`);
+      this.setState({
+        search: "",
+        found: false,
+      });
+    } else {
+      this.props.history.push(`/joinus`);
+      this.setState({
+        search: "",
+        found: false,
+      });
+    }
   };
 
   render() {
     const JoinButton = (text, link) => (
-      <Button type="button">
+      <Button type="button" onClick={this.navigate}>
         <Link to={link} />{" "}
         <Logo
           src={logo}
@@ -80,4 +133,4 @@ class StartChapter extends Component {
   }
 }
 
-export default StartChapter;
+export default withRouter(StartChapter);

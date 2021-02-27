@@ -45,6 +45,9 @@ export const PastWorkshopsDiv = styled.div`
   margin: 4rem 2rem;
   padding-top: 4rem;
   text-align: center;
+  @media screen and (max-width: 500px) {
+    margin: 0;
+  }
   @media screen and (min-width: 1200px) {
     padding: 4rem 4rem;
   }

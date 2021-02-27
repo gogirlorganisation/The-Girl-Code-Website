@@ -19,6 +19,7 @@ export const CardHolder = styled.div`
   cursor: pointer;
   @media screen and (max-width: 520px) {
     margin: 1rem 0rem;
+    width: inherit - 4rem;
     /* font-size: 30px; */
   }
 `;
