@@ -18,6 +18,8 @@ import JoinUs from "./pages/JoinUsPage/joinus.page";
 import Workshop from "./pages/WorkshopPage/workshop.page";
 import Chapter from "./pages/ChapterPage/chapter.page";
 import IndWorkshop from "./pages/IndWorkshopPage/IndWorksop.page";
+import BuildPrevious from "./pages/Build/build.notactive.component";
+import BuildActive from "./pages/Build/build.active.component";
 class App extends Component {
   render() {
     return (
@@ -31,6 +33,8 @@ class App extends Component {
         <Route exact path="/" component={Home} />
         <Route exact path="/chapter" component={Chapter} />
         <Route exact path="/indworkshop" component={IndWorkshop} />
+        <Route exact path='/buildnotactive' component={BuildPrevious} />
+        <Route exact path='/buildactive' component={BuildActive} />
       </Router>
     );
   }

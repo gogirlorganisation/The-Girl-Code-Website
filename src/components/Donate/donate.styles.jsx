@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Background = styled.div`
   text-align: center;
-  padding-top: 0.5rem;
+  padding-top: 0rem;
   padding-bottom: 3rem;
 `;
 export const Alignment = styled.div`

@@ -25,6 +25,7 @@ import StartChapter from "../../components/StartChapter/startchapter.component";
 import Internships from "../../components/Internships/internships.component";
 import Donate from "../../components/Donate/donate.component";
 import Footer from "../../components/Footer/footer.component";
+import ShadowButton from "../../components/Button/button.component";
 
 const JoinUs = () => {
   // const internships =
@@ -47,6 +48,9 @@ const JoinUs = () => {
           <Col md={5}>
             <MainHeading>Join Us </MainHeading>
             <HeaderText>Together everyone achieves more!</HeaderText>
+            <ShadowButton Text = {'INTERN WITH US'} />
+            <ShadowButton Text = {'START A CHAPTER'} />
+            <ShadowButton Text = {'JOIN THE CCOMMUNITY'} />
           </Col>
         </Row>
       </Container>
