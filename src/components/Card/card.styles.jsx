@@ -14,7 +14,6 @@ export const CardHolder = styled.div`
   width: 24rem;
   max-height: 32rem;
   border-radius: 15px;
-  padding-bottom: 4rem;
   box-shadow: 0px 0px 5px 2px rgba(71, 71, 71, 0.22);
   cursor: pointer;
   @media screen and (max-width: 520px) {

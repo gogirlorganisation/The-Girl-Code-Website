@@ -26,7 +26,7 @@ export default function Donate({ button, title, content }) {
                   </Row>
                 </Container>
                 <Row xs={12}>
-                  <ShadowButton buttonText={button} />
+                  <ShadowButton Text={'Donate'} />
                 </Row>
               </Col>
             </Row>
