@@ -29,7 +29,8 @@ class Workshop extends React.Component {
   state = {
     upcomingWorkshopsData: [],
     pastWorkshopsData: [],
-    showItems: 4,
+    upcomingWorkshopItems: 4,
+    pastWorkshopItems: 4,
     loading: true,
     buttonText: "Show More",
     expanded: false,
@@ -98,13 +99,13 @@ class Workshop extends React.Component {
   toggleShow = () => {
     if (this.state.expanded === false) {
       this.setState({
-        showItems: this.state.pastWorkshopsData.length,
+        pastWorkshopItems: this.state.pastWorkshopsData.length,
         buttonText: "Show Less",
         expanded: true,
       });
     } else {
       this.setState({
-        showItems: 4,
+        pastWorkshopItems: 4,
         buttonText: "Show More",
         expanded: false,
       });
@@ -174,16 +175,18 @@ class Workshop extends React.Component {
             <Spinner animation="border" variant="danger" className="mt-5" />
           ) : (
             <CardsDiv className="my-5 flex-wrap">
-              {upcomingWorkshopsData.slice(0, showItems).map((card) => (
-                <Card
-                  image={card.image}
-                  icons={card.icons}
-                  title={card.title}
-                  subtitle={card.subtitle}
-                  description={card.description}
-                  isButton={card.isButton}
-                />
-              ))}
+              {upcomingWorkshopsData
+                .slice(0, this.state.pastWorkshopItems)
+                .map((card) => (
+                  <Card
+                    image={card.image}
+                    icons={card.icons}
+                    title={card.title}
+                    subtitle={card.subtitle}
+                    description={card.description}
+                    isButton={card.isButton}
+                  />
+                ))}
             </CardsDiv>
           )}
           {!loading ? (
@@ -198,16 +201,18 @@ class Workshop extends React.Component {
             <Spinner animation="border" variant="danger" className="mt-5" />
           ) : (
             <CardsDiv className="mt-5 flex-wrap">
-              {pastWorkshopsData.slice(0, showItems).map((card) => (
-                <Card
-                  image={card.image}
-                  icons={card.icons}
-                  title={card.title}
-                  subtitle={card.subtitle}
-                  description={card.description}
-                  isButton={card.isButton}
-                />
-              ))}
+              {pastWorkshopsData
+                .slice(0, this.state.upcomingWorkshopItems)
+                .map((card) => (
+                  <Card
+                    image={card.image}
+                    icons={card.icons}
+                    title={card.title}
+                    subtitle={card.subtitle}
+                    description={card.description}
+                    isButton={card.isButton}
+                  />
+                ))}
             </CardsDiv>
           )}
         </PastWorkshopsDiv>
