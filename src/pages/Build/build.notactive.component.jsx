@@ -126,11 +126,7 @@ class BuildPrevious extends Component {
           isButton={false}
         />
         <DonateSection>
-          <Donate
-            button="DONATE NOW"
-            title="Help support The Girl Code"
-            content="At The Girl Code, we aim to bridge the gender gap in the tech community by inspiring young girls to learn programming by hosting workshops."
-          />
+          <Donate />
         </DonateSection>
         <Footer />
       </>

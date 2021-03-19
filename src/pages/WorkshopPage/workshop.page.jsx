@@ -222,13 +222,7 @@ class Workshop extends React.Component {
           <StartChapter />
         </StartChapterSection>
         <DonateSection>
-          <Donate
-            title={"Help support The Girl Code"}
-            content={
-              "At The Girl Code, we aim to bridge the gender gap in the tech community by inspiring young girls to learn programming by hosting workshops."
-            }
-            button={"Donate Now"}
-          />
+          <Donate />
         </DonateSection>
         <Footer />
       </>

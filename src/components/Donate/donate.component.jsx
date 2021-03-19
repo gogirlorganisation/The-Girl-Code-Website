@@ -4,7 +4,7 @@ import { Container, Row, Col, Image } from "react-bootstrap";
 import ShadowButton from "../Button/button.component";
 import { Background, Alignment, Title, Content } from "./donate.styles";
 
-export default function Donate({ button, title, content }) {
+export default function Donate() {
   return (
     <Container>
       <Background>
@@ -19,14 +19,18 @@ export default function Donate({ button, title, content }) {
               <Col>
                 <Container>
                   <Row>
-                    <Title>{title}</Title>
+                    <Title>DONATE NOW!</Title>
                   </Row>
                   <Row>
-                    <Content>{content}</Content>
+                    <Content>
+                      The Girl Code is a non-profit organization and we do not
+                      take any fee for our workshops. Please consider donating
+                      to the organization and supporting our cause!
+                    </Content>
                   </Row>
                 </Container>
                 <Row xs={12}>
-                  <ShadowButton Text={'Donate'} />
+                  <ShadowButton Text={"Donate"} />
                 </Row>
               </Col>
             </Row>
