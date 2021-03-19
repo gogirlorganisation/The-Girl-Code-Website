@@ -52,8 +52,9 @@ class Workshop extends React.Component {
     const firstSheet = doc.sheetsByIndex[0];
     const upcomingWorkshops = await firstSheet.getRows();
 
-    const secondSheet = doc.sheetsByIndex[1];
+    const secondSheet = doc.sheetsByTitle["demo"];
     const pastWorkshops = await secondSheet.getRows();
+    // console.log(pastWorkshops);
 
     const upcomingWorkshopsData = [];
     const pastWorkshopsData = [];
@@ -70,14 +71,14 @@ class Workshop extends React.Component {
       });
     });
     pastWorkshops.forEach((da) => {
-      const { description, title, icons, image, isButton, subtitle } = da;
+      const { icons, image, isButton } = da;
       pastWorkshopsData.push({
-        description,
-        title,
+        description: da["Website description"].substr(0, 150),
+        title: da["Workshop Avenue"],
         icons,
         image,
         isButton,
-        subtitle,
+        subtitle: da["Dates"],
       });
     });
     this.setState({ upcomingWorkshopsData, pastWorkshopsData, loading: false });
@@ -118,7 +119,6 @@ class Workshop extends React.Component {
       pastWorkshopsData,
       upcomingWorkshopsData,
       loading,
-      showItems,
       buttonText,
     } = this.state;
 
@@ -170,12 +170,33 @@ class Workshop extends React.Component {
           />
         </PinkBoxDiv>
         <UpcomingWorkshopsDiv ref={this.state.myRef}>
-          <Heading heading={"PAST WORKSHOPS"} />
+          <Heading heading={"UPCOMING WORKSHOPS"} />
           {loading ? (
             <Spinner animation="border" variant="danger" className="mt-5" />
           ) : (
             <CardsDiv className="my-5 flex-wrap">
               {upcomingWorkshopsData
+                .slice(0, this.state.upcomingWorkshopItems)
+                .map((card) => (
+                  <Card
+                    image={card.image}
+                    icons={card.icons}
+                    title={card.title}
+                    subtitle={card.subtitle}
+                    description={card.description}
+                    isButton={card.isButton}
+                  />
+                ))}
+            </CardsDiv>
+          )}
+        </UpcomingWorkshopsDiv>
+        <PastWorkshopsDiv>
+          <Heading heading={"PAST WORKSHOPS"} />
+          {loading ? (
+            <Spinner animation="border" variant="danger" className="mt-5" />
+          ) : (
+            <CardsDiv className="mt-5 flex-wrap">
+              {pastWorkshopsData
                 .slice(0, this.state.pastWorkshopItems)
                 .map((card) => (
                   <Card
@@ -193,27 +214,6 @@ class Workshop extends React.Component {
             <ShadowButton Text={buttonText} onClick={this.toggleShow} />
           ) : (
             " "
-          )}
-        </UpcomingWorkshopsDiv>
-        <PastWorkshopsDiv>
-          <Heading heading={"UPCOMING WORKSHOPS"} />
-          {loading ? (
-            <Spinner animation="border" variant="danger" className="mt-5" />
-          ) : (
-            <CardsDiv className="mt-5 flex-wrap">
-              {pastWorkshopsData
-                .slice(0, this.state.upcomingWorkshopItems)
-                .map((card) => (
-                  <Card
-                    image={card.image}
-                    icons={card.icons}
-                    title={card.title}
-                    subtitle={card.subtitle}
-                    description={card.description}
-                    isButton={card.isButton}
-                  />
-                ))}
-            </CardsDiv>
           )}
         </PastWorkshopsDiv>
 
