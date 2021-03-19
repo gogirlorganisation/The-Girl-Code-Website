@@ -28,8 +28,6 @@ import Footer from "../../components/Footer/footer.component";
 import ShadowButton from "../../components/Button/button.component";
 
 const JoinUs = () => {
-  // const internships =
-
   return (
     <>
       <GlobalStyle />
@@ -48,16 +46,16 @@ const JoinUs = () => {
           <Col md={5}>
             <MainHeading>Join Us </MainHeading>
             <HeaderText>Together everyone achieves more!</HeaderText>
-            <ShadowButton Text = {'INTERN WITH US'} />
-            <ShadowButton Text = {'START A CHAPTER'} />
-            <ShadowButton Text = {'JOIN THE CCOMMUNITY'} />
+            <ShadowButton Text={"INTERN WITH US"} />
+            <ShadowButton Text={"START A CHAPTER"} />
+            <ShadowButton Text={"JOIN THE CCOMMUNITY"} />
           </Col>
         </Row>
       </Container>
       <PinkTextBox
         heading={"WHY WORK WITH US"}
         text={
-          "At The Girl Code, we aim to bridge the gender gap in the tech community by inspiring young girls to learn programming by hosting workshops at schools and universities local to them. Through our platform and intuitive curriculum, we plan to give rise to a new generation of female programmers set to take the world by storm."
+          "Have you always wanted to do something to make a positive impact in the world? If yes, then we’re the place for you! Use your technical/non-technical skills to effect tangible, positive change. Look into which of our internship programs suits you, and apply today! You’ll get to work with a team of over 70 compassionate, talented, and driven people who want to make a difference and learn amazing new things!"
         }
       />
       <InternshipsSection>
@@ -67,27 +65,27 @@ const JoinUs = () => {
             content={[
               [
                 "WEB DEVELOPMENT",
-                "At The Girl Code, we aim to bridge the gender gap in the tech community.",
+                "USE YOUR WEB-DEV EXPERTISE AND WORK WITH OUR EXCELLENT TEAM TO DEVELOP OUR PLATFORM!",
                 WebDevImg,
               ],
               [
                 "CONTENT",
-                "At The Girl Code, we aim to bridge the gender gap in the tech community.",
+                "USE YOUR LANGUAGE SKILLS TO DRAFT CONTENT FOR TGC’S SOCIALS AND CURRICULUM!",
                 ContentImg,
               ],
               [
                 "OUTREACH",
-                "At The Girl Code, we aim to bridge the gender gap in the tech community.",
+                "USE YOUR SOCIAL SKILLS AND HELP THE GIRL CODE REACH MORE PEOPLE!",
                 OutreachImg,
               ],
               [
                 "DESIGN",
-                "At The Girl Code, we aim to bridge the gender gap in the tech community.",
+                "USE YOUR DESIGN PROWESS TO MAKE CREATIVE DIGITAL CONTENT FOR TGC",
                 DesignImg,
               ],
               [
                 "SOCIAL MEDIA",
-                "At The Girl Code, we aim to bridge the gender gap in the tech community.",
+                "USE YOUR SOCIAL MEDIA SAVVINESS TO EXPAND TGC’S SOCIAL PRESENCE!",
                 SocialMediaImg,
               ],
             ]}
