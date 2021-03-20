@@ -13,6 +13,7 @@ import {
   StartChapterSection,
   DonateSection,
   CardsDiv,
+  ShowMoreButton,
 } from "./workshop.page.style";
 import Heading from "../../components/Heading/heading.component";
 import Card from "../../components/Card/card.component";
@@ -139,8 +140,9 @@ class Workshop extends React.Component {
             <Col md={5} className="text-center">
               <MainHeading>Our Workshops </MainHeading>
               <HeaderText>
-                We seek to inspire girls to discover and pursue programming.
+                We host free coding workshops!
               </HeaderText>
+              <ShadowButton Text={"CONDUCT A WORKSHOP"} />
             </Col>
           </Row>
         </Container>
@@ -163,10 +165,10 @@ class Workshop extends React.Component {
         </ImageBox>
         <PinkBoxDiv>
           <PinkTextBox
-            heading={"MISSION"}
+            heading={"OUR COVID-19 IMPACT"}
             text={
-              "At The Girl Code, we aim to bridge the gender gap in the tech community by inspiring young girls to learn programming by hosting workshops at schools and universities local to them. Through our platform and intuitive curriculum, we plan to give rise to a new generation of female programmers set to take the world by storm."
-            }
+              'The 2020 Coronavirus Pandemic brought a plague of troubles (literally). But, The Girl Code team believes in dealing with tough situations indomitably, and we can proudly say we doubled our productivity in the summer months of lockdown! TGC hosted over 15 workshops, including a summer bootcamp, BUILD (hyperlink), that saw over 500 participants. We also hosted several “Intro to Tech” workshops for girls in Rural India!'
+              }
           />
         </PinkBoxDiv>
         <UpcomingWorkshopsDiv ref={this.state.myRef}>
@@ -189,6 +191,7 @@ class Workshop extends React.Component {
                 ))}
             </CardsDiv>
           )}
+          
         </UpcomingWorkshopsDiv>
         <PastWorkshopsDiv>
           <Heading heading={"PAST WORKSHOPS"} />
@@ -211,7 +214,9 @@ class Workshop extends React.Component {
             </CardsDiv>
           )}
           {!loading ? (
-            <ShadowButton Text={buttonText} onClick={this.toggleShow} />
+            <ShowMoreButton onClick={this.toggleShow}>
+              See More Workshops {'>'}
+            </ShowMoreButton>
           ) : (
             " "
           )}

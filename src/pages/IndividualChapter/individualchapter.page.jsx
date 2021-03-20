@@ -3,6 +3,8 @@ import { Container, Button, Col, Row, Image } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 import HeaderImage from "../../assets/homepage/Superhero.jpg";
+import Card from "../../components/Card/card.component";
+import ChapterCardImg from "../../assets/Chapter/chaptercard.jpg";
 
 import GlobalStyle from "../globalStyles";
 import NavBar from "../../components/NavBar/NavBar.component";
@@ -19,6 +21,7 @@ import Footer from "../../components/Footer/footer.component";
 import ImageCorousel from "../../components/ImageCorousel/imagecorousel.component";
 
 import superhero from "../../assets/homepage/Superhero.jpg";
+import indchapter from '../../assets/IndChapter/indchapter.png'
 
 import {
   StyledJumbo,
@@ -27,7 +30,11 @@ import {
   PinkTextBoxDiv,
   StatsDiv,
   Corousel,
+  OtherChapters,
+  TeamDiv
 } from "./individualchapter.page.styles";
+import { CardsDiv, PastWorkshopsDiv, UpcomingWorkshopsDiv } from "../WorkshopPage/workshop.page.style";
+import { CardBg, DonateBg } from "../ChapterPage/chapter.styles";
 
 const Header = () => {
   return (
@@ -38,7 +45,7 @@ const Header = () => {
             <Image
               class="img-responsive float-left"
               width="100%"
-              src={superhero}
+              src={indchapter}
             />
           </Col>
           <Col md={{ span: 5, offset: 1 }} class="d-flex flex-column mb-3">
@@ -48,13 +55,13 @@ const Header = () => {
 
             <Row>
               <Bord>
-                <ShadowButton buttonText={"CONTACT US"} />
+                <ShadowButton Text={"CONTACT US"} />
               </Bord>
               <Bord>
-                <ShadowButton buttonText={"CONTACT US"} />
+                <ShadowButton Text={"START A CHAPTER"} />
               </Bord>
               <Bord>
-                <ShadowButton buttonText={"CONTACT US"} />
+                <ShadowButton Text={"JOIN DELHI CHAPTER"} />
               </Bord>
             </Row>
           </Col>
@@ -95,6 +102,152 @@ const IndividualChapter = () => {
           ]}
         />
       </Corousel>
+      <UpcomingWorkshopsDiv>
+      <Heading heading={'UPCOMING WORKSHOPS'} />
+      <CardBg>
+      <Card
+          image={ChapterCardImg}
+          title="Bangalore"
+          subtitle=""
+          //   icons={[[IconImg]]}
+          description="est. June 2020"
+          isButton={true}
+        />
+        <Card
+          image={ChapterCardImg}
+          title="Bangalore"
+          subtitle=""
+          //   icons={[[IconImg]]}
+          description="est. June 2020"
+          isButton={true}
+        />
+        <Card
+          image={ChapterCardImg}
+          title="Bangalore"
+          subtitle=""
+          //   icons={[[IconImg]]}
+          description="est. June 2020"
+          isButton={true}
+        />
+        <Card
+          image={ChapterCardImg}
+          title="Bangalore"
+          subtitle=""
+          //   icons={[[IconImg]]}
+          description="est. June 2020"
+          isButton={true}
+        />
+        <Card
+          image={ChapterCardImg}
+          title="Bangalore"
+          subtitle=""
+          //   icons={[[IconImg]]}
+          description="est. June 2020"
+          isButton={true}
+        />
+        <Card
+          image={ChapterCardImg}
+          title="Bangalore"
+          subtitle=""
+          //   icons={[[IconImg]]}
+          description="est. June 2020"
+          isButton={true}
+        />
+      </CardBg>
+      </UpcomingWorkshopsDiv>
+      <PastWorkshopsDiv>
+        <Heading heading={'PAST WORKSHOPS'} />
+        <CardBg>
+        <Card
+          image={ChapterCardImg}
+          title="Bangalore"
+          subtitle=""
+          //   icons={[[IconImg]]}
+          description="est. June 2020"
+          isButton={true}
+        />
+        <Card
+          image={ChapterCardImg}
+          title="Bangalore"
+          subtitle=""
+          //   icons={[[IconImg]]}
+          description="est. June 2020"
+          isButton={true}
+        />
+        <Card
+          image={ChapterCardImg}
+          title="Bangalore"
+          subtitle=""
+          //   icons={[[IconImg]]}
+          description="est. June 2020"
+          isButton={true}
+        />
+        <Card
+          image={ChapterCardImg}
+          title="Bangalore"
+          subtitle=""
+          //   icons={[[IconImg]]}
+          description="est. June 2020"
+          isButton={true}
+        />
+        <Card
+          image={ChapterCardImg}
+          title="Bangalore"
+          subtitle=""
+          //   icons={[[IconImg]]}
+          description="est. June 2020"
+          isButton={true}
+        />
+        <Card
+          image={ChapterCardImg}
+          title="Bangalore"
+          subtitle=""
+          //   icons={[[IconImg]]}
+          description="est. June 2020"
+          isButton={true}
+        />
+        </CardBg>
+      </PastWorkshopsDiv>
+      <TeamDiv>
+      <Team
+        backgroundColour="#ffffff"
+        heading="TEAM"
+        leads={[
+          [
+            "https://source.unsplash.com/Dm-qxdynoEc/800x799",
+            "Mushroom boss",
+            "Head Of Fungi Development",
+          ],
+        ]}
+        mems={[
+          ["https://source.unsplash.com/Dm-qxdynoEc/800x799", "Mushroom"],
+          ["https://source.unsplash.com/Dm-qxdynoEc/800x799", "Mushroom"],
+          ["https://source.unsplash.com/Dm-qxdynoEc/800x799", "Mushroom"],
+          ["https://source.unsplash.com/Dm-qxdynoEc/800x799", "Mushroom"],
+        ]}
+      />
+      </TeamDiv>
+      <OtherChapters>
+      <Heading heading={'OTHER CHAPTERS'} />
+      <CardBg>
+      <Card
+          image={ChapterCardImg}
+          title="Bangalore"
+          subtitle=""
+          //   icons={[[IconImg]]}
+          description="est. June 2020"
+          isButton={true}
+        />
+        <Card
+          image={ChapterCardImg}
+          title="Bangalore"
+          subtitle=""
+          //   icons={[[IconImg]]}
+          description="est. June 2020"
+          isButton={true}
+        />
+      </CardBg>
+      </OtherChapters>
       <Donate />
       <Footer />
     </div>

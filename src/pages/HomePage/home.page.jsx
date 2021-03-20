@@ -25,19 +25,18 @@ import {
   StartAChapterDiv,
   Corousel,
 } from "./home.page.style";
-import superhero from "../../assets/homepage/Superhero.jpg";
-
+import superhero from '../../assets/homepage/superhero.png'
 import GlobalStyle from "../globalStyles";
 import NavBar from "../../components/NavBar/NavBar.component";
 import Stats from "../../components/Stats/stats.component";
 import PinkTextBox from "../../components/PinkTextBox/pinktextbox.component";
 import ImageCorousel from "../../components/ImageCorousel/imagecorousel.component";
-
+import workshops from '../../assets/homepage/webdev.png'
+import community from '../../assets/homepage/community.png'
+import mentors from '../../assets/homepage/mentors.png'
+import online from '../../assets/homepage/online.png'
 import YoutubeVideo from "../../components/YoutubeVideo/YoutubeVideo.component";
 import SocialMediaDiv from "../../components/SocialMediaDiv/SocialMediaDiv.component";
-import LeadCard from "../../components/LeadCard/LeadCard.component";
-import MemberCard from "../../components/MemberCard/MemberCard.component";
-import Team from "../../components/Team/Team.component";
 import TextCard from "../../components/TextCard/textcard.component";
 import CommunitySection from "../../components/Community/community.component";
 import Heading from "../../components/Heading/heading.component";
@@ -85,9 +84,9 @@ const Home = () => {
       <StatsDiv>
         <Stats
           stats={[
-            ["70", "FLAGSHIP STAT1"],
-            ["400+", "FLAGSHIP STAT2"],
-            ["35", "FLAGSHIP STAT3"],
+            ["10", "ACTIVE CHAPTERS"],
+            ["1600+", "STUDENTS IMPACTED"],
+            ["35+", "WORKSHOPS CONDUCTED"],
           ]}
         />
       </StatsDiv>
@@ -137,19 +136,23 @@ const Home = () => {
         content={[
           [
             "WORKSHOPS",
-            "We host free coding workshops in Python & HTML CSS at schools and universities." /*imgurl*/,
+            "We host free coding workshops in Python & HTML CSS at schools and universities.",
+            workshops,
           ],
           [
             "ONLINE",
-            "Due to covid-19, we’ve moved our workshops online to virtual platforms that will allow us for a more hands-on teaching." /*imgurl*/,
+            "Due to covid-19, we’ve moved our workshops online to virtual platforms that will allow us for a more hands-on teaching.",
+            online
           ],
           [
             "COMMUNITY",
-            "We have a Slack Community of over 500 TGC workshop attendees!" /*imgurl*/,
+            "We have a Slack Community of over 500 TGC workshop attendees!",
+            community
           ],
           [
             "MENTORS",
-            "One-on-One help and advice from experienced women in tech! We have mentors ready to help for our workshops and slack community!" /*imgurl*/,
+            "One-on-One help and advice from experienced women in tech! We have mentors ready to help for our workshops and slack community!",
+            mentors
           ],
         ]}
       />
@@ -168,8 +171,8 @@ const Home = () => {
         <YoutubeVideo
           videoOne="https://www.youtube.com/watch?v=ysz5S6PUM-U"
           videoTwo="https://www.youtube.com/watch?v=ysz5S6PUM-U"
-          textOne="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
-          textTwo="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+          textOne="Join us as we speak with Mina, and break down the fundamentals of technology on 'Tech Talks'. In this episode, she breaks down web development for us and talks about her journey in the field."
+          textTwo="Join us as we speak with Annie and Kass to break down the fundamentals of frontend development on “Tech Talks”. In this episode, they speak about out the future of frontend with sites like Wix and AIs like GPT3"
         />
       </YouTubeSection>
       <StartAChapterDiv>

@@ -3,7 +3,7 @@ import { GoogleSpreadsheet } from "google-spreadsheet";
 
 import { Container, Row, Col, Image } from "react-bootstrap";
 import projectpic from "../../assets/IndWorkshop/projectpic.jpg";
-
+import build from '../../assets/build/build.png'
 import NavBar from "../../components/NavBar/NavBar.component";
 import GlobalStyle from "../globalStyles";
 import JoinImg from "../../assets/joinuspage.jpg";
@@ -13,7 +13,9 @@ import {
   DonateSection,
   StatsBg,
   HeadingStyle,
+  BuildCardBg,
   TestimonialBg,
+  PinkBigDiv,
 } from "./build.styles";
 import Heading from "../../components/Heading/heading.component";
 import PinkTextBox from "../../components/PinkTextBox/pinktextbox.component";
@@ -22,6 +24,7 @@ import Footer from "../../components/Footer/footer.component";
 import Stats from "../../components/Stats/stats.component";
 import Card from "../../components/Card/card.component";
 import Testimonial from "../../components/Testimonial/testimonial.component";
+import ShadowButton from "../../components/Button/button.component";
 
 class BuildActive extends Component {
   state = {};
@@ -69,10 +72,11 @@ class BuildActive extends Component {
             <Col md={5}>
               <MainHeading>BUILD 3.0</MainHeading>
               <HeaderText>It's bigger. It's better. It's back</HeaderText>
+              <ShadowButton Text={'Register'} />
             </Col>
             <Col xs={0} md={1} />
             <Col md={6}>
-              <Image src={JoinImg} alt="Join Us" fluid />
+              <Image src={build} alt="Join Us" fluid />
             </Col>
           </Row>
         </Container>
@@ -95,6 +99,7 @@ class BuildActive extends Component {
         <HeadingStyle>
           <Heading heading="COURSES" />
         </HeadingStyle>
+        <BuildCardBg>
         <Card
           image={projectpic}
           title=" Project Name"
@@ -103,17 +108,70 @@ class BuildActive extends Component {
           description="Python Course"
           isButton={true}
         />
-        <HeadingStyle>
-          <Heading heading="PROJECT SHOWCASE" />
-        </HeadingStyle>
         <Card
           image={projectpic}
           title=" Project Name"
           subtitle="PERSON NAME"
           // icons={[[]]}
           description="Python Course"
-          isButton={false}
+          isButton={true}
         />
+        <Card
+          image={projectpic}
+          title=" Project Name"
+          subtitle="PERSON NAME"
+          // icons={[[]]}
+          description="Python Course"
+          isButton={true}
+        />
+        <Card
+          image={projectpic}
+          title=" Project Name"
+          subtitle="PERSON NAME"
+          // icons={[[]]}
+          description="Python Course"
+          isButton={true}
+        />
+        </BuildCardBg>
+        <PinkBigDiv>
+        <HeadingStyle>
+          <Heading heading="PROJECT SHOWCASE" />
+        </HeadingStyle>
+        <BuildCardBg>
+        <Card
+          image={projectpic}
+          title=" Project Name"
+          subtitle="PERSON NAME"
+          // icons={[[]]}
+          description="Python Course"
+          isButton={true}
+        />
+        <Card
+          image={projectpic}
+          title=" Project Name"
+          subtitle="PERSON NAME"
+          // icons={[[]]}
+          description="Python Course"
+          isButton={true}
+        />
+        <Card
+          image={projectpic}
+          title=" Project Name"
+          subtitle="PERSON NAME"
+          // icons={[[]]}
+          description="Python Course"
+          isButton={true}
+        />
+        <Card
+          image={projectpic}
+          title=" Project Name"
+          subtitle="PERSON NAME"
+          // icons={[[]]}
+          description="Python Course"
+          isButton={true}
+        />
+        </BuildCardBg>
+        </PinkBigDiv>
         {/* <StayInTouchBg>
             <h4>STAY IN TOUCH</h4>
             <p>Thank you for your interest in #Build. Summer 2020 applications are now closed. If you have already applied, keep your eye on your inbox for updates and for application status. If you'd like to be notified of future opportunities, please enter your email here. </p>
@@ -124,18 +182,45 @@ class BuildActive extends Component {
             text="At The Girl Code, we aim to bridge the gender gap in the tech community by inspiring young girls to learn programming by hosting workshops at schools and universities local to them."
           />
         </TestimonialBg>
-
+        <PinkBigDiv>
         <HeadingStyle>
           <Heading heading="PAST BUILD BOOTCAMPS" />
         </HeadingStyle>
+        <BuildCardBg>
         <Card
           image={projectpic}
           title=" Project Name"
           subtitle="PERSON NAME"
           // icons={[[]]}
           description="Python Course"
-          isButton={false}
+          isButton={true}
         />
+        <Card
+          image={projectpic}
+          title=" Project Name"
+          subtitle="PERSON NAME"
+          // icons={[[]]}
+          description="Python Course"
+          isButton={true}
+        />
+        <Card
+          image={projectpic}
+          title=" Project Name"
+          subtitle="PERSON NAME"
+          // icons={[[]]}
+          description="Python Course"
+          isButton={true}
+        />
+        <Card
+          image={projectpic}
+          title=" Project Name"
+          subtitle="PERSON NAME"
+          // icons={[[]]}
+          description="Python Course"
+          isButton={true}
+        />
+        </BuildCardBg>
+        </PinkBigDiv>
         <DonateSection>
           <Donate />
         </DonateSection>

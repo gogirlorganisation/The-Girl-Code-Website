@@ -21,7 +21,9 @@ import {
   BoxStyle,
   CardHeading,
   CardBg,
+  ProjectShowcaseDiv
 } from "./IndWorkshop.styles";
+import { ShowMoreButton } from "../WorkshopPage/workshop.page.style";
 
 const Header = () => {
   return (
@@ -32,7 +34,6 @@ const Header = () => {
         </Col>
         <Col className="justify-content-center">
           <WorkHeading>Lorem Ipsum</WorkHeading>
-          <br />
           <SubHeading>January 2020</SubHeading>
         </Col>
       </Row>
@@ -70,10 +71,11 @@ const IndWorkshop = () => {
           ]}
         />
       </BoxStyle>
-      <CardBg>
+      <ProjectShowcaseDiv>
         <CardHeading>
           <Heading heading="PROJECT SHOWCASE" />
         </CardHeading>
+        <CardBg>
         <Card
           image={ProjectCardImg}
           title=" Project Name"
@@ -82,7 +84,67 @@ const IndWorkshop = () => {
           description="Python Course"
           isButton={true}
         />
-      </CardBg>
+        <Card
+          image={ProjectCardImg}
+          title=" Project Name"
+          subtitle="PERSON NAME"
+          // icons={[[]]}
+          description="Python Course"
+          isButton={true}
+        />
+        <Card
+          image={ProjectCardImg}
+          title=" Project Name"
+          subtitle="PERSON NAME"
+          // icons={[[]]}
+          description="Python Course"
+          isButton={true}
+        />
+        <Card
+          image={ProjectCardImg}
+          title=" Project Name"
+          subtitle="PERSON NAME"
+          // icons={[[]]}
+          description="Python Course"
+          isButton={true}
+        />
+        <Card
+          image={ProjectCardImg}
+          title=" Project Name"
+          subtitle="PERSON NAME"
+          // icons={[[]]}
+          description="Python Course"
+          isButton={true}
+        />
+        <Card
+          image={ProjectCardImg}
+          title=" Project Name"
+          subtitle="PERSON NAME"
+          // icons={[[]]}
+          description="Python Course"
+          isButton={true}
+        />
+        <Card
+          image={ProjectCardImg}
+          title=" Project Name"
+          subtitle="PERSON NAME"
+          // icons={[[]]}
+          description="Python Course"
+          isButton={true}
+        />
+        <Card
+          image={ProjectCardImg}
+          title=" Project Name"
+          subtitle="PERSON NAME"
+          // icons={[[]]}
+          description="Python Course"
+          isButton={true}
+        />
+        <ShowMoreButton>
+              See More Projects {'>'}
+            </ShowMoreButton>
+        </CardBg>
+      </ProjectShowcaseDiv>
       <Testimonial
         name="-John Doe"
         text="At The Girl Code, we aim to bridge the gender gap in the tech community by inspiring young girls to learn programming by hosting workshops at schools and universities local to them."

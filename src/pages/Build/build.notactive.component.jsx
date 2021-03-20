@@ -14,6 +14,8 @@ import {
   StatsBg,
   HeadingStyle,
   TestimonialBg,
+  BuildCardBg,
+  PinkBigDiv,
 } from "./build.styles";
 import Heading from "../../components/Heading/heading.component";
 import PinkTextBox from "../../components/PinkTextBox/pinktextbox.component";
@@ -22,7 +24,8 @@ import Footer from "../../components/Footer/footer.component";
 import Stats from "../../components/Stats/stats.component";
 import Card from "../../components/Card/card.component";
 import Testimonial from "../../components/Testimonial/testimonial.component";
-
+import build from '../../assets/build/build.png'
+import { DonateBg } from "../ChapterPage/chapter.styles";
 class BuildPrevious extends Component {
   state = {};
 
@@ -72,7 +75,7 @@ class BuildPrevious extends Component {
             </Col>
             <Col xs={0} md={1} />
             <Col md={6}>
-              <Image src={JoinImg} alt="Join Us" fluid />
+              <Image src={build} alt="Join Us" fluid />
             </Col>
           </Row>
         </Container>
@@ -95,6 +98,7 @@ class BuildPrevious extends Component {
         <HeadingStyle>
           <Heading heading="PROJECT SHOWCASE" />
         </HeadingStyle>
+        <BuildCardBg>
         <Card
           image={projectpic}
           title=" Project Name"
@@ -103,20 +107,43 @@ class BuildPrevious extends Component {
           description="Python Course"
           isButton={false}
         />
-        {/* <StayInTouchBg>
-            <h4>STAY IN TOUCH</h4>
-            <p>Thank you for your interest in #Build. Summer 2020 applications are now closed. If you have already applied, keep your eye on your inbox for updates and for application status. If you'd like to be notified of future opportunities, please enter your email here. </p>
-          </StayInTouchBg> */}
+        <Card
+          image={projectpic}
+          title=" Project Name"
+          subtitle="PERSON NAME"
+          // icons={[[]]}
+          description="Python Course"
+          isButton={false}
+        />
+        <Card
+          image={projectpic}
+          title=" Project Name"
+          subtitle="PERSON NAME"
+          // icons={[[]]}
+          description="Python Course"
+          isButton={false}
+        />
+        <Card
+          image={projectpic}
+          title=" Project Name"
+          subtitle="PERSON NAME"
+          // icons={[[]]}
+          description="Python Course"
+          isButton={false}
+        />
+        </BuildCardBg>
+        <PinkBigDiv>
         <TestimonialBg>
           <Testimonial
             name="-John Doe"
             text="At The Girl Code, we aim to bridge the gender gap in the tech community by inspiring young girls to learn programming by hosting workshops at schools and universities local to them."
           />
         </TestimonialBg>
-
+        </PinkBigDiv>
         <HeadingStyle>
           <Heading heading="PAST BUILD BOOTCAMPS" />
         </HeadingStyle>
+        <BuildCardBg>
         <Card
           image={projectpic}
           title=" Project Name"
@@ -125,9 +152,11 @@ class BuildPrevious extends Component {
           description="Python Course"
           isButton={false}
         />
-        <DonateSection>
+        
+        </BuildCardBg>
+        <DonateBg>
           <Donate />
-        </DonateSection>
+        </DonateBg>
         <Footer />
       </>
     );

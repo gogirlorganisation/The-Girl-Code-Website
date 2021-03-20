@@ -16,6 +16,7 @@ export const HeaderText = styled.p`
   font-size: 1.6rem;
   line-height: 33px;
   color: #f05680;
+  margin: 0 0 3.5rem 0;
 `;
 
 export const PinkBoxDiv = styled.div`
@@ -42,7 +43,7 @@ export const UpcomingWorkshopsDiv = styled.div`
 export const PastWorkshopsDiv = styled.div`
   background-color: rgba(215, 75, 131, 0.1);
   text-align: center;
-  margin: 4rem 2rem;
+  margin: 4rem 0;
   padding-top: 4rem;
   text-align: center;
   @media screen and (max-width: 500px) {
@@ -62,12 +63,36 @@ export const StartChapterSection = styled.div`
 `;
 
 export const DonateSection = styled.div`
-  margin-top: 5rem;
   text-align: center;
+  border-top: 3px pink solid;
+  padding: 3rem 0 0 0;
+  width: 80vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 5rem 0 0 10vw;
 `;
 
 export const CardsDiv = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-around;
+`;
+
+export const ShowMoreButton = styled.button`
+display: inline-block;
+border: none;
+padding: 1rem 1rem;
+margin: 1rem 0 0 70vw;
+text-decoration: none;  
+color: grey;
+background: none;
+font-family: sans-serif;
+font-size: 1rem;
+cursor: pointer;
+text-align: center;
+transition: background 250ms ease-in-out, 
+            transform 150ms ease;
+-webkit-appearance: none;
+-moz-appearance: none;
 `;

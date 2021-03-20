@@ -9,7 +9,7 @@ export const StyledJumbo = styled(Container)`
     padding-bottom: 100px;
 `
 export const Bord = styled(Row)` 
-    margin-bottom: 20px;
+    margin: 2vh 0;
 `
     
 export const StyleHead = styled.div`
@@ -72,8 +72,8 @@ export const SuperheroDiv = styled.div`
     margin: 8rem 8rem;
 `
 
-export const SuperHeroTextDiv = styled.div`
-
+export const TeamDiv = styled.div`
+margin: 5vh 0;
 
 `
 

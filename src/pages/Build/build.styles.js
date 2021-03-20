@@ -45,6 +45,18 @@ text-align: center;
 `;
 
 export const TestimonialBg = styled.div`
-text-align: center;
+padding: 5vh 0;
+`;
 
+export const BuildCardBg = styled.div`
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+justify-content: space-around;
+margin: 2vh 0 0 0;
+`;
+
+export const PinkBigDiv = styled.div`
+background-color:#FBEDF3;
+padding: 5vh 0;
 `;

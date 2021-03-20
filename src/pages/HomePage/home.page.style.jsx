@@ -61,6 +61,7 @@ export const PinkTextBoxDiv = styled.div`
 
 export const StatsDiv = styled.div`
   padding: 0;
+  margin: 6vh 0 0 0;
 `;
 
 export const HeadingDiv = styled.div`

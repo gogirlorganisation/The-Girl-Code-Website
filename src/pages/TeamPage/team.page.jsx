@@ -25,9 +25,10 @@ import {
   StartAChapterDiv,
   Corousel,
   Bord,
+  TeamDiv
 } from "./team.page.styles";
 import superhero from "../../assets/homepage/Superhero.jpg";
-
+import team from '../../assets/team/team.png'
 import GlobalStyle from "../globalStyles";
 import NavBar from "../../components/NavBar/NavBar.component";
 import PinkTextBox from "../../components/PinkTextBox/pinktextbox.component";
@@ -51,7 +52,7 @@ const Header = () => {
             <Image
               class="img-responsive float-left"
               width="100%"
-              src={superhero}
+              src={team}
             />
           </Col>
           <Col md={{ span: 5, offset: 1 }} class="d-flex flex-column mb-3">
@@ -63,13 +64,13 @@ const Header = () => {
             </Row>
             <Row>
               <Bord>
-                <ShadowButton buttonText={"INTERN WITH US"} />
+                <ShadowButton Text={"INTERN WITH US"} />
               </Bord>
               <Bord>
-                <ShadowButton buttonText={"INTERN WITH US"} />
+                <ShadowButton Text={"START A CHAPTER"} />
               </Bord>
               <Bord>
-                <ShadowButton buttonText={"INTERN WITH US"} />
+                <ShadowButton Text={"JOIN OUR COMMUNTIY"} />
               </Bord>
             </Row>
           </Col>
@@ -101,8 +102,9 @@ const Home = () => {
         heading="ABOUT THE DIRECTORS"
         text="At The Girl Code, we aim to bridge the gender gap in the tech community by inspiring young girls to learn programming by hosting workshops at schools and universities local to them. Through our platform and intuitive curriculum, we plan to give rise to a new generation of female programmers set to take the world by storm."
       />
+      <TeamDiv>
       <Team
-        backgroundColour="#FBEDF3"
+        backgroundColour="#ffffff"
         heading="TECHNOLOGY DEPARTMENT"
         leads={[
           [
@@ -118,9 +120,10 @@ const Home = () => {
           ["https://source.unsplash.com/Dm-qxdynoEc/800x799", "Mushroom"],
         ]}
       />
-
+      </TeamDiv>
+      <TeamDiv>
       <Team
-        backgroundColour="#FFFFFF"
+        backgroundColour="#FBEDF3"
         heading="SAUCE DEPARTMENT"
         leads={[
           [
@@ -137,7 +140,7 @@ const Home = () => {
           ["https://source.unsplash.com/Dm-qxdynoEc/800x799", "Mushroom"],
         ]}
       />
-
+  </TeamDiv>
       <Donate />
       <Footer />
     </div>

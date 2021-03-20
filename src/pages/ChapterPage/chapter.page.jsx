@@ -29,23 +29,23 @@ const Header = () => {
     <Row>
       <Col className="justify-content-center">
         <ImgStyle>
-          <Image src={ChapterHeaderImg} fluid />
+          <Image src={ChapterHeaderImg} fluid style={{ height: "80vh" }} />
         </ImgStyle>
       </Col>
       <Col>
         <Row className="justify-content-center">
           <ChapterHeading>Chapters</ChapterHeading>
         </Row>
-        <ButtonBg>
-          <Row className="justify-content-center">
-            <ShadowButton buttonText={"Contact Us"} />
-          </Row>
-        </ButtonBg>
-        <ButtonBg>
-          <Row className="justify-content-center">
-            <ShadowButton buttonText={"Start A Chapter"} />
-          </Row>
-        </ButtonBg>
+        <Row className="justify-content-center">
+          <ButtonBg>
+            <ShadowButton Text={"Contact Us"} />
+          </ButtonBg>
+        </Row>
+        <Row className="justify-content-center">
+          <ButtonBg>
+            <ShadowButton Text={"Start A Chapter"} />
+          </ButtonBg>
+        </Row>
       </Col>
     </Row>
   );
@@ -83,6 +83,30 @@ const Chapter = () => {
         <Heading heading="OUR CHAPTERS" />
       </HeadingStyle>
       <CardBg>
+        <Card
+          image={ChapterCardImg}
+          title="Bangalore"
+          subtitle=""
+          //   icons={[[IconImg]]}
+          description="est. June 2020"
+          isButton={true}
+        />
+        <Card
+          image={ChapterCardImg}
+          title="Bangalore"
+          subtitle=""
+          //   icons={[[IconImg]]}
+          description="est. June 2020"
+          isButton={true}
+        />
+        <Card
+          image={ChapterCardImg}
+          title="Bangalore"
+          subtitle=""
+          //   icons={[[IconImg]]}
+          description="est. June 2020"
+          isButton={true}
+        />
         <Card
           image={ChapterCardImg}
           title="Bangalore"

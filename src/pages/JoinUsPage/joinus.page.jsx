@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Row, Col, Image } from "react-bootstrap";
-import WebDevImg from "../../assets/webdev.png";
+import WebDevImg from "../../assets/homepage/webdev.png";
 import SocialMediaImg from "../../assets/socialmedia.png";
 import OutreachImg from "../../assets/outreach.png";
 import ContentImg from "../../assets/content.png";
@@ -26,6 +26,7 @@ import Internships from "../../components/Internships/internships.component";
 import Donate from "../../components/Donate/donate.component";
 import Footer from "../../components/Footer/footer.component";
 import ShadowButton from "../../components/Button/button.component";
+import { DonateBg } from "../ChapterPage/chapter.styles";
 
 const JoinUs = () => {
   return (
@@ -101,9 +102,9 @@ const JoinUs = () => {
         <Heading heading={"Start a chapter"} />
         <StartChapter />
       </StartChapterSection>
-      <DonateSection>
+      <DonateBg>
         <Donate />
-      </DonateSection>
+      </DonateBg>
       <Footer />
     </>
   );

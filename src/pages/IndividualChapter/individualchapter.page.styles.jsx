@@ -11,7 +11,7 @@ export const Bord = styled(Row)`
     
 export const StyleHead = styled.div`
     font-weight: bold;
-    font-size: 35px;
+    font-size: 55px;
     color: #F05680;
     margin-left: 10px;
     margin-bottom: 15px;
@@ -27,7 +27,18 @@ export const StatsDiv = styled.div`
 `;
 
 export const Corousel = styled.div`
-margin: 6rem 0;
-background-color: #FBEDF3;
+margin: 6rem 0 0 0;
 padding: 3rem 0;
+background: #FBEDF3;
+`;
+
+export const OtherChapters = styled.div`
+    text-align: center;
+    margin: 5vh 0 8vh 0;
+    background: #FBEDF3;
+    padding: 3rem 0;
+`;
+
+export const TeamDiv = styled.div`
+    text-align: center;
 `;

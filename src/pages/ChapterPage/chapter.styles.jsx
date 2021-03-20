@@ -1,12 +1,11 @@
 import styled from "styled-components";
 
 export const HeaderBg=styled.div`
-    padding-top:6rem;
-    padding-bottom:3rem;
+padding: 15vh 0 0 0
+
 `
 export const ImgStyle=styled.div`
-    padding-left:5rem;
-    margin-left:10rem;
+    margin: 0 0 0 5rem;
 `
 export const ChapterHeading=styled.h1`
     color:#F05680;
@@ -14,10 +13,8 @@ export const ChapterHeading=styled.h1`
     font-weight:700;
     padding-top:5rem;
     padding-bottom:3rem;
-    margin-right:20rem;
 `
 export const ButtonBg=styled.div`
-    margin-right:20rem;
     margin-bottom:2rem;
 `
 
@@ -32,9 +29,20 @@ export const ImgCarouselStyle=styled.div`
     padding-bottom:4rem
 `
 export const CardBg=styled.div`
-margin-top:50px;
+ display: flex;
+ flex-direction: row;
+ flex-wrap: wrap;
+ justify-content: space-around;
+ margin: 2vh 0 0 0;
 `
 
 export const DonateBg=styled.div`
-    margin-top:50px;
+text-align: center;
+border-top: 3px pink solid;
+padding: 3rem 0 0 0;
+width: 80vw;
+display: flex;
+flex-direction: row;
+justify-content: center;
+margin: 5rem 0 0 10vw;
 `

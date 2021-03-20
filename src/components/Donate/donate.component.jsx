@@ -19,7 +19,7 @@ export default function Donate() {
               <Col>
                 <Container>
                   <Row>
-                    <Title>DONATE NOW!</Title>
+                    <Title>HELP SUPPORT THE GIRL CODE</Title>
                   </Row>
                   <Row>
                     <Content>
