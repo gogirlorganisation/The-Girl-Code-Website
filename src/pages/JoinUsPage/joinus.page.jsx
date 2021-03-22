@@ -12,14 +12,11 @@ import {
   MainHeading,
   HeaderText,
   StartChapterSection,
-  DonateSection,
   InternshipsSection,
 } from "./joinus.page.style";
 import Heading from "../../components/Heading/heading.component";
-// import TextCard from "../../components/TextCard/textcard.component";
 import PinkTextBox from "../../components/PinkTextBox/pinktextbox.component";
 import Button from "../../components/Button/button.component";
-// import superhero from "../../assets/homepage/Superhero.jpg";
 import JoinCommunity from "../../components/JoinCommunity/joincommunity.components";
 import StartChapter from "../../components/StartChapter/startchapter.component";
 import Internships from "../../components/Internships/internships.component";
@@ -44,12 +41,12 @@ const JoinUs = () => {
             <Image src={JoinImg} alt="Join Us" fluid />
           </Col>
           <Col xs={0} md={1} />
-          <Col md={5}>
+          <Col md={5} className="text-center">
             <MainHeading>Join Us </MainHeading>
             <HeaderText>Together everyone achieves more!</HeaderText>
             <ShadowButton Text={"INTERN WITH US"} />
             <ShadowButton Text={"START A CHAPTER"} />
-            <ShadowButton Text={"JOIN THE CCOMMUNITY"} />
+            <ShadowButton Text={"JOIN THE COMMUNITY"} />
           </Col>
         </Row>
       </Container>

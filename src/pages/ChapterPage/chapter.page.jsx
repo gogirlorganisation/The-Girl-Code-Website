@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Button, Col, Row, Image } from "react-bootstrap";
+import { Col, Row, Image } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import NavBar from "../../components/NavBar/NavBar.component";
 import Stats from "../../components/Stats/stats.component";
@@ -12,7 +12,6 @@ import ChapterHeaderImg from "../../assets/Chapter/chapter_header.png";
 import ChapterCardImg from "../../assets/Chapter/chaptercard.jpg";
 import ShadowButton from "../../components/Button/button.component";
 import Card from "../../components/Card/card.component";
-import IconImg from "../../assets/Chapter/icon.jpg";
 import {
   ButtonBg,
   CardBg,
@@ -29,7 +28,7 @@ const Header = () => {
     <Row>
       <Col className="justify-content-center">
         <ImgStyle>
-          <Image src={ChapterHeaderImg} fluid style={{ height: "80vh" }} />
+          <Image src={ChapterHeaderImg} fluid style={{ height: "60vh" }} />
         </ImgStyle>
       </Col>
       <Col>

@@ -10,9 +10,11 @@ export const ButtonStyle = styled.div`
   font-size: 1.4rem;
   border-width: 2px;
   border-color: #ffff;
-  padding: 0.8rem 4rem;
+  padding: 0.8rem 3rem;
   border-radius: 5px;
   letter-spacing: 2;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
   margin-right: 1rem;
   box-shadow: 0 3px 4px #f05680;
   &:hover {
