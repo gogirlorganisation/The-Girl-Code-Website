@@ -33,7 +33,7 @@ class Workshop extends React.Component {
     upcomingWorkshopItems: 4,
     pastWorkshopItems: 4,
     loading: true,
-    buttonText: "Show More",
+    buttonText: "See More Workshops",
     expanded: false,
     myRef: React.createRef(),
   };
@@ -50,10 +50,10 @@ class Workshop extends React.Component {
     });
 
     await doc.loadInfo(); // loads document properties and worksheets
-    const firstSheet = doc.sheetsByIndex[0];
+    const firstSheet = doc.sheetsByTitle["UpcomingWorkshops"];
     const upcomingWorkshops = await firstSheet.getRows();
 
-    const secondSheet = doc.sheetsByTitle["demo"];
+    const secondSheet = doc.sheetsByTitle["PastWorkshops"];
     const pastWorkshops = await secondSheet.getRows();
     // console.log(pastWorkshops);
 
@@ -72,14 +72,14 @@ class Workshop extends React.Component {
       });
     });
     pastWorkshops.forEach((da) => {
-      const { icons, image, isButton } = da;
+      const { description, title, subtitle, icons, image, isButton } = da;
       pastWorkshopsData.push({
-        description: da["Website description"].substr(0, 150),
-        title: da["Workshop Avenue"],
+        description,
+        title,
         icons,
         image,
         isButton,
-        subtitle: da["Dates"],
+        subtitle,
       });
     });
     this.setState({ upcomingWorkshopsData, pastWorkshopsData, loading: false });
@@ -108,7 +108,7 @@ class Workshop extends React.Component {
     } else {
       this.setState({
         pastWorkshopItems: 4,
-        buttonText: "Show More",
+        buttonText: "See More Workshops",
         expanded: false,
       });
       this.state.myRef.current.scrollIntoView();
@@ -139,9 +139,7 @@ class Workshop extends React.Component {
             </Col>
             <Col md={5} className="text-center">
               <MainHeading>Our Workshops </MainHeading>
-              <HeaderText>
-                We host free coding workshops!
-              </HeaderText>
+              <HeaderText>We host free coding workshops!</HeaderText>
               <ShadowButton Text={"CONDUCT A WORKSHOP"} />
             </Col>
           </Row>
@@ -167,11 +165,11 @@ class Workshop extends React.Component {
           <PinkTextBox
             heading={"OUR COVID-19 IMPACT"}
             text={
-              'The 2020 Coronavirus Pandemic brought a plague of troubles (literally). But, The Girl Code team believes in dealing with tough situations indomitably, and we can proudly say we doubled our productivity in the summer months of lockdown! TGC hosted over 15 workshops, including a summer bootcamp, BUILD (hyperlink), that saw over 500 participants. We also hosted several “Intro to Tech” workshops for girls in Rural India!'
-              }
+              "The 2020 Coronavirus Pandemic brought a plague of troubles (literally). But, The Girl Code team believes in dealing with tough situations indomitably, and we can proudly say we doubled our productivity in the summer months of lockdown! TGC hosted over 15 workshops, including a summer bootcamp, BUILD (hyperlink), that saw over 500 participants. We also hosted several “Intro to Tech” workshops for girls in Rural India!"
+            }
           />
         </PinkBoxDiv>
-        <UpcomingWorkshopsDiv ref={this.state.myRef}>
+        <UpcomingWorkshopsDiv>
           <Heading heading={"UPCOMING WORKSHOPS"} />
           {loading ? (
             <Spinner animation="border" variant="danger" className="mt-5" />
@@ -191,9 +189,8 @@ class Workshop extends React.Component {
                 ))}
             </CardsDiv>
           )}
-          
         </UpcomingWorkshopsDiv>
-        <PastWorkshopsDiv>
+        <PastWorkshopsDiv ref={this.state.myRef}>
           <Heading heading={"PAST WORKSHOPS"} />
           {loading ? (
             <Spinner animation="border" variant="danger" className="mt-5" />
@@ -215,7 +212,7 @@ class Workshop extends React.Component {
           )}
           {!loading ? (
             <ShowMoreButton onClick={this.toggleShow}>
-              See More Workshops {'>'}
+              {buttonText} {">"}
             </ShowMoreButton>
           ) : (
             " "

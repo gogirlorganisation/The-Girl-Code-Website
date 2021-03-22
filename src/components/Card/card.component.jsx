@@ -21,7 +21,6 @@ const Card = ({ icons, image, title, subtitle, description, isButton }) => {
     <CardHolder>
       <CardComp
         style={{
-          maxHeight: "32rem",
           borderRadius: "15px",
           paddingBottom: "4rem",
           margin: "0 auto",

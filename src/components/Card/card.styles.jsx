@@ -8,11 +8,9 @@ export const Title = styled.p`
 `;
 
 export const CardHolder = styled.div`
-  margin-bottom: 2rem;
   margin: 1rem 2rem;
   text-align: left;
   width: 24rem;
-  max-height: 32rem;
   border-radius: 15px;
   box-shadow: 0px 0px 5px 2px rgba(71, 71, 71, 0.22);
   cursor: pointer;
@@ -32,8 +30,9 @@ export const Subtitle = styled.p`
 
 export const IconText = styled.p`
   display: inline;
-  font-size: 0.75rem;
-  color: #000;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #202020;
   margin-left: 0.5rem;
 `;
 

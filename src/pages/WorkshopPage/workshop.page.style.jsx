@@ -43,7 +43,7 @@ export const UpcomingWorkshopsDiv = styled.div`
 export const PastWorkshopsDiv = styled.div`
   background-color: rgba(215, 75, 131, 0.1);
   text-align: center;
-  margin: 4rem 0;
+  margin: 4rem 2rem;
   padding-top: 4rem;
   text-align: center;
   @media screen and (max-width: 500px) {
@@ -80,19 +80,18 @@ export const CardsDiv = styled.div`
 `;
 
 export const ShowMoreButton = styled.button`
-display: inline-block;
-border: none;
-padding: 1rem 1rem;
-margin: 1rem 0 0 70vw;
-text-decoration: none;  
-color: grey;
-background: none;
-font-family: sans-serif;
-font-size: 1rem;
-cursor: pointer;
-text-align: center;
-transition: background 250ms ease-in-out, 
-            transform 150ms ease;
--webkit-appearance: none;
--moz-appearance: none;
+  display: inline-block;
+  border: none;
+  padding: 1rem 1rem;
+  margin: 1rem 0 0 70vw;
+  text-decoration: none;
+  color: grey;
+  background: none;
+  font-family: sans-serif;
+  font-size: 1rem;
+  cursor: pointer;
+  text-align: center;
+  transition: background 250ms ease-in-out, transform 150ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
 `;

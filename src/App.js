@@ -29,7 +29,7 @@ class App extends Component {
         <Route exact path="/joinus" component={JoinUs} />
         <Route exact path="/" component={Home} />
         <Route exact path="/chapter" component={Chapter} />
-        <Route exact path="/indworkshop" component={IndWorkshop} />
+        <Route exact path="/indworkshop/:id" component={IndWorkshop} />
         <Route exact path="/buildnotactive" component={BuildPrevious} />
         <Route exact path="/buildactive" component={BuildActive} />
       </Router>
