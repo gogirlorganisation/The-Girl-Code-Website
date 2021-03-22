@@ -12,11 +12,15 @@ import {
 
 import { Card as CardComp } from "react-bootstrap";
 const Card = ({ icons, image, title, subtitle, description, isButton }) => {
-  let icon = [];
+  let icon = [],
+    iconText;
   if (icons) {
     icon = icons.split(" ");
+    iconText = icon[icon.length - 1];
+    icon.pop();
     console.log(icon);
   }
+
   return (
     <CardHolder>
       <CardComp
@@ -31,10 +35,12 @@ const Card = ({ icons, image, title, subtitle, description, isButton }) => {
           <Title>{title}</Title>
           <Subtitle>{subtitle}</Subtitle>
           <div style={{ margin: "1rem 0" }}>
-            {icons ? (
+            {icon ? (
               <>
-                <IconImg src={icon[0]} alt={"Workshop"} />
-                <IconText>{icon[1]}</IconText>{" "}
+                {icon.map((i) => (
+                  <IconImg src={i} alt={"Workshop"} />
+                ))}
+                <IconText>{iconText}</IconText>{" "}
               </>
             ) : (
               ""

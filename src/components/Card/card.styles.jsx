@@ -37,7 +37,8 @@ export const IconText = styled.p`
 `;
 
 export const IconImg = styled.img`
-  width: 1.5rem;
+  max-width: 1.75rem;
+  max-height: 1.75rem;
 `;
 
 export const Description = styled.p`
