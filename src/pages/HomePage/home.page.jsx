@@ -171,8 +171,8 @@ const Home = () => {
         <YoutubeVideo
           videoOne="https://www.youtube.com/watch?v=ysz5S6PUM-U"
           videoTwo="https://www.youtube.com/watch?v=ysz5S6PUM-U"
-          textOne="Join us as we speak with Mina, and break down the fundamentals of technology on 'Tech Talks'. In this episode, she breaks down web development for us and talks about her journey in the field."
-          textTwo="Join us as we speak with Annie and Kass to break down the fundamentals of frontend development on “Tech Talks”. In this episode, they speak about out the future of frontend with sites like Wix and AIs like GPT3"
+          textOne="Join us as we speak with Mina, and break down the fundamentals of technology on 'Tech Talks'. She breaks down web development for us and talks about her journey in the field."
+          textTwo="Join us as we speak with Annie and Kass to break down the fundamentals of frontend development on “Tech Talks”. They speak about out the future of frontend with sites like Wix and AIs like GPT3"
         />
       </YouTubeSection>
       <StartAChapterDiv>

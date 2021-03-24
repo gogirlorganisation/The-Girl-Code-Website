@@ -53,7 +53,12 @@ const Header = () => {
 const Chapter = () => {
   return (
     <div>
-      <NavBar />
+      <NavBar
+          bgOut="transparent"
+          bgIn="#F05680"
+          textOut="#F05680"
+          textIn="#F05680"
+        />
       <HeaderBg>
         <Header />
       </HeaderBg>

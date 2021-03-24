@@ -43,7 +43,6 @@ export const UpcomingWorkshopsDiv = styled.div`
 export const PastWorkshopsDiv = styled.div`
   background-color: rgba(215, 75, 131, 0.1);
   text-align: center;
-  margin: 4rem 2rem;
   padding-top: 4rem;
   text-align: center;
   @media screen and (max-width: 500px) {
