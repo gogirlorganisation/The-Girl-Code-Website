@@ -3,53 +3,37 @@ import styled from "styled-components";
  export const Background=styled.div`
         background-color: #63379A;
         color: white;
-        @media screen and (min-width:768px) {
-          padding-top: 1.5rem;
-        }
-        @media screen and (max-width:768px) {
-          padding-top: 2rem;
-        }
+        padding-top:2em;
+       
     
  `
  export const TextAlign=styled.p`
-   font-size: 1.3rem;
+   font-size: 1em;
    line-height: 210%;
-   padding-top:0.4rem;
-   padding-left:4rem;
+   padding-left: 1em;
    text-align:left;
-   @media screen and (max-width:1200px) {
-            font-size:1.2rem;
-          }
-   @media screen and (max-width:992px) {
-     text-align: center;
-     font-size: 1.1rem;
-     padding-right:4rem;
+   
+   @media (max-width: 576px) {
+     text-align:center;
    }
                 
  `
  export const Icons=styled.div`
-          font-size: 1.3rem;
-          @media screen and (max-width:1200px) {
-            font-size:1.3rem;
-          }
-        @media screen and (max-width:992px) {
-     text-align: center;
-     font-size: 1.2rem;
-     padding-right:6rem;
-   }
+  height: 100%;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1em;
  `
 export const PartnerStyle=styled.div`
-                text-align: center;
-                font-size:1.3rem;
-                font-weight:650;
-                @media screen and (max-width:1200px) {
-            font-size:1.2rem;
-            margin-left:2.5rem;
-            margin-top:1.5rem;
-          }
-                @media screen and (max-width:992px) {
-                  font-size: 1.15rem;
-                }
+  display:flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content:center;
+  align-items: center;
+  font-size: 1em;
+  font-weight: bold;
+  
 ` 
 export const FooterEnd=styled.div`
 background:#421F6D;

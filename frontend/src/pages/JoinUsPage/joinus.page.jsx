@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Row, Col, Image } from "react-bootstrap";
-import WebDevImg from "../../assets/homepage/webdev.png";
+import WebDevImg from "../../assets/homepage/Workshops PNG.png";
 import SocialMediaImg from "../../assets/socialmedia.png";
 import OutreachImg from "../../assets/outreach.png";
 import ContentImg from "../../assets/content.png";

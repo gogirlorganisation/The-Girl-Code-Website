@@ -6,8 +6,8 @@ export const BoxBackground = styled.div`
   border-radius: 25px;
   text-align: center;
   justify-content: center;
-  @media screen and (min-width: 481px) {
-    border-radius: 30px;
+  @media screen and (max-width: 720px) {
+    border-radius: 0px;
   }
 `;
 export const BoxHeading = styled.h2`

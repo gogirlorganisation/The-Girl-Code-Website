@@ -24,32 +24,9 @@ class StartChapter extends Component {
   };
 
   fetchData = async () => {
-    // Initialize the sheet - doc ID is the long id in the sheets URL
-    const doc = new GoogleSpreadsheet(
-      "1L_Etdeh13tOV5BJvodoV7J8rM3HH3lDWt_CYYvLqKrs"
-    );
-
-    await doc.useServiceAccountAuth({
-      client_email: process.env.REACT_APP_GOOGLE_SERVICE_ACCOUNT_EMAIL,
-      private_key: process.env.REACT_APP_GOOGLE_PRIVATE_KEY,
-    });
-
-    await doc.loadInfo(); // loads document properties and worksheets
-    const chapterSheet = doc.sheetsByIndex[2];
-    const chapters = await chapterSheet.getRows();
-
-    const chaptersData = [];
-
-    chapters.forEach((da) => {
-      chaptersData.push(da.name);
-    });
-
-    this.setState({ searchItems: chaptersData });
+    
   };
 
-  componentDidMount() {
-    this.fetchData();
-  }
 
   handleChange = (e) => {
     const { searchItems } = this.state;

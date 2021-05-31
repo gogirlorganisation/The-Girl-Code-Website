@@ -1,8 +1,8 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Container, Row, Col, Image } from "react-bootstrap";
-import superhero from '../../assets/homepage/superhero.png';
-import { HeadingStyle,DescriptionStyle } from "./community.styles";
+import superhero from '../../assets/homepage/Superhero.png';
+import { HeadingStyle,DescriptionStyle,Align } from "./community.styles";
 
 
 export default function CommunitySection({content }) {
@@ -15,7 +15,7 @@ export default function CommunitySection({content }) {
           fontWeight: 700,
           marginLeft: "auto",
           marginRight: "auto",
-        }} fluid
+        }}
       >
         <HeadingStyle>{c[0]}</HeadingStyle>
          
@@ -23,10 +23,10 @@ export default function CommunitySection({content }) {
       <div
         style={{
           color: "#666666",
-          fontSize: "17px",
+          fontSize: "1em",
           textAlign: "center",
-          marginBottom:"2rem",
-          padding:"0.1rem 3rem",
+          marginBottom:"2em",
+          
         }}
       >
        <DescriptionStyle> {c[1]}</DescriptionStyle>
@@ -34,17 +34,15 @@ export default function CommunitySection({content }) {
     </Row>
   ));
   return (
-    <Container >
-      <Row style={{margin: '0 0 0 2vw'}}>
-        
-        <Col md={5} style={{ marginTop: "auto", marginBottom: "auto" }}>
+    <Container>
+      <Row>
+        <Col lg={6} md={5} sm={12} xs={12}>
+          <Align>
           {listItems}
+          </Align>
         </Col>
-        <Col
-          md={6}
-          style={{margin: "0 0 0 7vw"}}
-        >
-          <Image src={superhero} fluid style={{height: '100vh'}}/>
+        <Col  lg={6} md={7} sm={12} xs={12} style={{display:"flex", flexDirection:"row", justifyContent:"center"}}>
+          <Image src={superhero} style={{width:"100%"}} />
         </Col>
       </Row>
     </Container>

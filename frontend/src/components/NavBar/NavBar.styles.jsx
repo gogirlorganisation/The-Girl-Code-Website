@@ -1,22 +1,30 @@
 import styled from "styled-components";
 
 export const Nav = styled.nav`
-  position: absolute;
   z-index: 1000;
   width: 100%;
   height: 80px;
-  padding: 25px 25px;
   display: flex;
+  flex-direction: row;
   background-color: ${({ bgOut, bgIn, textOut, textIn }) => bgOut};
   justify-content: space-between;
+  align-items: center;
   img {
     width: 4em;
+  }
+
+  @media (max-width: 768px) {
+    padding: 0em 1em;
   }
 `;
 
 export const Ul = styled.ul`
   list-style: none;
   display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  flex:0.6;
   flex-flow: row nowrap;
   z-index: 10;
   background-color: ${({ open, bgOut, bgIn, textOut, textIn }) => bgOut};
@@ -24,7 +32,7 @@ export const Ul = styled.ul`
   li {
     font-weight: 700;
     background-color: ${({ open, bgOut, bgIn, textOut, textIn }) => bgOut};
-    margin: 4px 20px;
+    color:white;
 
     color: ${({ open, bgOut, bgIn, textOut, textIn }) => textOut};
   }
@@ -43,9 +51,8 @@ export const Ul = styled.ul`
   @media (max-width: 910px) and (min-width: 768px) {
     li {
       background-color: ${({ open, bgOut, bgIn, textOut, textIn }) => bgOut};
-
-      margin: 4px 10px;
-      font-size: 14px;
+      
+      font-size: 0.9em;
     }
 
     li:nth-child(6) {

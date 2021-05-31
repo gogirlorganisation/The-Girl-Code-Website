@@ -10,8 +10,8 @@ export const Container = styled.div`
 
 export const BoxImage = styled.div`
   display: inline-block;
-  width: 35rem;
-  height:20rem;
+  width: 60%;
+  height:25em;
   background-position: center; 
   background-size: cover;
   display:flex;

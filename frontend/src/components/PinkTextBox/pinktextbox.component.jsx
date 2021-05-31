@@ -5,13 +5,11 @@ import { BoxBackground, BoxHeading, BoxText } from "./pinktextbox.styles";
 
 export default function PinkTextBox({ heading, text }) {
   return (
-    <Container>
       <BoxBackground>
         <Row>
           <BoxHeading>{heading}</BoxHeading>
           <BoxText>{text}</BoxText>
         </Row>
       </BoxBackground>
-    </Container>
   );
 }

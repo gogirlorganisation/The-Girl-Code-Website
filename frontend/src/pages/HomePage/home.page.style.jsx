@@ -3,65 +3,96 @@ import { Button, Container, Row } from "react-bootstrap";
 import Logo from "./../../assets/Logo.png";
 import Workshop from "./../../assets/header.png";
 
-export const StyledJumbo = styled.div`
-   padding-top: 250px;
-   padding-bottom: 250px;
-  background-image: url(${Workshop});
+export const HeaderDiv = styled.div`
+  height:100vh;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  background:linear-gradient(0deg, rgba(0,0,0, 0.4), rgba(0,0,0, 0.4)), url(https://i.imgur.com/xsZYSIX.jpg);
   background-size: cover;
-  width: 100%;
 `;
 
-export const StyleHead = styled.div`
+export const MainContent = styled.div`
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex:0.7;
+  width:80%;
+  @media screen and (max-width:720px) {
+       
+  }
+  
+`;
+
+export const Heading = styled.p`
+  font-size:2.8em;
   font-weight: bold;
-  font-size: 25px;
-  background-color: transparent;
-  color: white;
+  color:#fff;
   text-align: center;
+  @media screen and (max-width:720px) {
+     
+  }
+  
+  
 `;
-export const StylePee = styled.div`
-  font-weight: bold;
-  font-size: 17px;
-  background-color: transparent;
-  color: white;
+
+export const SubHeading = styled.p`
+  font-size:1.5em;
+  color:#fff;
   text-align: center;
+  @media screen and (max-width:720px) {
+       flex-direction:column;
+      
+  }
+  
 `;
 
-export const StyledRow = styled(Row)`
-  background-color: transparent;
-`;
-export const StyledContainer = styled(Container)`
-  background-color: transparent;
-`;
-export const StyledButtonOne = styled(Button)`
-  font-weight: bold;
-  font-size: 13px;
-  padding: 10px 60px 10px 60px;
-  margin: 0px 25px 0px 0px;
-
-  @media (max-width: 768px) {
-    padding: 10px 20px 10px 20px;
-    margin: 0px 10px 10px 0px;
+export const ButtonsDiv = styled.div`
+  display:flex;
+  flex-direction: row;
+  width:50%;
+  justify-content: space-evenly;
+  @media screen and (max-width:992px) {
+       flex-direction:column;
+       width:100%;
   }
 `;
-export const StyledButtonTwo = styled(Button)`
-  font-weight: bold;
-  font-size: 13px;
-  padding: 10px 50px 10px 50px;
-  margin: 0px 0px 0px 25px;
 
-  @media (max-width: 768px) {
-    padding: 10px 10px 10px 10px;
-    margin: 0px 0px 10px 10px;
+export const OutlineButton = styled.div`
+  color: white;
+  border: 2px white solid;
+  border-radius:5px;
+  width:30%;
+  padding: 0.5em;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &:hover{
+    background-color: white;
+    color:black;
   }
+
+  @media screen and (max-width:992px) {
+       width:100%;
+       margin-top:1em;
+  }
+  
 `;
+
 
 export const PinkTextBoxDiv = styled.div`
-  margin: 5rem 0;
+  margin: 5em 3em;
+  @media screen and (max-width:768px) {
+       margin:5em 0;
+  }
 `;
 
 export const StatsDiv = styled.div`
   padding: 0;
-  margin: 6vh 0 0 0;
+  margin: 2em 0 0 0;
 `;
 
 export const HeadingDiv = styled.div`
