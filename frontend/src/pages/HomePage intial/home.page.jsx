@@ -2,12 +2,6 @@ import React from "react";
 import { Container, Button, Col, Row } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import {
-  HeaderDiv,
-  MainContent,
-  Heading,
-  SubHeading,
-  ButtonsDiv,
-  OutlineButton,
   StyledJumbo,
   StyleHead,
   StyledButton,
@@ -31,41 +25,48 @@ import {
   StartAChapterDiv,
   Corousel,
 } from "./home.page.style";
+import superhero from '../../assets/homepage/superhero.png'
 import GlobalStyle from "../globalStyles";
 import NavBar from "../../components/NavBar/NavBar.component";
 import Stats from "../../components/Stats/stats.component";
 import PinkTextBox from "../../components/PinkTextBox/pinktextbox.component";
 import ImageCorousel from "../../components/ImageCorousel/imagecorousel.component";
-import workshops from '../../assets/homepage/Workshops PNG.png'
-import community from '../../assets/homepage/Community PNG.png'
-import mentors from '../../assets/homepage/Mentors PNG.png'
-import online from '../../assets/homepage/Online PNG.png'
+import workshops from '../../assets/homepage/webdev.png'
+import community from '../../assets/homepage/community.png'
+import mentors from '../../assets/homepage/mentors.png'
+import online from '../../assets/homepage/online.png'
 import YoutubeVideo from "../../components/YoutubeVideo/YoutubeVideo.component";
 import SocialMediaDiv from "../../components/SocialMediaDiv/SocialMediaDiv.component";
 import TextCard from "../../components/TextCard/textcard.component";
 import CommunitySection from "../../components/Community/community.component";
-//import Heading from "../../components/Heading/heading.component";
+import Heading from "../../components/Heading/heading.component";
 import StartChapter from "../../components/StartChapter/startchapter.component";
 import Donate from "../../components/Donate/donate.component";
 import Footer from "../../components/Footer/footer.component";
 const Header = () => {
   return (
-    <HeaderDiv>
-      <NavBar
-        bgOut="transparent"
-        bgIn="#F05680"
-        textOut="white"
-        textIn="white"/>
-
-      <MainContent>
-        <Heading>Welcome to The Girl Code</Heading>
-        <SubHeading>Inspiring girls to discover and pursure programming</SubHeading>
-        <ButtonsDiv>
-          <OutlineButton>JOIN US</OutlineButton>
-          <OutlineButton>LEARN MORE</OutlineButton>
-        </ButtonsDiv>
-      </MainContent>
-    </HeaderDiv>
+    <div>
+      <StyledJumbo>
+        <StyledContainer>
+          <StyledRow className="justify-content-center mt-5">
+            <StyleHead>Welcome To The Girl Code</StyleHead>
+          </StyledRow>
+          <StyledRow className="justify-content-center mt-2">
+            <StylePee>
+              We seek to inspire girls to discover and pursue programming
+            </StylePee>
+          </StyledRow>
+          <StyledRow className="justify-content-center mt-5">
+            <StyledButtonOne variant="outline-light" className="rounded-0">
+              JOIN US
+            </StyledButtonOne>{" "}
+            <StyledButtonTwo variant="outline-light" className="rounded-0">
+              LEARN MORE
+            </StyledButtonTwo>{" "}
+          </StyledRow>
+        </StyledContainer>
+      </StyledJumbo>
+    </div>
   );
 };
 
@@ -73,8 +74,14 @@ const Home = () => {
   return (
     <div>
       <GlobalStyle/>
-      <Header/>
-
+      
+      <NavBar
+        bgOut="transparent"
+        bgIn="#F05680"
+        textOut="white"
+        textIn="white"
+      />
+      <Header />
       <StatsDiv>
         <Stats
           stats={[
@@ -84,13 +91,19 @@ const Home = () => {
           ]}
         />
       </StatsDiv>
-      
       <PinkTextBoxDiv>
         <PinkTextBox
           heading="MISSION"
           text="Bridging the gender gap in Tech one free workshop at a time! We host fun and friendly workshops for young students to learn programming at schools and universities local to them. Through our unique approach, and our intuitive curriculum, we plan to give rise to a new generation of female programmers set to take the world by storm!"
         />
       </PinkTextBoxDiv>
+      {/* <SuperheroDiv>
+        <SuperHeroTextDiv>
+        </SuperHeroTextDiv>
+        <SuperHeroImgDiv>
+          <SuperHeroImg src={superhero} />
+        </SuperHeroImgDiv>
+      </SuperheroDiv> */}
 
       <CommunitySection
         content={[
@@ -109,16 +122,17 @@ const Home = () => {
         ]}
       />
 
-<Corousel>
+      <Corousel>
         <ImageCorousel
           imgUrls={[
-            "https://i.imgur.com/xsZYSIX.jpg",
-            "https://i.imgur.com/xsZYSIX.jpg",
-            "https://i.imgur.com/xsZYSIX.jpg",
-            "https://i.imgur.com/xsZYSIX.jpg",
+            "homepage/imagegallery/workshop.png",
+            "homepage/imagegallery/workshop2.jpg",
+            "homepage/imagegallery/workshop3.jpg",
+            "homepage/imagegallery/workshop4.jpg",
           ]}
         />
       </Corousel>
+      
       <TextCard
         heading="OUR PROGRAM"
         content={[
@@ -169,7 +183,6 @@ const Home = () => {
       </StartAChapterDiv>
       <Donate />
       <Footer />
-
     </div>
   );
 };

@@ -6,9 +6,9 @@ import Heading from "../Heading/heading.component";
 
 export default function TextCard({ heading, content }) {
   const listItems = content.map((item) => (
-    <Col mx-auto>
+    <Col lg={3} md={6} sm={12} xs={12}>
       <Container>
-        <Image src={item[2]} style={{ justifyContent: "center" }} fluid />
+        <Image src={item[2]} style={{ justifyContent: "center", width:"120px", height:"100px"}} fluid />
 
         <Title>{item[0]}</Title>
         <Content>{item[1]}</Content>
@@ -18,13 +18,9 @@ export default function TextCard({ heading, content }) {
   
   return (
     <Alignment>
-      <Container >
-        <Heading heading={heading} />
-        <Row
-          style={{
-            marginTop: "2rem",
-          }}
-        >
+      <Container>
+        <Heading heading={heading}/>
+        <Row style={{marginTop:"3em"}}>
           {listItems}
         </Row>
       </Container>

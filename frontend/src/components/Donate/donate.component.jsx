@@ -6,15 +6,16 @@ import { Background, Alignment, Title, Content } from "./donate.styles";
 
 export default function Donate() {
   return (
-    <Container>
+    <Container style={{paddingBottom:"4em"}}>
       <Background>
         <Row>
-          <Col xs={12} md={4}>
+          <Col lg={3} md={3} sm={12}>
             <Alignment>
               <Image src="https://imgur.com/9UFLhE6.jpg" fluid />
             </Alignment>
           </Col>
-          <Col>
+
+          <Col lg={9} md={9} sm={12}>
             <Row>
               <Col>
                 <Container>
@@ -29,8 +30,11 @@ export default function Donate() {
                     </Content>
                   </Row>
                 </Container>
-                <Row xs={12}>
-                  <ShadowButton Text={"Donate"} />
+                <Row>
+                  <Alignment style={{width:"100%"}}>
+                    <ShadowButton Text={"Donate"} />
+                  </Alignment>
+                  
                 </Row>
               </Col>
             </Row>
