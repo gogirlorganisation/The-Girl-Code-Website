@@ -2,6 +2,7 @@ const express = require("express");
 const router = express.Router();
 const mongoose = require("mongoose");
 const multer = require("multer");
+const {GoogleSpreadsheet} = require("google-spreadsheet")
 
 require("./../models/chapter");
 require("./../models/workshop");
@@ -19,7 +20,6 @@ router.post(
     console.log(req.body);
     const {
       chapterName,
-      description,
       image,
       carouselImages,
     } = req.body;
@@ -27,7 +27,6 @@ router.post(
     try {
       const chapter = await Chapter.create({
         chapterName,
-        description,
         image,
         carouselImages,
       });
@@ -193,5 +192,50 @@ router.get("/users", async (req, res) => {
     console.log(error);
   }
 });
+
+router.post("/data", async (req, res) => {
+  try {
+    const doc = new GoogleSpreadsheet('18XBWjzeytN39_KQaHYz734qK7XcRjagjI-e5BWGd7JI')
+    await doc.useServiceAccountAuth({
+      client_email: "krishna@the-girl-code-315413.iam.gserviceaccount.com",
+      private_key: "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDCOhKgeOiaMblk\nwGjEctSEDWdxzZuNgMvmvanJsIQS0fjp+uENXoqMbLNCh30GHiaY/tOGrtoq1008\nA8E/fY68kL9ioksjHse6lIXobOzNbShvSBpAz3UeIzZB57lzRntPCZ5lyvAPCaWI\nmDDnXh5I2dkESVZWRpffy5SyUbBTPRvYJuB2ON1tm6YmPLbTxJiGRWB6abBkIXb8\ndv0RHcTsh9zUAt8HQfXuzT7m43mySfMtU9XKKizt9bv+lPeyWBtu1P0VynwUNImf\ndY5+H1GGNKgoKKgogHX4Yn26Ulhj62dvYywDMJs2ZCnKK4XsS2q6LrBLr0smnOQy\nnal15mcXAgMBAAECggEAB1MYU7vrjbEVXELTUKFB+W7l+Uk3Nglm5x888XG6MVmA\nyRYgeZgYon4Q7o/ce6gUbY2inYAnkxkGfR5pIcNS6DKPPSGAsuTcxGEIgcDl10No\nFHZEIzCPqqDKUYbzG/FLAiqLMiyKjA6hkvqmUXtfqgCpKfu4CU3lOVfcljL1ctYY\nt4z8i4QAjwi3hMsVeGXV4PDFLTSpK0tIOpBo5ZBbQGQPFtQ+OLjogbQNFSjezzsr\ngA8TKDw1ra/k+jGU8SMeVGB2TBxM71rjL8z8RLlw3j+iBrgKTc5ZTDIN/oN2Yo4K\nU1W1+TlCcuP0z81lSeU07nCG1l5MmrgS65xNMr6qZQKBgQD3VwrtotiB8HfJihL5\nogTbpcacG1qvPYrEy/c+z70kOd6aZ78f7aVFFDFE/oIgtEWxsyalLBRJZGOzxK3R\nVSgZGL4F892/NzGrbzTDqtUS+gPZ8xsAEqR5CTuqFEaHM21qqjCWHLfwFsQgTrS2\nmUDpzNxqZEk2RVy76kQGz0i8AwKBgQDJBvdf5WUCxKJUFuVL7jwBkwBVpVrj8hQG\nx3QlbLMmItvcWwkqkZjVqlWqwApXymI7PRucTzj1ufymzJ55Tz/ph3exGrc7yRcd\nGCcY2g2JUDedBY39qLiavCdF8Wfb9cUBIjWb9285iBiizpD0YEzC8dTcG2HWazOp\nU0FDCnteXQKBgQC8Buqi3oISvdiCWLm2Fin1RF/ouo7E21cL5jaOBGS4DlogLTBJ\nOGLEUeZmmcgYzpKQ1S1SsWC2rl9xANpWYZM7COkkI1B2laHnvoFxIgQbCf81h68F\n7iYkcRVvZTx8eWb7iGepJinalaQBH3QXwAdt9TO2mYhifnZR0HRobNnROwKBgHC5\nLEukqSCFPHUkpY0PWKyVTpG3+CBrpRksDI/TxR00XM7SaXBqViYxrnnh16rkvHJ1\nUJ80uT7o/KhXguGJM9ByewZfcbHfj8truLixxPdjeNveuoErc+CoculAdbmctcxt\n71u2wrKjAxV/+T5fJYwG6RJHdHQ0hrKDEcxS+1ytAoGBAN9P8ixdH7fswpdLn5f8\n64a3Kx5HctCjofWFcOyQ4Ack4z7YT5Hyjln2k7juKuxCr4Fsa+IPZk30w4SMju7Z\nT3s38EInHXEsFTEcLgs0Ls9hKbxQz/XJ/Iya/iAEQlaphmDd6KOTJLpRUL6W5NMG\ncmBHxVeoME4BzU5wdP8IDmdn\n-----END PRIVATE KEY-----\n",
+    }, console.log('hi'));
+    //console.log(doc, 'doc')
+    await doc.loadInfo()
+    const sheet = doc.sheetsByIndex[0]
+    const rows = await sheet.getRows()
+    rows.map(async (row) => {
+      const number = parseFloat(row. _rawData[9])
+      const arr = row. _rawData[18].split(',')
+      try {
+        const workshop = await Workshop.create({
+          workshopName: row._rawData[0],
+          flagshipStatValue1: row._rawData[22],
+          flagshipStatValue2: parseFloat(row. _rawData[9]),
+          flagshipStatValue3: row._rawData[8],
+          description: row._rawData[17],
+          image: row._rawData[18].split(',')[0],
+          carouselImages: row._rawData[18].split(','),
+          LOR: row._rawData[19],
+          courseName: row._rawData[4],
+          courseIcon: row._rawData[20],
+          dates: row._rawData[7]
+        });
+        const id = row._rawData[21].toString()
+        const chapter = await Chapter.findById(id);
+        // console.log(chapter)
+        chapter.workshops.push(workshop._id);
+        await chapter.save();
+        console.log(workshop)
+      } catch (error) {
+        console.log(error)
+      }
+     
+    })
+    res.status(200).json({message: 'ok'})
+  } catch (error) {
+    console.log(error)
+  }
+})
 
 module.exports = router;

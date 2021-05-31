@@ -34,6 +34,7 @@ class IndWorkshop extends React.Component {
     expanded: false,
     buttonText: "See More Workshops",
     myRef: React.createRef(),
+    testimonials: []
   }
   componentDidMount(){
     this.fetchData();
@@ -47,10 +48,13 @@ class IndWorkshop extends React.Component {
     console.log(workshopData)
     this.setState({
       workshopInfo: workshopData.workshop,
-      loading: false
+      loading: false,
+      testimonials: workshopData.testimonials
     }, () => {
       console.log(this.state, 'state')
     })
+
+
   }
   render() {
     const {
@@ -127,14 +131,14 @@ class IndWorkshop extends React.Component {
               ): null
             }
 
-        {
-          workshopInfo.testimonials ? (
+        {/* {
+          (this.state.testimonials != []) ? (
             <Testimonial
             name={workshopInfo.testimonials[0].name}
             text={workshopInfo.testimonials[0].testimonial}
             />
           ): null
-        }
+        } */}
        
         <AcknowledgementBg>
           <Acknowledgement heading="HERE'S WHAT NUS HAD TO SAY" image={workshopInfo.LOR}/>

@@ -164,7 +164,7 @@ class Chapter extends Component {
                     //icons={card.courseIcon}
                     title={card.chapterName}
                     //subtitle={card.dates}
-                    description={card.description}
+                    //description={card.description}
                     isButton='hi'
                   />
                 ))}

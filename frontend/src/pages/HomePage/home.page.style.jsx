@@ -4,8 +4,8 @@ import Logo from "./../../assets/Logo.png";
 import Workshop from "./../../assets/header.png";
 
 export const StyledJumbo = styled.div`
-  padding-top: 250px;
-  padding-bottom: 250px;
+   padding-top: 250px;
+   padding-bottom: 250px;
   background-image: url(${Workshop});
   background-size: cover;
   width: 100%;
