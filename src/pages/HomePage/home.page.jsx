@@ -124,10 +124,10 @@ const Home = () => {
       <Corousel>
         <ImageCorousel
           imgUrls={[
-            "homepage/imagegallery/workshop.png",
-            "homepage/imagegallery/workshop2.jpg",
-            "homepage/imagegallery/workshop3.jpg",
-            "homepage/imagegallery/workshop4.jpg",
+            "https://i.imgur.com/QsY1Dc6.jpg",
+            "https://i.imgur.com/QsY1Dc6.jpg",
+            "https://i.imgur.com/QsY1Dc6.jpg",
+            "https://i.imgur.com/QsY1Dc6.jpg",
           ]}
         />
       </Corousel>

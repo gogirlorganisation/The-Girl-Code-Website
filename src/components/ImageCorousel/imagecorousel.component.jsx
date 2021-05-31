@@ -54,14 +54,14 @@ class ImageCorousel extends React.Component{
     
     render() {
         const imgUrl = this.state.imgUrls[this.state.imgIndex]
-        const img = require(`../../assets/${imgUrl}`)
+        //const img = require(`../../assets/${imgUrl}`)
         const newImgUrls = this.state.imgUrls.filter((Url, index) => index < this.state.numberImages)
         
         console.log(newImgUrls)
 
         return(
             <Container>
-                <BoxImage style = {{backgroundImage: `url(${img.default})` }}>
+                <BoxImage style = {{backgroundImage: `url(${imgUrl})` }}>
                     <PinkDiv> 
                         <h6 style = {{margin:0}}> <bold> SJI Workshop </bold> </h6>
                         <p style = {{margin:0}}> Learn more about our Singapore chapter &#8594; </p>
@@ -72,13 +72,13 @@ class ImageCorousel extends React.Component{
                     {   
                         
                         newImgUrls.map((imgUrl,index) => {
-                            const footerImg = require(`../../assets/${imgUrl}`)
-                            console.log(index === this.state.imgIndex)
+                            //const footerImg = require(`../../assets/${imgUrl}`)
+                            console.log(imgUrl)
                             return (
                                 <div key = {index} 
                                     onClick = {this.indexImage}
                                     index = {index} >
-                                <FooterImage src = {footerImg.default}
+                                <FooterImage src = {imgUrl}
                                  style = { index === this.state.imgIndex ? {border: "3px solid #EE1E6D"}: {}}/>
                                 </div>
 
