@@ -8,7 +8,7 @@ export default function Acknowledgement({ heading, image }) {
   return (<BoxBackground>
       <Container fluid>
           <Heading heading={heading}/>
-          <Image src={image} style={{marginBottom:"4rem"}} fluid/>
+          <Image src={image} style={{marginBottom:"4rem", height: '90vh'}} fluid/>
     </Container>
     </BoxBackground>
   );

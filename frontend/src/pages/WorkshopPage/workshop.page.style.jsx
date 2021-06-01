@@ -59,6 +59,7 @@ export const PastWorkshopsDiv = styled.div`
 export const StartChapterSection = styled.div`
   margin-top: 3rem;
   text-align: center;
+  background-color: "#FBEDF3";
 `;
 
 export const DonateSection = styled.div`
@@ -80,7 +81,8 @@ export const CardsDiv = styled.div`
 
 export const ShowMoreButton = styled.button`
   display: inline-block;
-  border: none;
+  border: 1px black solid;
+  border-radius: 9px;
   padding: 1rem 1rem;
   margin: 1rem 0 0 70vw;
   text-decoration: none;

@@ -5,7 +5,8 @@ export const Background = styled.div`
   
 `;
 export const Alignment = styled.div`
-
+  display: flex;
+  align-self: center;
   @media screen and (max-width: 786px) {
    display:flex;
    flex-direction:row;

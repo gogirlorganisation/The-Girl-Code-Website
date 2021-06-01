@@ -70,6 +70,9 @@ class Chapter extends Component {
         console.log(chapters.chapters)
         this.setState({
           chaptersInfo: chapters.chapters,
+          stat1: chapters.stat1,
+          stat2: chapters.stat2,
+          stat3: chapters.stat3,
           loading: false
         }, () => {
           console.log(this.state, this.state.chaptersInfo)
@@ -126,9 +129,9 @@ class Chapter extends Component {
       </HeaderBg>
       <Stats
         stats={[
-          ["70", "NO. OF CHAPTERS"],
-          ["400+", "STUDENTS IMPACTED"],
-          ["35", "WORKSHOPS"],
+          [this.state.stat1, "NO. OF CHAPTERS"],
+          ['1500+', "STUDENTS IMPACTED"],
+          [this.state.stat3, "WORKSHOPS"],
         ]}
       />
       <HeadingStyle>
@@ -138,10 +141,6 @@ class Chapter extends Component {
       <ImgCarouselStyle>
         <ImageCorousel
           imgUrls={[
-            "homepage/imagegallery/workshop.png",
-            "homepage/imagegallery/workshop2.jpg",
-            "homepage/imagegallery/workshop3.jpg",
-            "homepage/imagegallery/workshop4.jpg",
           ]}
         />
       </ImgCarouselStyle>

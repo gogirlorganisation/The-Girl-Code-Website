@@ -166,6 +166,9 @@ class Workshop extends React.Component {
                     title={card.workshopName}
                     id={card._id}
                     subtitle={card.dates}
+                    icon={card.courseIcon}
+                    iconText={card.courseName}
+                    height = '100vh'
                     description={card.description}
                     isButton='hi'
                   />
@@ -181,7 +184,7 @@ class Workshop extends React.Component {
           )}
         </PastWorkshopsDiv>
 
-        <StartChapterSection>
+        <StartChapterSection style={{backgroundColor: "#FBEDF3", padding: '2.5em 0'}}>
           <Heading heading={"Start a chapter"} />
           <StartChapter />
         </StartChapterSection>

@@ -52,6 +52,7 @@ export const Img = styled.img`
   padding: 2rem 0 0 0;
   margin: 0 auto;
   border-radius: 10px 10px;
+  height: 40%;
 `;
 
 export const Button = styled.button`

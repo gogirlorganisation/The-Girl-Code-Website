@@ -11,16 +11,35 @@ import {
 } from "./card.styles";
 
 import { Card as CardComp } from "react-bootstrap";
-const Card = ({ icons, image, title, subtitle, description, isButton, onClick, id  }) => {
-  let icon = [],
-    iconText;
-  if (icons) {
-    icon = icons.split(" ");
-    iconText = icon[icon.length - 1];
-    icon.pop();
-    console.log(icon);
+const Card = ({
+  icons,
+  image,
+  title,
+  subtitle,
+  description,
+  isButton,
+  onClick,
+  id,
+  height,
+  iconText,
+  icon,
+}) => {
+  // let icon = [],
+  //   iconText;
+  // if (icons) {
+  //   icon = icons.split(" ");
+  //   iconText = icon[icon.length - 1];
+  //   icon.pop();
+  //   console.log(icon);
+  // }
+  // console.log(icons)
+  function truncate(str, no_words) {
+    return str.split(" ").splice(0, no_words).join(" ");
   }
-
+  let text
+if(description){
+  text = truncate(description, 50);
+}
   return (
     <CardHolder>
       <CardComp
@@ -28,6 +47,7 @@ const Card = ({ icons, image, title, subtitle, description, isButton, onClick, i
           borderRadius: "15px",
           paddingBottom: "4rem",
           margin: "0 auto",
+          height: height,
         }}
       >
         <Img src={image} fluid />
@@ -37,17 +57,21 @@ const Card = ({ icons, image, title, subtitle, description, isButton, onClick, i
           <div style={{ margin: "1rem 0" }}>
             {icon ? (
               <>
-                {icon.map((i) => (
-                  <IconImg src={i} alt={"Workshop"} />
-                ))}
+                <IconImg src={icon} alt={"Workshop"} />
                 <IconText>{iconText}</IconText>{" "}
               </>
             ) : (
               ""
             )}
           </div>
-          {description ? <Description> {description}</Description> : ""}
-          {isButton ? <Button className={id} onClick={onClick} data-id = {id}>View More</Button> : ""}
+          {description ? <Description> {text}...</Description> : ""}
+          {isButton ? (
+            <Button className={id} onClick={onClick} data-id={id}>
+              View More
+            </Button>
+          ) : (
+            ""
+          )}
         </CardComp.Body>
       </CardComp>
     </CardHolder>

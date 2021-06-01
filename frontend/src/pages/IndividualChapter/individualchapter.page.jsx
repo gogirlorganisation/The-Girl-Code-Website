@@ -130,7 +130,7 @@ class IndividualChapter extends React.Component {
           textIn="white"
         />
   
-  <div>
+  
         <StyledJumbo>
           <Row>
             <Col md={5}>
@@ -159,7 +159,7 @@ class IndividualChapter extends React.Component {
             </Col>
           </Row>
         </StyledJumbo>
-      </div>
+      
         <StatsDiv>
           <Stats
             stats={[
@@ -193,11 +193,14 @@ class IndividualChapter extends React.Component {
                     onClick={this.click}
                     image={card.image}
                     id={card._id}
-                    //icons={card.courseIcon}
+                    icon={card.courseIcon}
+                    iconText={card.courseName}
+                    height = '100vh'
                     title={card.workshopName}
                     subtitle={card.dates}
                     description={card.description}
                     isButton='hi'
+                    
                   />
                 ))}
             </CardsDiv>

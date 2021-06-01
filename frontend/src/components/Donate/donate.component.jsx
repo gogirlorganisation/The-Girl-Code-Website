@@ -31,10 +31,9 @@ export default function Donate() {
                   </Row>
                 </Container>
                 <Row>
-                  <Alignment style={{width:"100%"}}>
-                    <ShadowButton Text={"Donate"} />
+                  <Alignment>
+                    <ShadowButton Text={"Donate"} width='20vw' />
                   </Alignment>
-                  
                 </Row>
               </Col>
             </Row>

@@ -63,7 +63,12 @@ class IndWorkshop extends React.Component {
     console.log(workshopInfo.testimonials)
     return (
       <div>
-        <NavBar />
+        <NavBar
+        bgOut="transparent"
+        bgIn="#F05680"
+        textOut="#F05680"
+        textIn="white"
+        />
         <HeaderBg>
         <Container fluid>
       <Row>
@@ -90,18 +95,17 @@ class IndWorkshop extends React.Component {
             text="At The Girl Code, we aim to bridge the gender gap in the tech community by inspiring young girls to learn programming by hosting workshops at schools and universities local to them. Through our platform and intuitive curriculum, we plan to give rise to a new generation of female programmers set to take the world by storm."
           />
         </BoxStyle>
-        <BoxStyle>
+        <ImageCorousel
+          imgUrls={[
+          ]}
+        />
+        {/* <BoxStyle>
           <ImageCorousel
-            imgUrls={[
-              "homepage/imagegallery/workshop.png",
-              "homepage/imagegallery/workshop2.jpg",
-              "homepage/imagegallery/workshop3.jpg",
-              "homepage/imagegallery/workshop4.jpg",
-            ]}
+            imgUrls={workshopInfo.carouselImages}
           />
-        </BoxStyle>
+        </BoxStyle> */}
         
-            {
+            {/* {
               workshopInfo.project ? 
               (
                 <ProjectShowcaseDiv>
@@ -116,11 +120,12 @@ class IndWorkshop extends React.Component {
                 <Card
                   image={card.projectImage}
                   id={card._id}
-                  //icons={card.courseIcon}
+                  icons={card.courseIcon}
                   title={card.projectName}
                   subtitle={card.personName}
                   description={card.courseName}
                   isButton='hi'
+                  
                 />
               ))}
            </CardBg>
@@ -129,7 +134,7 @@ class IndWorkshop extends React.Component {
               </ShowMoreButton>
         </ProjectShowcaseDiv>
               ): null
-            }
+            } */}
 
         {/* {
           (this.state.testimonials != []) ? (
@@ -139,10 +144,12 @@ class IndWorkshop extends React.Component {
             />
           ): null
         } */}
-       
-        <AcknowledgementBg>
-          <Acknowledgement heading="HERE'S WHAT NUS HAD TO SAY" image={workshopInfo.LOR}/>
+       {workshopInfo.LOR ? (
+          <AcknowledgementBg>
+          <Acknowledgement heading="LOR" image={workshopInfo.LOR}/>
         </AcknowledgementBg>
+       ): null}
+       
         <Donate
           button="DONATE NOW"
           title="Help support The Girl Code"

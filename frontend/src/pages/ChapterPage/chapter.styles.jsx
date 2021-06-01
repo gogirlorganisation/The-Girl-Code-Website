@@ -1,11 +1,9 @@
 import styled from "styled-components";
 
 export const HeaderBg=styled.div`
-padding: 15vh 0 0 0
 
 `
 export const ImgStyle=styled.div`
-    margin: 0 0 0 5rem;
 `
 export const ChapterHeading=styled.h1`
     color:#F05680;

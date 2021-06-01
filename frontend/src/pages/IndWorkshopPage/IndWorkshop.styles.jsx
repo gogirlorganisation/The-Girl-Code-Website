@@ -1,8 +1,7 @@
 import styled from "styled-components";
 
 export const HeaderBg = styled.div`
-  padding-top: 6rem;
-  padding-bottom: 3rem;
+  padding-bottom: 5rem;
 `;
 
 export const WorkHeading = styled.h1`

@@ -11,6 +11,10 @@ export const DonateSection = styled.div`
 export const InternshipsSection = styled.div`
   margin-top: 4rem;
   text-align: center;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  flex-wrap: wrap;
 `;
 
 export const MainHeading = styled.p`

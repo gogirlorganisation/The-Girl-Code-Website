@@ -1,7 +1,7 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Container, Row, Col, Image } from "react-bootstrap";
-import superhero from '../../assets/homepage/Superhero.png';
+import superhero from '../../assets/homepage/superhero.png';
 import { HeadingStyle,DescriptionStyle,Align } from "./community.styles";
 
 

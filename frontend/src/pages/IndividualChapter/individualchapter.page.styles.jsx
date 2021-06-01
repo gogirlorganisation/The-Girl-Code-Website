@@ -2,8 +2,6 @@ import styled from "styled-components";
 import { Button, Container, Row, Image} from 'react-bootstrap';
 
 export const StyledJumbo = styled(Container)` 
-    padding-top: 100px;
-    padding-bottom: 100px;
 `
 export const Bord = styled(Row)` 
     margin-bottom: 20px;

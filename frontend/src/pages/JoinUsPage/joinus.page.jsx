@@ -44,9 +44,9 @@ const JoinUs = () => {
           <Col md={5} className="text-center">
             <MainHeading>Join Us </MainHeading>
             <HeaderText>Together everyone achieves more!</HeaderText>
-            <ShadowButton Text={"INTERN WITH US"} />
-            <ShadowButton Text={"START A CHAPTER"} />
-            <ShadowButton Text={"JOIN THE COMMUNITY"} />
+            <ShadowButton Text={"INTERN WITH US"} width='90%'/>
+            <ShadowButton Text={"START A CHAPTER"} width='90%'/>
+            <ShadowButton Text={"JOIN THE COMMUNITY"} width='90%'/>
           </Col>
         </Row>
       </Container>
@@ -89,7 +89,7 @@ const JoinUs = () => {
             ]}
           />
         </Container>
-        <Button Text={"Apply Now"} />
+        <Button Text={"Apply Now"} width = '20vw' style={{alignSelf: 'center'}}/>
       </InternshipsSection>
       {/* <Container style={{ textAlign: "center", marginTop: "4rem" }}>
         <Button Text={"Apply Now"} />

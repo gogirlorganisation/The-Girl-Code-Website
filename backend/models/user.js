@@ -11,11 +11,14 @@ const userSchema = new mongoose.Schema({
     },
     department: {
         type: String, 
-        required: true
     },
     designation: {
         type: String, 
         required: true
+    },
+    dept: {
+        type: Boolean,
+        default: false
     }
 })
 
