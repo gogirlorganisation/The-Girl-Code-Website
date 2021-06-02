@@ -2,10 +2,21 @@ import styled from "styled-components";
 import { Button, Container, Row, Image} from 'react-bootstrap';
 
 export const StyledJumbo = styled(Container)` 
+
+height: 90vh;
 `
 export const Bord = styled(Row)` 
-    margin-bottom: 20px;
+    margin: 10vh 0;
 `
+
+export const ButtonDiv = styled.div`
+  display: flex;
+  flex-direction: column;
+  height: 40vh;
+  margin-top: 5vh;
+  justify-content: space-around; 
+`
+
     
 export const StyleHead = styled.div`
     font-weight: bold;

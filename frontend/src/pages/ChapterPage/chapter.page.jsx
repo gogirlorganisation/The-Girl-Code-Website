@@ -18,9 +18,11 @@ import {
   ChapterHeading,
   DonateBg,
   HeaderBg,
+  HeaderImg,
   HeadingStyle,
   ImgCarouselStyle,
   ImgStyle,
+  HeaderInfo
 } from "./chapter.styles";
 import { CardsDiv, ShowMoreButton } from "../WorkshopPage/workshop.page.style";
 
@@ -28,28 +30,15 @@ import { CardsDiv, ShowMoreButton } from "../WorkshopPage/workshop.page.style";
 
 const Header = () => {
   return (
-    <Row>
-      <Col className="justify-content-center">
-        <ImgStyle>
-          <Image src={ChapterHeaderImg} fluid style={{ height: "60vh" }} />
-        </ImgStyle>
-      </Col>
-      <Col>
-        <Row className="justify-content-center">
-          <ChapterHeading>Chapters</ChapterHeading>
-        </Row>
-        <Row className="justify-content-center">
-          <ButtonBg>
-            <ShadowButton Text={"Contact Us"} />
-          </ButtonBg>
-        </Row>
-        <Row className="justify-content-center">
-          <ButtonBg>
-            <ShadowButton Text={"Start A Chapter"} />
-          </ButtonBg>
-        </Row>
-      </Col>
-    </Row>
+    <HeaderBg>
+      <HeaderImg src={ChapterHeaderImg} />
+      <HeaderInfo>
+        <ChapterHeading>Chapters</ChapterHeading>
+        <ShadowButton Text={'CONTACT US'}/>
+        <ShadowButton Text={'START A CHAPTER'} />
+      </HeaderInfo>
+    </HeaderBg>
+    
   );
 };
 

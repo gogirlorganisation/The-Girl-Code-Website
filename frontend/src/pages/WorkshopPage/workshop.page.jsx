@@ -91,7 +91,7 @@ class Workshop extends React.Component {
           textOut="#F05680"
           textIn="#F05680"
         />
-        <Container style={{ paddingTop: "8rem" }}>
+        <Container style={{ paddingTop: "5rem" }}>
           <Row>
             <Col md={7}>
               <Image src={WorkshopsHeader} alt="Join Us" fluid />

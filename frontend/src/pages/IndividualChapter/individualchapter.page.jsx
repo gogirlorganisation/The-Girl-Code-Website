@@ -31,7 +31,8 @@ import {
   StatsDiv,
   Corousel,
   OtherChapters,
-  TeamDiv
+  TeamDiv,
+  ButtonDiv
 } from "./individualchapter.page.styles";
 import { CardsDiv,  ShowMoreButton, UpcomingWorkshopsDiv } from "../WorkshopPage/workshop.page.style";
 import { CardBg, DonateBg } from "../ChapterPage/chapter.styles";
@@ -133,7 +134,7 @@ class IndividualChapter extends React.Component {
   
         <StyledJumbo>
           <Row>
-            <Col md={5}>
+            <Col md={6}>
               <Image
                 class="img-responsive float-left"
                 width="100%"
@@ -145,17 +146,15 @@ class IndividualChapter extends React.Component {
                 <StyleHead>{this.state.chapterInfo.chapterName}</StyleHead>
               </Row>
   
-              <Row>
-                <Bord>
+              <ButtonDiv>
+                
                   <ShadowButton Text={"CONTACT US"} />
-                </Bord>
-                <Bord>
+                 
                   <ShadowButton Text={"START A CHAPTER"} />
-                </Bord>
-                <Bord>
-                  <ShadowButton Text={"JOIN DELHI CHAPTER"} />
-                </Bord>
-              </Row>
+                  
+                  <ShadowButton Text={`Join ${this.state.chapterInfo.chapterName}`} />
+                
+              </ButtonDiv>
             </Col>
           </Row>
         </StyledJumbo>

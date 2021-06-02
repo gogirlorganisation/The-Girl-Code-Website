@@ -1,16 +1,28 @@
 import styled from "styled-components";
 
 export const HeaderBg=styled.div`
+    display: flex;
+    flex-wrap: wrap;
+   // justify-content: space-around;
+`;
 
-`
-export const ImgStyle=styled.div`
-`
+export const HeaderImg = styled.img`
+    padding-left: 5vw
+
+`;
+
+
+export const HeaderInfo = styled.div`
+padding-left: 25vw;
+`;
+
 export const ChapterHeading=styled.h1`
     color:#F05680;
     font-size:70px;
     font-weight:700;
     padding-top:5rem;
     padding-bottom:3rem;
+
 `
 export const ButtonBg=styled.div`
     margin-bottom:2rem;

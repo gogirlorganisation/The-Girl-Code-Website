@@ -5,7 +5,7 @@ import Workshop from "./../../assets/header.png";
 import ShadowButton from "../../components/Button/button.component";
 
 export const StyledJumbo = styled(Container)` 
-    padding-top: 100px;
+    padding-top: 50px;
     padding-bottom: 100px;
 `
 export const Bord = styled(Row)` 
@@ -14,7 +14,7 @@ export const Bord = styled(Row)`
     
 export const StyleHead = styled.div`
     font-weight: bold;
-    font-size: 35px;
+    font-size: 50px;
     color: #F05680;
     margin-left: 10px;
 `
@@ -43,7 +43,6 @@ export const ChapterHeading=styled.h1`
     font-weight:700;
     padding-top:5rem;
     padding-bottom:3rem;
-    margin-right:20rem;
 `
 export const ButtonBg=styled.div`
     margin-right:20rem;
@@ -76,6 +75,33 @@ export const TeamDiv = styled.div`
 margin: 5vh 0;
 
 `
+
+export const HeaderBg=styled.div`
+    display: flex;
+    // flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 90vh;
+`;
+
+export const HeaderImg = styled.img`
+  padding: 0 0 0 2vw;
+
+`;
+
+
+export const HeaderInfo = styled.div`
+padding: 0 0 0 10vw;
+`;
+
+// export const ChapterHeading=styled.h1`
+//     color:#F05680;
+//     font-size:70px;
+//     font-weight:700;
+//     padding-top:5rem;
+//     padding-bottom:3rem;
+
+// `
 
 export const SuperHeroImgDiv = styled.div`
 height: 100%;

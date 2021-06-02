@@ -29,8 +29,8 @@ class form extends Component {
   render() {
     return (
       <Form style={{ textAlign: "left" }} onSubmit={this.handleSubmit}>
-        <Row>
-          <Col>
+        <Row style={{padding: '0'}}>
+          <Col style={{padding: '0'}}>
             <FormLabel>Name :</FormLabel>
             <Input
               name="name"
@@ -39,8 +39,8 @@ class form extends Component {
             />
           </Col>
         </Row>
-        <Row>
-          <Col>
+        <Row style={{padding: '0'}}>
+          <Col style={{padding: '0'}}>
             <FormLabel>Gender :</FormLabel>
 
             <Input name="gender" as="select" onChange={this.handleChange}>
@@ -51,8 +51,8 @@ class form extends Component {
             </Input>
           </Col>
         </Row>
-        <Row>
-          <Col>
+        <Row style={{padding: '0'}}>
+          <Col style={{padding: '0'}}>
             <FormLabel>Email :</FormLabel>
             <Input
               name="email"
