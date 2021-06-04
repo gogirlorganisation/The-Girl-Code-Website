@@ -20,7 +20,7 @@ export const HeaderText = styled.p`
 `;
 
 export const PinkBoxDiv = styled.div`
-  margin: 3rem 0;
+  margin: 3rem 6rem;
 `;
 
 export const ImageBox = styled.div`
@@ -57,7 +57,7 @@ export const PastWorkshopsDiv = styled.div`
 `;
 
 export const StartChapterSection = styled.div`
-  margin-top: 3rem;
+  margin: 3rem 0;
   text-align: center;
   background-color: "#FBEDF3";
 `;

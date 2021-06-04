@@ -47,6 +47,7 @@ import CommunitySection from "../../components/Community/community.component";
 //import Heading from "../../components/Heading/heading.component";
 import StartChapter from "../../components/StartChapter/startchapter.component";
 import Donate from "../../components/Donate/donate.component";
+import Headingg from "../../components/Heading/heading.component";
 import Footer from "../../components/Footer/footer.component";
 const Header = () => {
   return (
@@ -92,7 +93,7 @@ const Home = () => {
         />
       </PinkTextBoxDiv>
 
-      <CommunitySection
+      <CommunitySection 
         content={[
           [
             "Confidence",
@@ -145,7 +146,7 @@ const Home = () => {
         ]}
       />
       <SocialMediaSection>
-        <Heading heading="SOCIAL MEDIA" />
+        <Headingg heading={"SOCIAL MEDIA"} />
         <p style={{ fontWeight: "500" }}>
           Selection from our <span style={{ color: "#d74b8d" }}>socials</span>
         </p>
@@ -154,7 +155,7 @@ const Home = () => {
 
       <YouTubeSection>
         <HeadingDiv>
-          <Heading heading="featured" />
+          <Headingg heading={"FEATURED"} />
         </HeadingDiv>
         <YoutubeVideo
           videoOne="https://www.youtube.com/watch?v=ysz5S6PUM-U"
@@ -164,7 +165,7 @@ const Home = () => {
         />
       </YouTubeSection>
       <StartAChapterDiv>
-        <Heading heading="Start A Chapter" />
+        <Headingg heading={"Start A Chapter"} />
         <StartChapter />
       </StartAChapterDiv>
       <Donate />

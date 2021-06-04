@@ -80,6 +80,7 @@ class Chapter extends Component {
 
   componentDidMount(){
     this.fetchData()
+    window.scrollTo(0,0)
   }
 
   toggleShow = () => {
@@ -123,16 +124,13 @@ class Chapter extends Component {
           [this.state.stat3, "WORKSHOPS"],
         ]}
       />
+      
+      <div style={{backgroundColor: "#FBEDF3", padding: '2.5em 0', margin: '5vh 0'}}>
       <HeadingStyle>
         <Heading heading="FIND YOUR CITY" />
       </HeadingStyle>
-      <StartChapter />
-      <ImgCarouselStyle>
-        <ImageCorousel
-          imgUrls={[
-          ]}
-        />
-      </ImgCarouselStyle>
+          <StartChapter />
+        </div>
       <HeadingStyle>
         <Heading heading="OUR CHAPTERS" />
       </HeadingStyle>

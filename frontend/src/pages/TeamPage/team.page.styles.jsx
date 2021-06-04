@@ -42,7 +42,6 @@ export const ChapterHeading=styled.h1`
     font-size:70px;
     font-weight:700;
     padding-top:5rem;
-    padding-bottom:3rem;
 `
 export const ButtonBg=styled.div`
     margin-right:20rem;
@@ -78,10 +77,9 @@ margin: 5vh 0;
 
 export const HeaderBg=styled.div`
     display: flex;
-    // flex-wrap: wrap;
+    flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-around;
-    height: 90vh;
 `;
 
 export const HeaderImg = styled.img`

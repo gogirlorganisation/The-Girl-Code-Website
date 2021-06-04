@@ -24,6 +24,7 @@ import {
   ProjectShowcaseDiv
 } from "./IndWorkshop.styles";
 import { ShowMoreButton } from "../WorkshopPage/workshop.page.style";
+import { DonateBg } from "../ChapterPage/chapter.styles";
 
 
 class IndWorkshop extends React.Component {
@@ -38,6 +39,7 @@ class IndWorkshop extends React.Component {
   }
   componentDidMount(){
     this.fetchData();
+    window.scrollTo(0,0)
   }
 
   fetchData = async () => {
@@ -73,7 +75,7 @@ class IndWorkshop extends React.Component {
         <Container fluid>
       <Row>
         <Col>
-          <Image style={{ paddingLeft: "5rem" }} src={IndWorkshopImg} fluid />
+          <Image style={{ paddingLeft: "1rem" }} src={IndWorkshopImg} fluid />
         </Col>
         <Col className="justify-content-center">
           <WorkHeading>{workshopInfo.workshopName}</WorkHeading>
@@ -92,69 +94,30 @@ class IndWorkshop extends React.Component {
         <BoxStyle>
           <PinkTextBox
             heading="MISSION"
-            text="At The Girl Code, we aim to bridge the gender gap in the tech community by inspiring young girls to learn programming by hosting workshops at schools and universities local to them. Through our platform and intuitive curriculum, we plan to give rise to a new generation of female programmers set to take the world by storm."
-          />
+            text={workshopInfo.description}/>
         </BoxStyle>
-        <ImageCorousel
-          imgUrls={[
-          ]}
-        />
-        {/* <BoxStyle>
-          <ImageCorousel
-            imgUrls={workshopInfo.carouselImages}
-          />
-        </BoxStyle> */}
-        
-            {/* {
-              workshopInfo.project ? 
-              (
-                <ProjectShowcaseDiv>
-          <CardHeading>
-            <Heading heading="PROJECT SHOWCASE" />
-          </CardHeading>
-          <CardBg>
-            {
-              workshopInfo.project
-              .slice(0, this.state.chapterItems)
-              .map((card) => (
-                <Card
-                  image={card.projectImage}
-                  id={card._id}
-                  icons={card.courseIcon}
-                  title={card.projectName}
-                  subtitle={card.personName}
-                  description={card.courseName}
-                  isButton='hi'
-                  
-                />
-              ))}
-           </CardBg>
-           <ShowMoreButton>
-                See More Projects {'>'}
-              </ShowMoreButton>
-        </ProjectShowcaseDiv>
-              ): null
-            } */}
 
-        {/* {
-          (this.state.testimonials != []) ? (
-            <Testimonial
-            name={workshopInfo.testimonials[0].name}
-            text={workshopInfo.testimonials[0].testimonial}
-            />
-          ): null
-        } */}
+        {
+          this.state.loading? null : (
+            <BoxStyle>
+            <ImageCorousel
+            imgUrls={this.state.workshopInfo.carouselImages}
+          />
+          </BoxStyle>
+          )
+        }
        {workshopInfo.LOR ? (
           <AcknowledgementBg>
           <Acknowledgement heading="LOR" image={workshopInfo.LOR}/>
         </AcknowledgementBg>
        ): null}
-       
+       <DonateBg>
         <Donate
           button="DONATE NOW"
           title="Help support The Girl Code"
           content="At The Girl Code, we aim to bridge the gender gap in the tech community by inspiring young girls to learn programming by hosting workshops."
         />
+        </DonateBg>
         <Footer />
       </div>
     );

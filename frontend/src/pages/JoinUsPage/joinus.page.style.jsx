@@ -17,11 +17,21 @@ export const InternshipsSection = styled.div`
   flex-wrap: wrap;
 `;
 
+export const PinkDiv = styled.div`
+  margin: 0 6vw;
+`
+
+export const HeaderButtons = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+`;
+
 export const MainHeading = styled.p`
   font-weight: 900;
   font-size: 60px;
   line-height: 73px;
-
+  margin-bottom: 3vh;
   color: #f05680;
   @media screen and (max-width: 600px) {
     text-align: center;
@@ -33,4 +43,5 @@ export const HeaderText = styled.p`
   font-size: 27px;
   line-height: 33px;
   color: #f05680;
+  padding: 1vh 0;
 `;

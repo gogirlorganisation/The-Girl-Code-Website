@@ -13,6 +13,8 @@ import {
   HeaderText,
   StartChapterSection,
   InternshipsSection,
+  PinkDiv,
+  HeaderButtons,
 } from "./joinus.page.style";
 import Heading from "../../components/Heading/heading.component";
 import PinkTextBox from "../../components/PinkTextBox/pinktextbox.component";
@@ -24,6 +26,7 @@ import Donate from "../../components/Donate/donate.component";
 import Footer from "../../components/Footer/footer.component";
 import ShadowButton from "../../components/Button/button.component";
 import { DonateBg } from "../ChapterPage/chapter.styles";
+import { Link } from "react-router-dom";
 
 const JoinUs = () => {
   return (
@@ -35,27 +38,31 @@ const JoinUs = () => {
         textOut="#F05680"
         textIn="#F05680"
       />
-      <Container style={{ paddingTop: "6rem" }}>
+      <Container style={{ paddingTop: "2rem" }}>
         <Row>
           <Col md={6}>
             <Image src={JoinImg} alt="Join Us" fluid />
           </Col>
           <Col xs={0} md={1} />
-          <Col md={5} className="text-center">
+          <Col md={5} className="text-center" style={{padding: '2vh 0 0 0'}}>
             <MainHeading>Join Us </MainHeading>
             <HeaderText>Together everyone achieves more!</HeaderText>
-            <ShadowButton Text={"INTERN WITH US"} width='90%'/>
-            <ShadowButton Text={"START A CHAPTER"} width='90%'/>
+            <HeaderButtons>
+            <ShadowButton Text={"INTERN WITH US"} width='90%' link='https://docs.google.com/forms/d/e/1FAIpQLSdNnrbYFbdkTMnlod-Pp74KRPLipqN2RHmT1gwDoudFcxbG9Q/viewform'/>
+            <ShadowButton Text="START A CHAPTER" width='90%' link='https://docs.google.com/forms/d/e/1FAIpQLSd5_ISkWJPslqQQE4l4WyL7of9ThLfVMSX3DP7kH5SLuu3MaA/viewform'/>
             <ShadowButton Text={"JOIN THE COMMUNITY"} width='90%'/>
+            </HeaderButtons>
           </Col>
         </Row>
       </Container>
+      <PinkDiv>
       <PinkTextBox
         heading={"WHY WORK WITH US"}
         text={
           "Have you always wanted to do something to make a positive impact in the world? If yes, then we’re the place for you! Use your technical/non-technical skills to effect tangible, positive change. Look into which of our internship programs suits you, and apply today! You’ll get to work with a team of over 70 compassionate, talented, and driven people who want to make a difference and learn amazing new things!"
         }
       />
+      </PinkDiv>
       <InternshipsSection>
         <Heading heading="INTERNSHIPS" />
         <Container className="mt-5">
@@ -89,11 +96,8 @@ const JoinUs = () => {
             ]}
           />
         </Container>
-        <Button Text={"Apply Now"} width = '20vw' style={{alignSelf: 'center'}}/>
+        <Button Text={"Apply Now"} link='https://docs.google.com/forms/d/e/1FAIpQLSdNnrbYFbdkTMnlod-Pp74KRPLipqN2RHmT1gwDoudFcxbG9Q/viewform' width = '20vw' style={{alignSelf: 'center'}}/>
       </InternshipsSection>
-      {/* <Container style={{ textAlign: "center", marginTop: "4rem" }}>
-        <Button Text={"Apply Now"} />
-      </Container> */}
       <JoinCommunity />
       <StartChapterSection>
         <Heading heading={"Start a chapter"} />

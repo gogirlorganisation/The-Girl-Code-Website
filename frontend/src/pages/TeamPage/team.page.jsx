@@ -23,6 +23,7 @@ import Directors from "../../components/Directors/Directors.component";
 import Team from "../../components/Team/Team.component";
 import Donate from "../../components/Donate/donate.component";
 import Footer from "../../components/Footer/footer.component";
+import { PinkDiv } from "../JoinUsPage/joinus.page.style";
 
 export default class Home extends Component {
   state = {
@@ -45,6 +46,7 @@ export default class Home extends Component {
 
   componentDidMount() {
     this.fetchData();
+    window.scrollTo(0,0)
   }
   render() {
     const { org, design, marketing, webD, socialMedia } = this.state;
@@ -59,40 +61,6 @@ export default class Home extends Component {
               textOut="#F05680"
               textIn="white"
             />
-
-            {/* <StyledJumbo>
-              <Row>
-                <Col md={6}>
-                  <Image
-                    class="img-responsive float-left"
-                    // width="100%"
-                    src={team}
-                  />
-                </Col>
-                <Col
-                  md={{ span: 5, offset: 1 }}
-                  class="d-flex flex-column mb-3"
-                >
-                  <Row>
-                    <StyleHead>Our Team</StyleHead>
-                  </Row>
-                  <Row>
-                    <StylePee>Together everyone achieves more!</StylePee>
-                  </Row>
-                  <Row>
-                    <Bord>
-                      <ShadowButton Text={"INTERN WITH US"} width="30vw" />
-                    </Bord>
-                    <Bord>
-                      <ShadowButton Text={"START A CHAPTER"} width="30vw" />
-                    </Bord>
-                    <Bord>
-                      <ShadowButton Text={"JOIN OUR COMMUNTIY"} width="30vw" />
-                    </Bord>
-                  </Row>
-                </Col>
-              </Row>
-            </StyledJumbo> */}
             <HeaderBg>
               <HeaderImg src={team} style={{height: '90vh'}}/>
               <HeaderInfo>
@@ -115,10 +83,12 @@ export default class Home extends Component {
               imgUrlTwo={this.state.team.org[1]}
               nameTwo={this.state.team.org[0]}
             />
+            <PinkDiv>
             <PinkTextBox
               heading="ABOUT THE DIRECTORS"
               text="At The Girl Code, we aim to bridge the gender gap in the tech community by inspiring young girls to learn programming by hosting workshops at schools and universities local to them. Through our platform and intuitive curriculum, we plan to give rise to a new generation of female programmers set to take the world by storm."
             />
+            </PinkDiv>
             <TeamDiv>
               <Team
                 backgroundColour="#ffffff"

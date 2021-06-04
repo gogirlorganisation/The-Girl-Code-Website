@@ -49,11 +49,13 @@ class IndividualChapter extends React.Component {
     buttonText: "See More Workshops",
     myRef: React.createRef(),
     teamLead: [],
-    membersInfo: []
+    membersInfo: [],
+    carouselImages: []
   }
   
   componentDidMount(){
     this.fetchData();
+    window.scrollTo(0,0)
   }
 
   fetchData = async () => {
@@ -66,9 +68,10 @@ class IndividualChapter extends React.Component {
       chapterInfo: chapterData.chapter,
       workshops: chapterData.chapter.workshops,
       team: chapterData.chapter.team,
-      loading: false
+      loading: false,
+      carouselImages: chapterData.chapter.carouselImages
     }, () => {
-      console.log(this.state, 'state')
+      console.log(this.state.carouselImages, 'state')
     })
     this.manageTeam();
   }
@@ -148,11 +151,11 @@ class IndividualChapter extends React.Component {
   
               <ButtonDiv>
                 
-                  <ShadowButton Text={"CONTACT US"} />
+                  <ShadowButton Text={"CONTACT US"}  />
                  
-                  <ShadowButton Text={"START A CHAPTER"} />
+                  <ShadowButton Text={"START A CHAPTER"}  />
                   
-                  <ShadowButton Text={`Join ${this.state.chapterInfo.chapterName}`} />
+                  <ShadowButton Text={`Join ${this.state.chapterInfo.chapterName}`} link='https://docs.google.com/forms/d/e/1FAIpQLSd5_ISkWJPslqQQE4l4WyL7of9ThLfVMSX3DP7kH5SLuu3MaA/viewform'/>
                 
               </ButtonDiv>
             </Col>
@@ -168,16 +171,18 @@ class IndividualChapter extends React.Component {
             ]}
           />
         </StatsDiv>
-        <Corousel>
-          <ImageCorousel
-            imgUrls={[
-              "homepage/imagegallery/workshop.png",
-              "homepage/imagegallery/workshop2.jpg",
-              "homepage/imagegallery/workshop3.jpg",
-              "homepage/imagegallery/workshop4.jpg",
-            ]}
-          />
-        </Corousel>
+        {
+          loading ? null : (
+            <Corousel>
+            <ImageCorousel
+              imgUrls={this.state.carouselImages}
+            />
+          </Corousel>
+          )
+        }
+          
+       
+       
         <PastWorkshopsDiv>
           <Heading heading={'PAST WORKSHOPS'} />
           <CardBg ref={this.state.myRef}>

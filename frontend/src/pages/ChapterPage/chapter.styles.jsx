@@ -30,7 +30,6 @@ export const ButtonBg=styled.div`
 
 export const HeadingStyle=styled.div`
 text-align:center;
-margin-top:80px;
 `
 export const ImgCarouselStyle=styled.div`
     background-color:#FBEDF3;
@@ -43,7 +42,7 @@ export const CardBg=styled.div`
  flex-direction: row;
  flex-wrap: wrap;
  justify-content: space-around;
- margin: 2vh 0 0 0;
+ margin: 2vh 0 2vh 0;
 `
 
 export const DonateBg=styled.div`
@@ -55,4 +54,8 @@ display: flex;
 flex-direction: row;
 justify-content: center;
 margin: 5rem 0 0 10vw;
+`
+
+export const PinkDiv = styled.div`
+    background-color: 
 `

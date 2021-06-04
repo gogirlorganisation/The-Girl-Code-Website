@@ -18,7 +18,7 @@ export const SubHeading = styled.h1`
   text-align: center;
 `;
 export const BoxStyle = styled.div`
-  margin-top: 6rem;
+  margin: 6rem 6rem;
 `;
 export const CardHeading = styled.div`
   text-align: center;
@@ -33,6 +33,7 @@ export const ProjectShowcaseDiv = styled.div`
 export const AcknowledgementBg = styled.div`
   background-color: #fbedf3;
   padding-top: 0.1rem;
+  margin-top: 2vh;
 `;
 
 export const CardBg = styled.div`

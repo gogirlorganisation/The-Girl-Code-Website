@@ -9,7 +9,7 @@ const NavBar = ({ bgOut, bgIn, textOut, textIn }) => {
   return (
     <Nav bgOut={bgOut} bgIn={bgIn} textOut={textOut} textIn={textIn}>
       <div className="logo" style={{display:"flex", flex: 0.1, justifyContent:"center", background:"transparent"}}>
-        <img style={{background:"transparent"}} src={Logo} alt="Logo" />
+        <img style={{background:"transparent"}} src={Logo} alt="Logo"/>
       </div>
       <Burger bgOut={bgOut} bgIn={bgIn} textOut={textOut} textIn={textIn} />
     </Nav>

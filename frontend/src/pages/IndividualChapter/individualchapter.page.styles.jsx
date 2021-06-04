@@ -3,7 +3,6 @@ import { Button, Container, Row, Image} from 'react-bootstrap';
 
 export const StyledJumbo = styled(Container)` 
 
-height: 90vh;
 `
 export const Bord = styled(Row)` 
     margin: 10vh 0;

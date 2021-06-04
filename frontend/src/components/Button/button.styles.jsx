@@ -17,7 +17,7 @@ export const ButtonStyle = styled.div`
   margin-right: 1rem;
   box-shadow: 0 3px 4px #f05680;
   &:hover {
-    background-color: #f05680;
+    //background-color: #f05680;
     color: #fff;
     border-color: #f05680;
     font-weight: 700;

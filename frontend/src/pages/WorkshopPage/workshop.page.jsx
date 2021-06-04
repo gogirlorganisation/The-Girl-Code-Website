@@ -50,6 +50,7 @@ class Workshop extends React.Component {
 
   componentDidMount() {
     this.fetchData();
+    window.scrollTo(0,0)
   }
 
   click = (e) => {
@@ -188,9 +189,7 @@ class Workshop extends React.Component {
           <Heading heading={"Start a chapter"} />
           <StartChapter />
         </StartChapterSection>
-        <DonateSection>
           <Donate />
-        </DonateSection>
         <Footer />
       </>
     );

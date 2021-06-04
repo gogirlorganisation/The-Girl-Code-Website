@@ -32,7 +32,7 @@ export default function JoinCommunity() {
           </FormBox>
         </Col>
       </Row> */}
-      <img src={tgc} style={{height: '60vh', width: '60vw', alignSelf: 'center'}}/>
+      <img src={tgc} style={{height: '60vh', alignSelf: 'center'}}/>
       <div style={{alignSelf: "center", padding: "1em 0"}}>
       <ShadowButton Text={"Apply Now"} width = '20vw' />
       </div>

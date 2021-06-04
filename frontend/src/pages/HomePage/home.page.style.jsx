@@ -138,7 +138,7 @@ export const StartAChapterDiv = styled.div`
 `;
 
 export const Corousel = styled.div`
-  margin: 6rem 0;
+  margin: 2rem 0 6rem 0;
   background-color: #fbedf3;
   padding: 3rem 0;
 `;
