@@ -7,11 +7,13 @@ export const Background = styled.div`
 export const Alignment = styled.div`
   display: flex;
   align-self: center;
-  @media screen and (max-width: 786px) {
+  @media(max-width: 786px) {
    display:flex;
    flex-direction:row;
    justify-content: center;
-   margin-bottom: 2em;
+   align-items: center;
+   width: 100%;
+   margin-bottom: 1em;
   }
 `;
 export const Title = styled.h2`

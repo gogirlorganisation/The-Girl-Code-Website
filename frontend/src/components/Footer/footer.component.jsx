@@ -21,9 +21,9 @@ export default function Footer() {
           <Col lg={4} md={3} sm={3} xs={6}>
               <Icons>
                   <ul style={{listStyleType:"none", height:"100%", display:"flex", flexDirection:"column", justifyContent:"space-around"}}>
-                      <li><a style={{textDecoration:"none",color:"white"}} href="#"><Image src="https://imgur.com/n5KLiz1.jpg" style={{width:"30px"}}/>@thegirlcode_co</a></li>
-                      <li><a style={{textDecoration:"none",color:"white"}} href="#"><Image src="https://imgur.com/Etnm8Qc.jpg" style={{width:"30px"}}/>@thegirlcode_co</a></li>
-                      <li><a style={{textDecoration:"none",color:"white"}} href="#"><Image src="https://imgur.com/onm1gvD.jpg" style={{width:"30px"}}/>@thegirlcode_co</a></li>
+                      <li><a style={{textDecoration:"none",color:"white"}} href="https://twitter.com/thegirlcode_co/"><Image src="https://imgur.com/n5KLiz1.jpg" style={{width:"30px"}}/>@thegirlcode_co</a></li>
+                      <li><a style={{textDecoration:"none",color:"white"}} href="https://www.instagram.com/thegirlcode_co/"><Image src="https://imgur.com/Etnm8Qc.jpg" style={{width:"30px"}}/>@thegirlcode_co</a></li>
+                      <li><a style={{textDecoration:"none",color:"white"}} href="https://www.instagram.com/thegirlcode_co/"><Image src="https://imgur.com/onm1gvD.jpg" style={{width:"30px"}}/>@thegirlcode_co</a></li>
                   </ul>
                 </Icons>
           </Col>

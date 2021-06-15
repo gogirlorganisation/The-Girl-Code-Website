@@ -84,12 +84,21 @@ export const HeaderBg=styled.div`
 
 export const HeaderImg = styled.img`
   padding: 0 0 0 2vw;
-
+  height: 90vh;
+  @media(max-width: 768px){
+      height: 40vh;
+  }
 `;
 
 
 export const HeaderInfo = styled.div`
 padding: 0 0 0 10vw;
+@media(max-width: 768px){
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 0 2vh 0;
+}
 `;
 
 // export const ChapterHeading=styled.h1`

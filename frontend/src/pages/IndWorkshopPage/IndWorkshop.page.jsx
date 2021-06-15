@@ -21,7 +21,8 @@ import {
   BoxStyle,
   CardHeading,
   CardBg,
-  ProjectShowcaseDiv
+  ProjectShowcaseDiv,
+  HeaderIconImage
 } from "./IndWorkshop.styles";
 import { ShowMoreButton } from "../WorkshopPage/workshop.page.style";
 import { DonateBg } from "../ChapterPage/chapter.styles";
@@ -74,9 +75,9 @@ class IndWorkshop extends React.Component {
         <HeaderBg>
         <Container fluid>
       <Row>
-        <Col>
+        <HeaderIconImage>
           <Image style={{ paddingLeft: "1rem" }} src={IndWorkshopImg} fluid />
-        </Col>
+        </HeaderIconImage>
         <Col className="justify-content-center">
           <WorkHeading>{workshopInfo.workshopName}</WorkHeading>
           <SubHeading>{workshopInfo.dates}</SubHeading>

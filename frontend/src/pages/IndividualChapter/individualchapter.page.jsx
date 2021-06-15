@@ -92,6 +92,11 @@ class IndividualChapter extends React.Component {
     console.log(this.state, 'manage team')
   }
 
+  chapterClick = (e) => {
+    console.log(e.target.dataset.id, 'hi')
+    this.props.history.push(`/chapter/${e.target.dataset.id}`)
+  }
+
   click = (e) => {
     console.log(e.target.dataset.id, 'hi')
     this.props.history.push(`/workshop/${e.target.dataset.id}`)
@@ -247,15 +252,18 @@ class IndividualChapter extends React.Component {
         <CardBg>
         <Card
             image={ChapterCardImg}
-            title="Bangalore"
-            subtitle=""
+            title="Singapore Chapter"
+            id="- 60b4ce4b94369a4024c91de4"
+            onClick = {this.chapterClick}
             //   icons={[[IconImg]]}
             description="est. June 2020"
             isButton={true}
           />
           <Card
             image={ChapterCardImg}
-            title="Bangalore"
+            title="Delhi Chapter"
+            id = '60b4caaa94369a4024c91de2'
+            onClick = {this.chapterClick}
             subtitle=""
             //   icons={[[IconImg]]}
             description="est. June 2020"

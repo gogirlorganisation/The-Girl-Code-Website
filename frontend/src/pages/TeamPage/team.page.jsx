@@ -62,7 +62,7 @@ export default class Home extends Component {
               textIn="white"
             />
             <HeaderBg>
-              <HeaderImg src={team} style={{height: '90vh'}}/>
+              <HeaderImg src={team}/>
               <HeaderInfo>
                 <ChapterHeading>OUR TEAM</ChapterHeading>
                 <Bord>
@@ -108,7 +108,7 @@ export default class Home extends Component {
             <TeamDiv>
               <Team
                 backgroundColour="#ffffff"
-                heading="WEBD DEPARTMENT"
+                heading="WEB DEVELOPMENT DEPARTMENT"
                 leads={this.state.team.webD.lead}
                 mems={this.state.team.webD.mems}
               />

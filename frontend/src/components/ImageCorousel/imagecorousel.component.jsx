@@ -72,10 +72,10 @@ class ImageCorousel extends React.Component{
         return(
             <Container>
                 <BoxImage style = {{backgroundImage: `url(${imgUrl})` }}>
-                    <PinkDiv> 
+                    {/* <PinkDiv> 
                         <h6 style = {{margin:0}}> <bold> SJI Workshop </bold> </h6>
                         <p style = {{margin:0}}> Learn more about our Singapore chapter &#8594; </p>
-                    </PinkDiv>
+                    </PinkDiv> */}
                 </BoxImage>
 
                 <FooterImages>

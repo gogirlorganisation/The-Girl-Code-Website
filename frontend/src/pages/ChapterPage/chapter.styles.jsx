@@ -8,6 +8,9 @@ export const HeaderBg=styled.div`
 
 export const HeaderImg = styled.img`
     padding-left: 5vw
+    @media(max-width: 768px){
+        height: 20vh;
+    }
 
 `;
 

@@ -14,10 +14,11 @@ import Heading from "../Heading/heading.component";
 import { Container, Image } from "react-bootstrap";
 import logo from "../../assets/plus.png";
 import { Link } from "react-router-dom";
+import map from '../../assets/map.png'
 
 class StartChapter extends Component {
   state = {
-    searchItems: [],
+    searchItems: ['delhi', 'rajasthan', 'haryana', 'telangana', 'usa', 'singapore', 'bihar'],
     search: "",
     linkedItems: this.props.linkedItems,
     found: false,
@@ -26,7 +27,6 @@ class StartChapter extends Component {
   fetchData = async () => {
     
   };
-
 
   handleChange = (e) => {
     const { searchItems } = this.state;
@@ -117,7 +117,7 @@ class StartChapter extends Component {
           : JoinButton("Join Chapter", "#")}
         <br />
         <BoxImage>
-          <Image src="https://i.imgur.com/fi5BtZq.png" fluid />
+          <Image src={map} fluid />
         </BoxImage>
         {!this.state.found
           ? SecondaryJoinButton("Start a Chapter", "#")

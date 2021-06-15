@@ -117,6 +117,8 @@ class Chapter extends Component {
       <HeaderBg>
         <Header />
       </HeaderBg>
+
+      
       <Stats
         stats={[
           [this.state.stat1, "NO. OF CHAPTERS"],

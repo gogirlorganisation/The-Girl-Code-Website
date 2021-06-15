@@ -19,6 +19,9 @@ export const SubHeading = styled.h1`
 `;
 export const BoxStyle = styled.div`
   margin: 6rem 6rem;
+  @media(max-width: 768px){
+    margin: 1rem;
+  }
 `;
 export const CardHeading = styled.div`
   text-align: center;
@@ -42,4 +45,10 @@ flex-direction: row;
 flex-wrap: wrap;
 justify-content: space-around;
 margin: 2vh 0 0 2vh;
+`;
+
+export const HeaderIconImage = styled.div`
+  @media(max-width: 768px){
+    display: none;
+  }
 `;
