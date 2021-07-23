@@ -24,7 +24,7 @@ class ImageCorousel extends React.Component{
 
     componentWillUnmount() {
         clearInterval(this.interval)
-        window.removeEventListener('resize', () => console.log('removed'))
+        window.removeEventListener('resize', () =>
       }
 
     nextImage = () => {
@@ -42,7 +42,7 @@ class ImageCorousel extends React.Component{
 
     indexImage = (e,index) => {
         this.setState({imgIndex: Number(e.currentTarget.getAttribute('index'))})
-        console.log(this.state)
+       
     }
 
     numberImages = () => {
@@ -57,7 +57,7 @@ class ImageCorousel extends React.Component{
         //const img = require(`../../assets/${imgUrl}`)
         const newImgUrls = this.state.imgUrls.filter((Url, index) => index < this.state.numberImages)
         
-        console.log(newImgUrls)
+       
 
         return(
             <Container>
@@ -73,7 +73,7 @@ class ImageCorousel extends React.Component{
                         
                         newImgUrls.map((imgUrl,index) => {
                             //const footerImg = require(`../../assets/${imgUrl}`)
-                            console.log(imgUrl)
+                           
                             return (
                                 <div key = {index} 
                                     onClick = {this.indexImage}

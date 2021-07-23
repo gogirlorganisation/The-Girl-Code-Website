@@ -5,7 +5,7 @@ class ImageCorousel extends React.Component{
 
     constructor(props){
         super(props);
-        console.log(props, '')
+       
         this.state = {
             imgUrls: [],
             imgIndex: 0,
@@ -20,20 +20,20 @@ class ImageCorousel extends React.Component{
             this.setState({ windowWidth: window.innerWidth })
             this.numberImages()
         })
-        console.log(this.props, 'mounting props')
+       
 
         this.setState({
             imgUrls: this.props.imgUrls,
             imgIndex: 0,
             numberImages:  Math.min(Math.floor(window.innerWidth / 190),this.props.imgUrls.length)
-        }, console.log(this.state, 'mounting console'))
+        })
       }
 
     componentWillUnmount() {
         clearInterval(this.interval)
         //this.state = {}
         window.removeEventListener('resize', () => {
-            console.log('unmount')
+           
         })
       }
 
@@ -68,7 +68,7 @@ class ImageCorousel extends React.Component{
  
             let  imgUrl = this.state.imgUrls[this.state.imgIndex]
             let  newImgUrls = this.state.imgUrls.filter((Url, index) => index < this.state.numberImages)
-            console.log(imgUrl, newImgUrls)
+           
         return(
             <Container>
                 <BoxImage style = {{backgroundImage: `url(${imgUrl})` }}>

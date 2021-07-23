@@ -56,7 +56,7 @@ class Chapter extends Component {
     try {
         let chapters = await fetch('/chapters')
         chapters = await chapters.json()
-        console.log(chapters.chapters)
+       
         this.setState({
           chaptersInfo: chapters.chapters,
           stat1: chapters.stat1,
@@ -64,17 +64,17 @@ class Chapter extends Component {
           stat3: chapters.stat3,
           loading: false
         }, () => {
-          console.log(this.state, this.state.chaptersInfo)
+         
         })
-        console.log(this.state.img)
+       
         
     } catch (error) {
-      console.log(error)
+     
     }
   }
 
   click = (e) => {
-    console.log(e.target.dataset.id, 'hi')
+   
     this.props.history.push(`/chapter/${e.target.dataset.id}`)
   }
 

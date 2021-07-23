@@ -12,7 +12,7 @@ class form extends Component {
 
   handleChange = (e) => {
     this.setState({ [e.target.name]: e.target.value });
-    // console.log(e.target.value);
+    //
   };
 
   handleSubmit = () => {
@@ -23,7 +23,7 @@ class form extends Component {
       gender,
       email,
     };
-    console.log(formData);
+   
   };
 
   render() {

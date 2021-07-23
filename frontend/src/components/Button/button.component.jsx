@@ -5,7 +5,7 @@ import { Container } from "react-bootstrap";
 import { Route } from "react-router";
 
 export default function ShadowButton({ Text, onClick, width, link }) {
-  console.log(link)
+ 
   return (
     <div onClick={onClick}>
       <Container>

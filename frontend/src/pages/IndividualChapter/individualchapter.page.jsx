@@ -60,10 +60,10 @@ class IndividualChapter extends React.Component {
 
   fetchData = async () => {
     const chapterId = this.props.match.params.chapterId
-    console.log(chapterId)
+   
     let chapterData = await fetch(`/chapter/${chapterId}`)
     chapterData = await chapterData.json()
-    console.log(chapterData)
+   
     this.setState({
       chapterInfo: chapterData.chapter,
       workshops: chapterData.chapter.workshops,
@@ -71,7 +71,7 @@ class IndividualChapter extends React.Component {
       loading: false,
       carouselImages: chapterData.chapter.carouselImages
     }, () => {
-      console.log(this.state.carouselImages, 'state')
+     
     })
     this.manageTeam();
   }
@@ -89,16 +89,16 @@ class IndividualChapter extends React.Component {
         })
       }
     })
-    console.log(this.state, 'manage team')
+   
   }
 
   chapterClick = (e) => {
-    console.log(e.target.dataset.id, 'hi')
+   
     this.props.history.push(`/chapter/${e.target.dataset.id}`)
   }
 
   click = (e) => {
-    console.log(e.target.dataset.id, 'hi')
+   
     this.props.history.push(`/workshop/${e.target.dataset.id}`)
   }
 
@@ -127,7 +127,7 @@ class IndividualChapter extends React.Component {
       workshops,
       team
     } = this.state
-    console.log(workshops)
+   
     
     return (
       <div>

@@ -25,10 +25,10 @@ mongoose.connect(process.env.MONGOURI, {
   useUnifiedTopology: true,
 });
 mongoose.connection.on('connected', () => {
-  console.log('connected to mongo');
+ console.log('connected to mongo')
 });
 mongoose.connection.on('err', () => {
-  console.log('error while connecting', err);
+ 
 });
 
 app.use('/', indexRouter);

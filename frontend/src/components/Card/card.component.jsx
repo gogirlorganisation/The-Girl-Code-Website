@@ -30,9 +30,9 @@ const Card = ({
   //   icon = icons.split(" ");
   //   iconText = icon[icon.length - 1];
   //   icon.pop();
-  //   console.log(icon);
+  //  
   // }
-  // console.log(icons)
+  //
   function truncate(str, no_words) {
     return str.split(" ").splice(0, no_words).join(" ");
   }

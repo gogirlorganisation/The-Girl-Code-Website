@@ -45,16 +45,16 @@ class IndWorkshop extends React.Component {
 
   fetchData = async () => {
     const workshopId = this.props.match.params.workshopId
-    console.log(workshopId)
+   
     let workshopData = await fetch(`/workshop/${workshopId}`)
     workshopData = await workshopData.json()
-    console.log(workshopData)
+   
     this.setState({
       workshopInfo: workshopData.workshop,
       loading: false,
       testimonials: workshopData.testimonials
     }, () => {
-      console.log(this.state, 'state')
+     
     })
 
 
@@ -63,7 +63,7 @@ class IndWorkshop extends React.Component {
     const {
       workshopInfo
     } = this.state
-    console.log(workshopInfo.testimonials)
+   
     return (
       <div>
         <NavBar

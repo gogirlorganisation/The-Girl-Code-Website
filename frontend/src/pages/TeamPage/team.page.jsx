@@ -39,7 +39,7 @@ export default class Home extends Component {
         leading: false,
       },
       () => {
-        console.log(this.state.team.org[0]);
+       
       }
     );
   };

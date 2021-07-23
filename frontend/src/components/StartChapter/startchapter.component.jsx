@@ -35,7 +35,7 @@ class StartChapter extends Component {
     if (!searchItems.includes(e.target.value.toLowerCase())) {
       this.setState({ found: false });
     } else {
-      console.log(searchItems.includes(e.target.value.toLowerCase()));
+     
       this.setState({ found: true });
     }
   };

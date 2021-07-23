@@ -41,7 +41,7 @@ class Workshop extends React.Component {
   fetchData = async () => {
     let workshops = await fetch('/workshops')
     workshops = await workshops.json()
-    console.log(workshops)
+   
     this.setState({
       pastWorkshopsData: workshops.workshops,
       loading: false
@@ -54,7 +54,7 @@ class Workshop extends React.Component {
   }
 
   click = (e) => {
-    console.log(e.target.dataset.id, 'hi')
+   
     this.props.history.push(`/workshop/${e.target.dataset.id}`)
   }
 
@@ -82,7 +82,7 @@ class Workshop extends React.Component {
       loading,
       buttonText,
     } = this.state;
-    console.log(this.state, 'hi')
+   
     return (
       <>
         <GlobalStyle />

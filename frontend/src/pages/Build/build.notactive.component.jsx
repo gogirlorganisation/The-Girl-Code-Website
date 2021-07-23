@@ -47,11 +47,11 @@ class BuildPrevious extends Component {
     const secondSheet = doc.sheetsByIndex[1];
     const pastWorkshops = await secondSheet.getRows();
 
-    // console.log(dataArray);
+    //
 
     // const sheet = doc.sheetsByIndex[0]; // or use doc.sheetsById[id] or doc.sheetsByTitle[title]
-    // console.log(sheet.title);
-    // console.log(sheet.rowCount);
+    //
+    //
 
     // // adding / removing sheets
     // const newSheet = await doc.addSheet({ title: "hot new sheet!" });
