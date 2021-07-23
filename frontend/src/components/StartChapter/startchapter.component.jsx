@@ -113,15 +113,15 @@ class StartChapter extends Component {
         <br />
 
         {!this.state.found
-          ? JoinButton("Start a Chapter", "#")
-          : JoinButton("Join Chapter", "#")}
+          ? JoinButton("Start a Chapter", "https://docs.google.com/forms/d/e/1FAIpQLSd5_ISkWJPslqQQE4l4WyL7of9ThLfVMSX3DP7kH5SLuu3MaA/viewform")
+          : JoinButton("Join Chapter", "https://docs.google.com/forms/d/e/1FAIpQLSd5_ISkWJPslqQQE4l4WyL7of9ThLfVMSX3DP7kH5SLuu3MaA/viewform")}
         <br />
         <BoxImage>
           <Image src={map} fluid />
         </BoxImage>
         {!this.state.found
-          ? SecondaryJoinButton("Start a Chapter", "#")
-          : SecondaryJoinButton("Join Chapter", "#")}
+          ? SecondaryJoinButton("Start a Chapter", "https://docs.google.com/forms/d/e/1FAIpQLSd5_ISkWJPslqQQE4l4WyL7of9ThLfVMSX3DP7kH5SLuu3MaA/viewform")
+          : SecondaryJoinButton("Join Chapter", "https://docs.google.com/forms/d/e/1FAIpQLSd5_ISkWJPslqQQE4l4WyL7of9ThLfVMSX3DP7kH5SLuu3MaA/viewform")}
       </Container>
     );
   }

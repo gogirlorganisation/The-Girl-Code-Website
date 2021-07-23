@@ -6,7 +6,7 @@ import { Container } from 'reactstrap';
 const SocialMediaDiv = () => {
   return (
     <Container className='mb-5 mt-5'>
-      <Gallery photos={photos} />
+      <Gallery photos={photos}  />
     </Container>
   );
 }

@@ -50,7 +50,7 @@ const JoinUs = () => {
             <HeaderButtons>
             <ShadowButton Text={"INTERN WITH US"} width='90%' link='https://docs.google.com/forms/d/e/1FAIpQLSdNnrbYFbdkTMnlod-Pp74KRPLipqN2RHmT1gwDoudFcxbG9Q/viewform'/>
             <ShadowButton Text="START A CHAPTER" width='90%' link='https://docs.google.com/forms/d/e/1FAIpQLSd5_ISkWJPslqQQE4l4WyL7of9ThLfVMSX3DP7kH5SLuu3MaA/viewform'/>
-            <ShadowButton Text={"JOIN THE COMMUNITY"} width='90%'/>
+            <ShadowButton Text={"JOIN THE COMMUNITY"} link='https://docs.google.com/forms/u/3/d/e/1FAIpQLSeqIjXp77VuEHqxevq3hdw_myuCVzYGJsKzFNpdWYwHKbNI-Q/viewform' width='90%'/>
             </HeaderButtons>
           </Col>
         </Row>

@@ -8,7 +8,7 @@ export const HeaderDiv = styled.div`
   display:flex;
   flex-direction: column;
   align-items: center;
-  background:linear-gradient(0deg, rgba(0,0,0, 0.4), rgba(0,0,0, 0.4)), url(https://i.imgur.com/xsZYSIX.jpg);
+  background:linear-gradient(0deg, rgba(0,0,0, 0.4), rgba(0,0,0, 0.4)), url(https://i.imgur.com/2w0bA3I.jpg);
   background-size: cover;
 `;
 

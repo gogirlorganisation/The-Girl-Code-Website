@@ -13,7 +13,7 @@ export const TextBox = styled.p`
   font-family: "Inter", sans-serif;
   font-size: 1.3rem;
   margin-top: 2rem;
-  padding-top: 6rem;
+  padding: 2rem 3rem ;
   @media screen and (max-width: 600px) {
     font-size: 1.5rem;
     padding: 0 0.8rem;

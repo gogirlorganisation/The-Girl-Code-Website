@@ -113,10 +113,12 @@ const Home = () => {
 <Corousel>
         <ImageCorousel
           imgUrls={[
-            "https://i.imgur.com/xsZYSIX.jpg",
-            "https://i.imgur.com/xsZYSIX.jpg",
-            "https://i.imgur.com/xsZYSIX.jpg",
-            "https://i.imgur.com/xsZYSIX.jpg",
+            "https://i.imgur.com/RyYGlc8.jpg",
+            "https://i.imgur.com/8S2wL4J.jpg",
+            "https://i.imgur.com/iltxAcZ.jpg",
+            "https://i.imgur.com/RyYGlc8.jpg",
+            "https://i.imgur.com/2w0bA3I.jpg",
+            "https://i.imgur.com/eStHKKq.jpg"
           ]}
         />
       </Corousel>
@@ -158,8 +160,8 @@ const Home = () => {
           <Headingg heading={"FEATURED"} />
         </HeadingDiv>
         <YoutubeVideo
-          videoOne="https://www.youtube.com/watch?v=ysz5S6PUM-U"
-          videoTwo="https://www.youtube.com/watch?v=ysz5S6PUM-U"
+          videoOne='https://www.youtube.com/watch?v=pGJb8vaA_ME&t=14s&ab_channel=TheGirlCode'
+          videoTwo='https://www.youtube.com/watch?v=GBhOYmd13Qo&t=3s&ab_channel=TheGirlCode'
           textOne="Join us as we speak with Mina, and break down the fundamentals of technology on 'Tech Talks'. She breaks down web development for us and talks about her journey in the field."
           textTwo="Join us as we speak with Annie and Kass to break down the fundamentals of frontend development on “Tech Talks”. They speak about out the future of frontend with sites like Wix and AIs like GPT3"
         />

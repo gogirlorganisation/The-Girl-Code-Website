@@ -34,8 +34,8 @@ const Header = () => {
       <HeaderImg src={ChapterHeaderImg} />
       <HeaderInfo>
         <ChapterHeading>Chapters</ChapterHeading>
-        <ShadowButton Text={'CONTACT US'}/>
-        <ShadowButton Text={'START A CHAPTER'} />
+        <ShadowButton Text={'CONTACT US'} link='writetothegirlcode@gmail.com'/>
+        <ShadowButton Text={'START A CHAPTER'} link='https://docs.google.com/forms/d/e/1FAIpQLSd5_ISkWJPslqQQE4l4WyL7of9ThLfVMSX3DP7kH5SLuu3MaA/viewform'/>
       </HeaderInfo>
     </HeaderBg>
     

@@ -6,6 +6,7 @@ export const Nav = styled.nav`
   height: 80px;
   display: flex;
   flex-direction: row;
+  padding-left: 2vw;
   background-color: ${({ bgOut, bgIn, textOut, textIn }) => bgOut};
   justify-content: space-between;
   align-items: center;
@@ -106,7 +107,7 @@ export const StyledBurger = styled.div`
     z-index: 1000;
     width: 2rem;
     height: 0.2rem;
-    background-color: ${({ open }) => (open ? "#000" : "#FFF")};
+    background-color: ${({ open }) => (open ? "#000" : "#F05680")};
     border-radius: 10px;
     transform-origin: 1px;
     transition: all 0.3s linear;

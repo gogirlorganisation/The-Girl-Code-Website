@@ -15,13 +15,7 @@ export default function JoinCommunity() {
       <Heading heading="JOIN OUR COMMUNITY" />
       {/* <Row>
         
-          <TextBox>
-            At The Girl Code, we aim to bridge the gender gap in the tech
-            community by inspiring young girls to learn programming by hosting
-            workshops at schools and universities local to them. Through our
-            platform and intuitive curriculum, we plan to give rise to a new
-            generation of female programmers set to take the world by storm.
-          </TextBox>
+          
         
         <Col xs={12} md={6}>
           <FormBox>
@@ -33,8 +27,15 @@ export default function JoinCommunity() {
         </Col>
       </Row> */}
       <img src={tgc} style={{height: '60vh', alignSelf: 'center'}}/>
+      <TextBox>
+            At The Girl Code, we aim to bridge the gender gap in the tech
+            community by inspiring young girls to learn programming by hosting
+            workshops at schools and universities local to them. Through our
+            platform and intuitive curriculum, we plan to give rise to a new
+            generation of female programmers set to take the world by storm.
+          </TextBox>
       <div style={{alignSelf: "center", padding: "1em 0"}}>
-      <ShadowButton Text={"Apply Now"} width = '20vw' />
+      <ShadowButton Text={"Apply Now"} width = '20vw' link='https://docs.google.com/forms/u/3/d/e/1FAIpQLSeqIjXp77VuEHqxevq3hdw_myuCVzYGJsKzFNpdWYwHKbNI-Q/viewform'/>
       </div>
     </Background>
   );
